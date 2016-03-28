@@ -15,10 +15,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="{{url('home')}}">Inicio</a></li>
-                <li><a href="{{url('about')}}">Nosotros</a></li>
-                <li><a href="{{url('events')}}">Eventos</a></li>
-                <li><a href="{{url('contact')}}">Contáctenos</a></li>
+                <li {!! Request::is('home') ? 'class=active' : '' !!}><a href="{{url('home')}}">Inicio</a></li>
+                <li {!! Request::is('about') ? 'class=active' : '' !!}><a href="{{url('about')}}">Nosotros</a></li>
+                <li {!! Request::is('events') ? 'class=active' : '' !!}><a href="{{url('events')}}">Eventos</a></li>
+                <li {!! Request::is('contact') ? 'class=active' : '' !!}><a href="{{url('contact')}}">Contáctenos</a></li>
             </ul>
         </div>
     </div>
