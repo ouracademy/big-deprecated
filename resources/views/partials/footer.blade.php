@@ -10,7 +10,8 @@
 			<div class="col-md-6 col-sm-6">
 				<h4>Mantente en contácto</h4>
 				<ul class="list-inline">
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://www.facebook.com/businessideasgroupperu/">
+						<i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 				</ul>
@@ -25,7 +26,7 @@
 			<ul class="list-inline pull-right">
 				<li><a href="{{url('home')}}">Inicio</a></li>
 				<li><a href="{{url('about')}}">Nosotros</a></li>
-				<li><a href="{{url('services/all')}}">Servicios</a></li>
+				<li><a href="{{url('events')}}">Eventos</a></li>
 				<li><a href="{{url('contact')}}">Contáctenos</a></li>					
 			</ul>
 		</div>
