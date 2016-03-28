@@ -1,0 +1,39 @@
+.thumbnail{
+    border: none;
+}
+
+.thumbnail a>img, .thumbnail>img {
+    border-radius: 100%;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    height: 500px;
+    width: 100%;
+}
+
+.carousel-caption{
+    top: 30%;
+}
+
+.carousel-caption h3{
+    font-size: 2.5em;
+}
+
+.carousel-caption p{
+    font-size: 1.5em;
+}
+    
+@media screen and (min-width: 768px)
+{
+    .carousel-caption h3{
+        font-size: 4em;
+    }
+    
+    .carousel-caption p{
+        font-size: 2em;
+    }
+    
+    .service{
+        padding:4em 8em 4em 8em;
+    }
+}

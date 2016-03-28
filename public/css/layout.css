@@ -1,0 +1,12 @@
+@import url('partials/header.css');
+@import url('partials/footer.css');
+
+/* Global Styles */
+html,
+body {
+    height: 100%;
+}
+
+section{
+    padding-bottom: 15px;
+}
