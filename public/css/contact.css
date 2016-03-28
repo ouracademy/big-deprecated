@@ -1,0 +1,7 @@
+.contact-details > ul > li{
+    padding-bottom: 5px;
+}
+
+.contact-details > ul > li > i{
+    padding-right: 5px;
+}

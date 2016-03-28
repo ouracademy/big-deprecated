@@ -1,6 +1,9 @@
 @extends('layouts.breadcrumbs')
 @section('title', 'Contáctenos')
 @section('subheading', 'Conéctate con nosotros')
+@section('head')
+    {!! Html::style('css/contact.css') !!}
+@endsection
 @section('container')
     <section class="row">
         <div class="col-md-8">
@@ -29,33 +32,35 @@
                 <button type="submit" class="btn btn-primary">Enviar mensaje</button>
             </form>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 contact-details">
             <h3>Detalles de contacto</h3>
-            <p>
-                Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)
-            </p>
-            <p>
-                <i class="fa fa-phone"></i>(01) 226-5452</p>
-            <p>
-                <i class="fa fa-envelope-o"></i>
-                <a href="mailto:informes@businessideasgroup.com.pe">
-                    informes@businessideasgroup.com.pe</a>
-            </p>
-            <p><i class="fa fa-clock-o"></i>Lunes - Viernes: 9:00 AM a 10:00 PM</p>
-            <ul class="list-unstyled list-inline list-social-icons">
+            <ul class="list-unstyled">
                 <li>
-                    <a href="https://www.facebook.com/businessideasgroupperu/">
-                        <i class="fa fa-facebook-square fa-2x"></i></a>
+                    <i class="fa fa-map-marker"></i>Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
-                </li>
+                    <i class="fa fa-phone"></i>(01) 226-5452</li>
                 <li>
-                    <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    <i class="fa fa-envelope-o"></i>
+                    <a href="mailto:informes@businessideasgroup.com.pe">
+                        informes@businessideasgroup.com.pe</a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
-                </li>
+                <li><i class="fa fa-clock-o"></i>Lunes - Viernes: 9:00 AM a 10:00 PM</li>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="https://www.facebook.com/businessideasgroupperu/">
+                            <i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+                    </li>
+                </ul>
             </ul>
         </div>
     </section>
