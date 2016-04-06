@@ -9,21 +9,21 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="{{asset('img/background.jpg')}}" alt="...">
+      <img src="{{asset('img/slider/business-world.jpg')}}" alt="...">
       <div class="carousel-caption">
         <h3>Bienvenido al mundo de las ideas</h3>
         <p>Ayudamos a convertir su idea en un negocio</p>
       </div>
     </div>
     <div class="item">
-      <img src="{{asset('img/background2.jpg')}}" alt="...">
+      <img src="{{asset('img/slider/conferences.jpg')}}" alt="...">
       <div class="carousel-caption">
         <h3>Grandes personas vienen de una gran educación</h3>
         <p>...</p>
       </div>
     </div>
     <div class="item">
-      <img src="{{asset('img/background.jpg')}}" alt="...">
+      <img src="{{asset('img/slider/entrepreneur.jpg')}}" alt="...">
       <div class="carousel-caption">
         <h3>Creando la nueva generación de emprendedores</h3>
         <p>...</p>

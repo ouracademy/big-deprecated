@@ -22,13 +22,8 @@
   
 	<div class="footer-bottom">
 		<div class="container">
-			<p class="pull-left">Copyright © Business Ideas Group 2016  - Diseñado por BIG IT y <a href="https://www.facebook.com/Ouracademy-661881453944170/?fref=ts">Ouracademy</a></p>
-			<ul class="list-inline pull-right">
-				<li><a href="{{url('home')}}">Inicio</a></li>
-				<li><a href="{{url('about')}}">Nosotros</a></li>
-				<li><a href="{{url('events')}}">Eventos</a></li>
-				<li><a href="{{url('contact')}}">Contáctenos</a></li>					
-			</ul>
+			<p class="pull-left">Copyright © Business Ideas Group 2016  - 
+			Diseñado por BIG IT y <a href="https://www.facebook.com/Ouracademy-661881453944170/?fref=ts">Ouracademy</a></p>
 		</div>
 	</div>
 </footer>

@@ -1,11 +1,13 @@
 @extends('layouts.breadcrumbs')
 @section('title', 'Nosotros')
 @section('subheading', 'Un equipo dedicado a formar grandes personas')
+@section('head')
+    {!! Html::style('css/about.css') !!}
+@endsection
 @section('container')
-    <!-- Intro Content -->
-    <section class="row">
+    <section class="row" id="intro">
         <div class="col-md-6">
-            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+            <img class="img-responsive" src="{{asset('img/team.jpg')}}" alt="">
         </div>
         <div class="col-md-6">
             <h2>Nosotros - <abbr title="Business Ideas Group">BIG</abbr></h2>
@@ -14,10 +16,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
         </div>
     </section>
-    <!-- /.row -->
 
-    <!-- Team Members -->
-    <section class="row">
+    <section class="row" id="team">
         <div class="col-lg-12">
             <h2 class="page-header">Nuestro equipo</h2>
         </div>
@@ -26,7 +26,7 @@
                 <img class="img-responsive" src="http://placehold.it/750x450" alt="">
                 <div class="caption">
                     <h3>Arthur Mauricio<br>
-                        <small>CIO - Cofundador</small>
+                        <small>Cofundador</small>
                     </h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
                     <ul class="list-inline">
@@ -79,21 +79,19 @@
             </div>
         </div>
     </section>
-    <!-- /.row -->
-
-    <!-- Our Customers -->
-    <section class="row">
+    
+    <section class="row" id="sponsors">
         <div class="col-lg-12">
             <h2 class="page-header">Nuestros patrocinadores</h2>
         </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
         </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
         </div>
-        <div class="col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive customer-img" src="http://placehold.it/500x300" alt="">
+        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
+            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
         </div>
     </section>
 @endsection
