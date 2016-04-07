@@ -6,29 +6,33 @@
 @section('content')
   @include('home.slider')
     <div class="container">
-        <section id="services">
-            <div class="row">
-                <div class="col-md-6 service">
-                    <div class="thumbnail">
-                        <img alt="cursos" src="img/courses.png" height="320px" width="70%"/>
-                        <div class="caption">
-                            <h3>Cursos</h3>
-                            <p>Importamos productos de Estados Unidos y diferentes paises de Asia.</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                        </div>
+        <section class="row" id="team">
+            <div class="col-lg-12">
+                <h2 class="page-header">Nuestros servicios</h2>
+            </div>
+            <div class="col-md-offset-1 col-md-4 text-center">
+                <div class="thumbnail service">
+                    <img class="img-responsive" src="https://d30y9cdsu7xlg0.cloudfront.net/png/117741-200.png" height="320px" width="70%" alt="">
+                    <div class="caption">
+                        <h3>Cursos</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+                        <a href="#" class="btn btn-primary" role="button">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 service">
-                    <div class="thumbnail">
-                        <img alt="talleres y seminarios" src="img/workshop.png" height="320px" width="70%"/>
-                        <div class="caption">
-                            <h3>Talleres y seminarios</h3>
-                            <p>Importamos productos de Estados Unidos y diferentes paises de Asia.</p>
-                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                        </div>
+            </div>
+            <div class="col-md-offset-1 col-md-4 text-center">
+                <div class="thumbnail service">
+                    <img class="img-responsive" src="http://ca-helpline.com/wp-content/uploads/2015/11/classes-icon.png" height="320px" width="70%" alt="">
+                    <div class="caption">
+                        <h3>Talleres y seminarios</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
+                        <a href="#" class="btn btn-primary" role="button">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </section>
+        
+        
+        
     </div>
 @endsection

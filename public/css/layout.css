@@ -10,3 +10,7 @@ body {
 section{
     padding-bottom: 15px;
 }
+
+a i{
+    margin-left: 5px;
+}

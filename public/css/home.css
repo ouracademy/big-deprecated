@@ -1,9 +1,9 @@
-.thumbnail{
-    border: none;
+.service .caption{
+    margin-top: -20px;
 }
 
-.thumbnail a>img, .thumbnail>img {
-    border-radius: 100%;
+.service{
+    border: none;
 }
 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img {
@@ -31,9 +31,5 @@
     
     .carousel-caption p{
         font-size: 2em;
-    }
-    
-    .service{
-        padding:4em 8em 4em 8em;
     }
 }

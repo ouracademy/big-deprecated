@@ -1,14 +1,16 @@
 <footer>
-	<div class="container">
+	<div class="footer-top container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
-				<h4>Quiénes somos</h4>
-				<p>Somos una empresa ....</p>
-				<a href="{{url('about')}}" class="txt-btn">Conócenos</a>
+				<h4 class="title">Quiénes somos</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+				sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+				magna aliquam erat volutpat.</p>
+				<a href="{{url('about')}}">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
 			</div>
 			
 			<div class="col-md-6 col-sm-6">
-				<h4>Mantente en contácto</h4>
+				<h4 class="title">Mantente en contácto</h4>
 				<ul class="list-inline">
 					<li><a href="https://www.facebook.com/businessideasgroupperu/">
 						<i class="fa fa-facebook"></i></a></li>
@@ -23,7 +25,7 @@
 	<div class="footer-bottom">
 		<div class="container">
 			<p class="pull-left">Copyright © Business Ideas Group 2016  - 
-			Diseñado por BIG IT y <a href="https://www.facebook.com/Ouracademy-661881453944170/?fref=ts">Ouracademy</a></p>
+			Diseñado por BIG y <a href="https://www.facebook.com/Ouracademy-661881453944170/?fref=ts">Ouracademy</a></p>
 		</div>
 	</div>
 </footer>

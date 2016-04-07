@@ -1,3 +1,21 @@
 footer{
-    background-color: #E7E7E7;
+    color: rgb(140, 140, 140);
+    background-color: rgb(28, 28, 28);
+}
+
+footer .title{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: rgb(200,200,200);
+}
+
+.footer-top{
+    padding-top: 45px;
+    padding-bottom: 35px;
+}
+
+.footer-bottom{
+    background: rgb(35, 35, 35);
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
