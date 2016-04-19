@@ -1,6 +1,6 @@
 <?php namespace App\Time;
 
-class TimeReference
+interface TimeReference
 {
-    
+    public function __toString();
 }

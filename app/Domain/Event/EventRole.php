@@ -1,8 +1,6 @@
-<?php namespace App;
+<?php namespace App\Domain\Event;
 
-use App\Event;
-use App\Party\Party;
-use App\EventRoleType;
+use App\Domain\Party\Party;
 
 class EventRole
 {

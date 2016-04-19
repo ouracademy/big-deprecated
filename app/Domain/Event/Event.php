@@ -1,10 +1,9 @@
-<?php namespace App;
+<?php namespace App\Domain\Event;
 
 use App\Money\Money;
 use App\Time\TimeReference;
 use InvalidArgumentException;
-use App\EventRoleType;
-use App\Party\Party;
+use App\Domain\Party\Party;
 use SplObjectStorage;
 
 //TODO add photo property

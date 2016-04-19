@@ -14,3 +14,19 @@ section{
 a i{
     margin-left: 5px;
 }
+
+.page-header{
+    text-transform: uppercase;
+}
+
+.page-header small{
+    text-transform: none;
+}
+
+.gray{
+    background-color: #E7E7E7;
+}
+
+a:hover{
+    text-decoration:none;
+}

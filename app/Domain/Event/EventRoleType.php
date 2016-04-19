@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Domain\Event;
 
 use App\Support\NamedObject;
 

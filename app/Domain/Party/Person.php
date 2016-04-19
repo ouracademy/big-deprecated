@@ -1,4 +1,4 @@
-<?php namespace App\Party;
+<?php namespace App\Domain\Party;
 
 use App\Support\NamedObject;
 

@@ -1,12 +1,14 @@
 <?php namespace App\Time;
 
-class TimePoint extends TimeReference
+use \DateTimeImmutable;
+
+class TimePoint extends DateTimeImmutable implements TimeReference
 {
-    private $day, $month, $year;
+    public static function createFromDate($day, $month, $year){
+        return new TimePoint($day.'-'.$month.'-'.$year);
+    }
     
-    public function __construct($day, $month, $year){
-        $this->day = $day;
-        $this->month = $month;
-        $this->year = $year;
+    public function __toString(){
+        return $this->format(self::W3C);
     }
 }

@@ -19,7 +19,7 @@
 
     <section class="row" id="team">
         <div class="col-lg-12">
-            <h2 class="page-header">Nuestro equipo</h2>
+            <h3 class="page-header">Nuestro equipo</h3>
         </div>
         <div class="col-md-4 text-center">
             <div class="thumbnail">
@@ -82,7 +82,7 @@
     
     <section class="row" id="sponsors">
         <div class="col-lg-12">
-            <h2 class="page-header">Nuestros patrocinadores</h2>
+            <h3 class="page-header">Nuestros patrocinadores</h3>
         </div>
         <div class="sponsor col-md-2 col-sm-4 col-xs-6">
             <img class="img-responsive" src="http://placehold.it/500x300" alt="">

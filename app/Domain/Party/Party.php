@@ -1,7 +1,7 @@
-<?php namespace App\Party;
+<?php namespace App\Domain\Party;
 
 use App\Support\NamedObject;
-use App\EventRole;
+use App\Domain\Event\EventRole;
 use SplObjectStorage;
 
 class Party extends NamedObject

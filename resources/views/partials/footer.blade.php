@@ -11,12 +11,14 @@
 			
 			<div class="col-md-6 col-sm-6">
 				<h4 class="title">Mantente en contácto</h4>
-				<ul class="list-inline">
-					<li><a href="https://www.facebook.com/businessideasgroupperu/">
-						<i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-				</ul>
+				<div class="social-network">
+					<ul class="social list-inline">
+						<li><a href="https://www.facebook.com/businessideasgroupperu/">
+							<i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
 				<p>Establezca una mejor relación con nosotros en nuestras redes sociales</p>
 			</div>
 		</div> 

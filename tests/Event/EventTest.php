@@ -1,12 +1,12 @@
 <?php
 
-use App\Event;
+use App\Domain\Event\Event;
 use App\Money\Money;
 use App\Money\Currency;
 use App\Time\TimePoint;
-use App\Party\Person;
-use App\EventRole;
-use App\EventRoleType;
+use App\Domain\Party\Person;
+use App\Domain\Event\EventRole;
+use App\Domain\Event\EventRoleType;
 
 class EventTest extends TestCase
 {
@@ -46,8 +46,8 @@ class EventTest extends TestCase
     }
     
     public function testTimeReference(){
-        $this->event->setTimeReference(new TimePoint('24','03','2016'));
-        $this->assertEquals($this->event->getTimeReference(),new TimePoint('24','03','2016'));
+        $this->event->setTimeReference(TimePoint::createFromDate(24, 03, 2016));
+        $this->assertEquals($this->event->getTimeReference(), TimePoint::createFromDate(24, 03, 2016));
     }
     
     public function testAddPerformer(){
