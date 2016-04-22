@@ -2,5 +2,5 @@
 
 interface TimeReference
 {
-    public function __toString();
+    public function format ($format);
 }

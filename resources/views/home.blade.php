@@ -4,57 +4,77 @@
     {!! Html::style('css/home.css') !!}
 @endsection
 @section('content')
-  @include('home.slider')
-    <section class="row" id="about-us">
-        <div class="col-md-6">
-            <h2 class="page-header">Nosotros</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-            quis nostrud </p>
-            <a href="{{url('services')}}" class="btn btn-primary">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="{{asset('img/home/slider/lean-canvas-strategyzer.jpg')}}" alt="...">
+          <div class="carousel-caption">
+            <h3>Bienvenido al mundo de las ideas</h3>
+            <p>Ayudamos a convertir su idea en un negocio</p>
+          </div>
         </div>
-        <div class="col-md-6">
-            <img class="img-responsive" src="http://www.vantageabt.com/images/os.jpg" height="320px" width="50%" alt="">    
+        <div class="item">
+          <img src="{{asset('img/home/slider/conference.jpg')}}" alt="...">
+          <div class="carousel-caption">
+            <h3>Grandes personas vienen de una gran educación</h3>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{{asset('img/home/slider/workshop.jpg')}}" alt="...">
+          <div class="carousel-caption">
+            <h3>Creando la nueva generación de emprendedores</h3>
+            <p>...</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <section class="row" id="about-us">
+        <div class="container">
+          <div class="col-md-6">
+              <h3 class="page-header">Nosotros</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+              quis nostrud </p>
+              <a href="{{url('about')}}" class="btn btn-primary">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
+          </div>
+          <div class="col-md-6">
+              <img class="img-responsive" src="{{asset('img/home/about-us.jpg')}}" width="400px" alt="Nosotros">    
+          </div>
         </div>
     </section>
     <section class="row gray" id="services">
-        <div class="col-md-6">
-            <img class="img-responsive" src="https://static.wixstatic.com/media/5da6025daca645e7baee50a929fe5b82.jpg/v1/fill/w_344,h_229,al_c,q_80,usm_0.66_1.00_0.01/5da6025daca645e7baee50a929fe5b82.jpg" height="320px" width="50%" alt="">    
-        </div>
-        <div class="col-md-6">
-            <h2 class="page-header">Nuestros servicios</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-            quis nostrud </p>
-            <a href="{{url('services')}}" class="btn btn-primary">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
-        </div>
-    </section>
-    <section class="row" id="sponsors">
-        <div class="col-lg-12">
-            <h2 class="page-header">Nuestros patrocinadores</h2>
-        </div>
-        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
+        <div class="container">
+          <div class="col-md-6">
+              <img class="img-responsive" src="{{asset('img/home/startup.jpg')}}" width="400px" alt="Nuestros servicios">    
+          </div>
+          <div class="col-md-6">
+              <h3 class="page-header">Nuestros servicios</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+              quis nostrud </p>
+              <a href="{{url('services')}}" class="btn btn-primary">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
+          </div>
         </div>
     </section>
-    
-    
-    <!--<div class="col-md-offset-1 col-md-4 text-center">
-                <div class="thumbnail service">
-                    <img class="img-responsive" src="http://ca-helpline.com/wp-content/uploads/2015/11/classes-icon.png" height="320px" width="50%" alt="">
-                    <div class="caption">
-                        <h3>Talleres y seminarios</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste saepe et quisquam nesciunt maxime.</p>
-                        <a href="#" class="btn btn-primary" role="button">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>-->
+    @include('partials.sponsors')
 @endsection

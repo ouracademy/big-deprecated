@@ -25,6 +25,10 @@ class EventTest extends TestCase
         $this->assertEquals($this->event->getName(),'Some name');
     }
     
+    public function testSlug(){
+        $this->assertEquals($this->event->getSlug(),'some-name');
+    }
+    
     public function testEventType(){
         $this->assertEquals($this->event->getEventType(),Event::CONFERENCE);
     }

@@ -11,12 +11,14 @@ class Event
 {
     const CONFERENCE = "Conference";
     private $name, $price, $description, $location, $timeRefence, $eventType;
+    private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
     
     public function __construct($name, $eventType){
         $this->name = $name;
         $this->setEventType($eventType);
         $this->eventRoles = new SplObjectStorage();
+        $this->slug = str_slug($name);
     }
     
     public function getName(){
@@ -37,6 +39,10 @@ class Event
                 throw new InvalidArgumentException("Wrong event type");
                 break;
         }
+    }
+    
+    public function getSlug(){
+        return $this->slug;
     }
     
     public function getPrice(){

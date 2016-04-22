@@ -11,12 +11,17 @@ section{
     padding-bottom: 15px;
 }
 
-a i{
+i{
     margin-left: 5px;
+    margin-right:2px;
 }
 
 .page-header{
     text-transform: uppercase;
+}
+
+#header .page-header{
+    text-transform: none;
 }
 
 .page-header small{
@@ -29,4 +34,16 @@ a i{
 
 a:hover{
     text-decoration:none;
+}
+
+main > .row{
+    margin:0;
+}
+    
+@media screen and (min-width: 768px)
+{
+    section .container{
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
 }

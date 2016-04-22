@@ -6,19 +6,19 @@
         <div class="col-md-8">
             @foreach($events as $event)
                 <h2>
-                    <a href="{{ route('event', [str_slug($event->getName())]) }}">{{$event->getName()}}</a>
+                    <a href="{{ route('event', $event->getSlug()) }}">{{$event->getName()}}</a>
                 </h2>
                 <p class="lead">
                     by <a href="index.php">Start Bootstrap</a>
                 </p>
-                <p><i class="fa fa-clock-o"></i> Posted on August 28, 2013 at 10:00 PM</p>
+                <p><i class="fa fa-clock-o"></i>Fecha: {{$event->getTimeReference()->format('d-m-Y')}}</p>
                 <hr>
-                <a href="{{ route('event', [str_slug($event->getName())]) }}">
+                <a href="{{ route('event', $event->getSlug()) }}">
                     <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">
                 </a>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <a class="btn btn-primary" href="#">Ver más <i class="fa fa-angle-right"></i></a>
+                <a class="btn btn-primary" href="{{ route('event', $event->getSlug()) }}">Ver más <i class="fa fa-angle-right"></i></a>
                 <hr>
             @endforeach
             

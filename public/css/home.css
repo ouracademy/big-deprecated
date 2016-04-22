@@ -1,7 +1,3 @@
-#about-us, #services, #sponsors{
-    margin:0;
-}
-
 .service .caption{
     margin-top: -20px;
 }
@@ -11,7 +7,7 @@
 }
 
 .carousel-inner>.item>a>img, .carousel-inner>.item>img {
-    height: 600px;
+    height: 620px;
     width: 100%;
 }
 
@@ -37,8 +33,8 @@
         font-size: 2em;
     }
     
-    #about-us, #services, #sponsors{
-        padding: 50px 100px;
-        margin:0;
+    section .container{
+        padding-bottom: 50px;
+        padding-top: 50px;
     }
 }

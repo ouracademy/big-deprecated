@@ -11,4 +11,7 @@ class TimePeriod extends Range implements TimeReference{
         parent::__construct($startDate, $endDate);
     }
    
+    public function format ($format){
+        
+    }
 }
