@@ -1,7 +1,15 @@
-.sponsor > img{
-    
+.jumbotron .container{
+    color:white;
 }
 
-.sponsor{
-    
+.jumbotron{
+    height:759px;
+}
+
+.jumbotron h1{
+    text-transform: uppercase;
+}
+
+.jumbotron.absolute-background .content{
+    top: 30%;
 }

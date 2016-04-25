@@ -1,0 +1,28 @@
+.absolute-background {
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.absolute-background .content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.absolute-background .background {
+    width: 100%;
+    height: 100%;
+}
+
+.black-background{
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.image-background{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
