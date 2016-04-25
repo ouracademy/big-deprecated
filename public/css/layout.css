@@ -43,3 +43,21 @@ main > .row{
         padding-top: 50px;
     }
 }
+
+
+/*Change this*/
+.jumbotron .container{
+    color:white;
+}
+
+.jumbotron{
+    height: 300px;
+}
+
+.jumbotron h1{
+    text-transform: uppercase;
+}
+
+.jumbotron.absolute-background .content{
+    top: 30%;
+}
