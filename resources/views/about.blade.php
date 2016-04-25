@@ -20,7 +20,7 @@
             {!! Breadcrumbs::render() !!}
         </div>
     </section>
-    <section class="row" id="intro">
+    <section id="intro">
         <div class="container">
             <div class="col-md-6">
                 <img class="img-responsive" src="{{asset('img/team.jpg')}}" alt="">
@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <section class="row" id="team">
+    <section id="team">
         <div class="container">
             <div class="col-lg-12">
                 <h3 class="page-header">Nuestro equipo</h3>

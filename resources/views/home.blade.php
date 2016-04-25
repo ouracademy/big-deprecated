@@ -46,7 +46,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <section class="row" id="about-us">
+    <section id="about-us">
         <div class="container">
           <div class="col-md-6">
               <h3 class="page-header">Nosotros</h3>
@@ -61,7 +61,7 @@
           </div>
         </div>
     </section>
-    <section class="row gray" id="services">
+    <section class="gray" id="services">
         <div class="container">
           <div class="col-md-6">
               <img class="img-responsive" src="{{asset('img/home/startup.jpg')}}" width="400px" alt="Nuestros servicios">    

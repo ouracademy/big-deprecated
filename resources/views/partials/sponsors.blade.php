@@ -1,4 +1,4 @@
-<section class="row" id="sponsors">
+<section id="sponsors">
     <div class="container">
         <div class="col-lg-12">
             <h3 class="page-header">Nuestros patrocinadores</h3>
