@@ -12,6 +12,10 @@ i{
     margin-right:2px;
 }
 
+.navbar-default .navbar-nav>li>a {
+    text-transform: uppercase;
+}
+
 .page-header{
     text-transform: uppercase;
 }

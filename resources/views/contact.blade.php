@@ -5,8 +5,8 @@
     {!! Html::style('css/absolute-background.css') !!}
 @endsection
 @section('content')
-    <header class="jumbotron absolute-background image-background" 
-        style="background-image: url('http://big-marthur.c9users.io/public/img/utiles/business-world.jpg')">
+    <div class="jumbotron absolute-background image-background" 
+        style="background-image: url('http://big-marthur.c9users.io/public/img/contact/business-world.jpg')">
         <div class="background black-background"></div>
         <div class="content text-center">
             <div class="container">
@@ -14,7 +14,7 @@
                 <p>Conéctate con nosotros</p>
             </div>
         </div>
-    </header>
+    </div>
     <section class="container">
         <div class="col-lg-12">
             {!! Breadcrumbs::render() !!}
