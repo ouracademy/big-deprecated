@@ -48,31 +48,36 @@
     </div>
     <section id="about-us">
         <div class="container">
-          <div class="col-md-6">
-              <h3 class="page-header">Nosotros</h3>
+          <div class="col-md-8 center-block text-center">
+              <h2 class="page-header">Nosotros</h2>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
               sed diam nonummy nibh euismod tincidunt ut laoreet dolore
               magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
               quis nostrud </p>
-              <a href="{{url('about')}}" class="btn btn-primary">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
-          </div>
-          <div class="col-md-6">
-              <img class="img-responsive" src="{{asset('img/home/about-us.jpg')}}" width="400px" alt="Nosotros">    
           </div>
         </div>
     </section>
     <section class="gray" id="services">
         <div class="container">
-          <div class="col-md-6">
-              <img class="img-responsive" src="{{asset('img/home/startup.jpg')}}" width="400px" alt="Nuestros servicios">    
-          </div>
-          <div class="col-md-6">
-              <h3 class="page-header">Nuestros servicios</h3>
+          <div class="col-md-8 center-block text-center">
+              <h2 class="page-header">Nuestros servicios</h2>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
               sed diam nonummy nibh euismod tincidunt ut laoreet dolore
               magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
               quis nostrud </p>
-              <a href="{{url('services')}}" class="btn btn-primary">Ver más<i class="glyphicon glyphicon-arrow-right"></i></a>
+          </div>
+          <div class="row">    
+            <div class="col-md-8 center-block text-center">
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                    <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                </div>
+            </div>
           </div>
         </div>
     </section>

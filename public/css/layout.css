@@ -48,7 +48,6 @@ main > .row{
     }
 }
 
-
 /*Change this*/
 .jumbotron .container{
     color:white;
@@ -64,4 +63,8 @@ main > .row{
 
 .jumbotron.absolute-background .content{
     top: 30%;
+}
+
+.center-block{
+    float: none;
 }

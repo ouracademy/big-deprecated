@@ -1,16 +1,22 @@
 <section id="sponsors">
     <div class="container">
-        <div class="col-lg-12">
-            <h3 class="page-header">Nuestros patrocinadores</h3>
-        </div>
-        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="sponsor col-md-2 col-sm-4 col-xs-6">
-            <img class="img-responsive" src="http://placehold.it/500x300" alt="">
+        <div class="row">
+            <div class="col-md-8 center-block text-center">
+                <h2 class="page-header">Nuestros patrocinadores</h2>
+            </div>
+        </div>    
+        <div class="row">    
+            <div class="col-md-8 center-block text-center">
+                <div class="sponsor col-md-4 col-sm-4 col-xs-6">
+                    <img class="img-responsive" src="http://placehold.it/500x300" alt="">
+                </div>
+                <div class="sponsor col-md-4 col-sm-4 col-xs-6">
+                    <img class="img-responsive" src="http://placehold.it/500x300" alt="">
+                </div>
+                <div class="sponsor col-md-4 col-sm-4 col-xs-6">
+                    <img class="img-responsive" src="http://placehold.it/500x300" alt="">
+                </div>
+            </div>
         </div>
     </div>
 </section>
