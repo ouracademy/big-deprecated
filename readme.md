@@ -1,6 +1,6 @@
 # Business Ideas Group WebApp
 
-Business Ideas Group WebApp is a web application for Business Ideas Group, it contains:
+Business Ideas Group WebApp is a web application for Business Ideas Group, it contains: 
 1. The official web page
   1. Home
   2. About
