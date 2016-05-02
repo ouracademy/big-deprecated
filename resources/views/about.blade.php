@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('title', 'Nosotros')
 @section('head')
-    {!! Html::style('css/about.css') !!}
     {!! Html::style('css/absolute-background.css') !!}
 @endsection
 @section('content')
