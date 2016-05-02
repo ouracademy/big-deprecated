@@ -24,6 +24,14 @@
     
 @media screen and (min-width: 768px)
 {
+    section .container{
+        padding-top: 50px;
+    }
+    
+    section p{
+        font-size: 1.2em;
+    }
+    
     .carousel-inner>.item>a>img, .carousel-inner>.item>img {
         height: 620px;
         width: 100%;
@@ -40,6 +48,4 @@
     .carousel-caption p{
         font-size: 2em;
     }
-    
-    
 }

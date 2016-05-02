@@ -26,7 +26,7 @@
   
 	<div class="footer-bottom">
 		<div class="container">
-			<p class="pull-left">Copyright © Business Ideas Group 2016  - 
+			<p class="pull-left">Copyright © 2016 Business Ideas Group (BIG).   
 			Diseñado por BIG y <a href="https://www.facebook.com/Ouracademy-661881453944170/?fref=ts">Ouracademy</a></p>
 		</div>
 	</div>

@@ -1,8 +1,12 @@
 # Business Ideas Group WebApp
 
 Business Ideas Group WebApp is a web application for Business Ideas Group, it contains:
--The official web page(Home, Contact Us, About, Events)
--Some classes for Events(Conferences, Workshops, Courses)
+1. The official web page
+  1. Home
+  2. About
+  3. Contact Us
+  4. Events
+2. Some classes for Events(Conferences, Workshops, Courses)
 
 ## License
 
