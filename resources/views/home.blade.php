@@ -50,10 +50,8 @@
         <div class="container">
           <div class="col-md-8 center-block text-center">
               <h2 class="page-header">Nosotros</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-              quis nostrud </p>
+              <p>BIG es una empresa peruana que fomenta la cultura emprendedora
+              en el país a través de talleres, seminarios, cursos y conferencias.</p>
           </div>
         </div>
     </section>
@@ -61,21 +59,22 @@
         <div class="container">
           <div class="col-md-8 center-block text-center">
               <h2 class="page-header">Nuestros servicios</h2>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-              sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-              magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-              quis nostrud </p>
           </div>
           <div class="row">    
             <div class="col-md-8 center-block text-center">
                 <div class="col-md-4 col-sm-4 col-xs-6">
-                    <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                    <div class="icon-ball">
+                      <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+                    </div>
+                    <h4>Cursos</h4>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-6">
                     <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+                    <h4>Talleres y Seminarios</h4>
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-6">
                     <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                    <h4>Conferencias</h4>
                 </div>
             </div>
           </div>

@@ -21,14 +21,46 @@
     </section>
     <section id="intro">
         <div class="container">
-            <div class="col-md-6">
-                <img class="img-responsive" src="{{asset('img/about/workshop.jpg')}}" alt="">
-            </div>
-            <div class="col-md-6">
-                <h2 class="page-header">BIG: Business Ideas Group</h2>
+            <div class="col-md-4">
+                <h2>Nosotros</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+            </div>
+            <div class="col-md-8">
+                <h2>¿Por qué nosotros?</h2>
+                <div class="media">
+					<div class="media-left">
+						<div class="">
+							<i class="fa fa-check "></i>
+						</div>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Experiencia</h4>
+						<p>Somos una empresa dedicada al comercio exterior con 5 años de experiencia en este rubro.</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<div class="">
+							<i class="fa fa-check "></i>
+						</div>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Experiencia</h4>
+						<p>Somos una empresa dedicada al comercio exterior con 5 años de experiencia en este rubro.</p>
+					</div>
+				</div>
+				<div class="media">
+					<div class="media-left">
+						<div class="">
+							<i class="fa fa-check "></i>
+						</div>
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Experiencia</h4>
+						<p>Somos una empresa dedicada al comercio exterior con 5 años de experiencia en este rubro.</p>
+					</div>
+				</div>
             </div>
         </div>
     </section>

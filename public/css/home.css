@@ -29,7 +29,11 @@
     }
     
     section p{
-        font-size: 1.2em;
+        font-size: 1.4em;
+    }
+    
+    section .glyphicon{
+        font-size:4em;
     }
     
     .carousel-inner>.item>a>img, .carousel-inner>.item>img {

@@ -2,10 +2,10 @@
 	<div class="footer-top container">
 		<div class="row">
 			<div class="col-md-6 col-sm-6">
-				<h4 class="title">Quiénes somos</h4>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-				sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-				magna aliquam erat volutpat.</p>
+				<h4 class="title">¿Quiénes somos?</h4>
+				<p>BIG es una empresa peruana que fomenta la cultura
+				emprendedora en el país a través de talleres, seminarios,
+				cursos y conferencias.</p>
 				<a href="{{url('about')}}">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
 			</div>
 			

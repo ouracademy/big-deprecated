@@ -23,7 +23,7 @@
     <section>
         <div class="container">
             <div class="col-md-8">
-                <h3>Envíenos su mensaje</h3>
+                <h2>Envíenos su mensaje</h2>
                 <form name="sentMessage" id="contactForm">
                     <div class="control-group form-group">
                         <div class="controls">
@@ -49,7 +49,7 @@
                 </form>
             </div>
             <div class="col-md-4 contact-details">
-                <h3>Detalles de contacto</h3>
+                <h2>Detalles de contacto</h2>
                 <ul class="list-unstyled">
                     <li>
                         <i class="fa fa-map-marker"></i>Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)
