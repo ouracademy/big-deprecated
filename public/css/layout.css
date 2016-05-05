@@ -16,12 +16,12 @@ i{
     text-transform: uppercase;
 }
 
-.page-header{
-    text-transform: uppercase;
-}
-
 #header .page-header{
     text-transform: none;
+}
+
+.page-header{
+    border-bottom: none;
 }
 
 .page-header small{
