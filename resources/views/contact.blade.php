@@ -24,29 +24,29 @@
         <div class="container">
             <div class="col-md-8">
                 <h2 class="page-header">Envíenos su mensaje</h2>
-                <form name="sentMessage" id="contactForm">
+                {!! Form::open(['route' => 'contact', 'name' => 'sentMessage']) !!}
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Nombre completo:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            {!! Form::label('name', 'Nombre completo') !!}
+                            {!! Form::text('name', null, ['required', 'class' =>'form-control']) !!}
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Dirección de email:</label>
-                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                            {!! Form::label('email', 'Dirección de email:') !!}
+                            {!! Form::email('email', null, ['required', 'class' =>'form-control']) !!}
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Mensaje:</label>
-                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                            {!! Form::label('message', 'Mensaje:') !!}
+                            {!! Form::textarea('message', null, ['required', 'class' =>'form-control', 'rows'=>'10', 'cols'=>'100', 'maxlength'=>'999']) !!}
                         </div>
                     </div>
                     <div id="success"></div><!-- For success/fail messages -->
                     <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                </form>
+                {!! Form::close() !!}
             </div>
             <div class="col-md-4 contact-details">
                 <h2 class="page-header">Detalles de contacto</h2>

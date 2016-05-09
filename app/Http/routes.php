@@ -15,7 +15,6 @@ Route::get('/', 'HomeController@home');
 Route::get('home', ['as' => 'home', 'uses' => 'HomeController@home']);
 Route::get('about', ['as' => 'about', 'uses' => 'HomeController@about']);
 Route::get('services', ['as' => 'services', 'uses' => 'HomeController@services']);
-Route::get('contact', ['as' => 'contact', 'uses' => 'HomeController@contact']);
 Route::get('events', ['as' => 'events', 'uses' => 'EventController@index']);
 Route::get('event/{event}', ['as' => 'event', 'uses' => 'EventController@show']);
 
@@ -31,5 +30,6 @@ Route::get('event/{event}', ['as' => 'event', 'uses' => 'EventController@show'])
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@getContact']);
+    Route::post('contact', 'ContactController@postContact');
 });
