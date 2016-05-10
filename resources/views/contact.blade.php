@@ -23,6 +23,11 @@
     <section>
         <div class="container">
             <div class="col-md-8">
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
                 <h2 class="page-header">Envíenos su mensaje</h2>
                 {!! Form::open(['route' => 'contact', 'name' => 'sentMessage']) !!}
                     <div class="control-group form-group">
@@ -58,8 +63,8 @@
                         <i class="fa fa-phone"></i>(01) 226-5452</li>
                     <li>
                         <i class="fa fa-envelope-o"></i>
-                        <a href="mailto:informes@businessideasgroup.com.pe">
-                            informes@businessideasgroup.com.pe</a>
+                        <a href="mailto:{{ $BIG->getEmail() }}">
+                            {{ $BIG->getEmail() }}</a>
                     </li>
                     <li><i class="fa fa-clock-o"></i>Lunes - Viernes: 9:00 AM a 10:00 PM</li>
                     <ul class="list-unstyled list-inline list-social-icons">

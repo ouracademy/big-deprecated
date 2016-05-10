@@ -4,7 +4,7 @@ class NamedObject
 {
     private $name;
     
-    public function __construct($name){
+    public function __construct($name = 'no name'){
         $this->name = $name;
     }
     
@@ -12,8 +12,7 @@ class NamedObject
         return $this->name;
     }
     
-    public function __toString()
-    {
+    public function __toString(){
         return $this->name;
     }
 }
