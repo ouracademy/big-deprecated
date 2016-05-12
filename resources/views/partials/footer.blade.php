@@ -19,7 +19,10 @@
 						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 					</ul>
 				</div>
-				<p>Establezca una mejor relación con nosotros en nuestras redes sociales</p>
+				<p>Establezca una mejor relación con nosotros a través nuestras
+				redes sociales. Envíenos sus preguntas, dudas y sugerencias.
+				Estaremos muy agradecidos en responderle y ofrecerle el mejor
+				servicio.</p>
 			</div>
 		</div> 
 	</div>

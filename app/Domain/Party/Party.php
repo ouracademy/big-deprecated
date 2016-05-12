@@ -4,7 +4,7 @@ use App\Support\NamedObject;
 use App\Domain\Event\EventRole;
 use SplObjectStorage;
 
-class Party extends NamedObject
+abstract class Party extends NamedObject
 {
     private $email;
     private $eventRoles;
@@ -21,7 +21,6 @@ class Party extends NamedObject
     public function getEmail(){
         return $this->email;
     }
-    
     
     function friendAddEventRole(EventRole $eventRole){
         $this->eventRoles->attach($eventRole);

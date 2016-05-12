@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="{{asset('img/home/slider/workshop.jpg')}}" alt="...">
+          <img src="{{asset('img/home/slider/business-people.jpg')}}" alt="...">
           <div class="carousel-caption">
             <h3>Creando la nueva generación de emprendedores</h3>
             <p>...</p>
