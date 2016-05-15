@@ -1,6 +1,6 @@
 <?php
 
-use App\Support\Range;
+use App\Domain\Support\Range;
 
 class RangeTest extends TestCase
 {

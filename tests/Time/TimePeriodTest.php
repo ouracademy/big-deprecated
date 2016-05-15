@@ -1,7 +1,7 @@
 <?php
 
-use App\Time\TimePeriod;
-use App\Time\TimePoint;
+use App\Domain\Time\TimePeriod;
+use App\Domain\Time\TimePoint;
 
 class TimePeriodTest extends TestCase
 {

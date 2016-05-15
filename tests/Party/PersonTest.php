@@ -19,4 +19,9 @@ class PersonTest extends TestCase
         $this->arthur->setEmail('amd11dot4@gmail.com');
         $this->assertEquals('amd11dot4@gmail.com', $this->arthur->getEmail());
     }
+    
+    public function testLocation(){
+        $this->arthur->setLocation('San Borja(Perú, Lima 36)');
+        $this->assertEquals('San Borja(Perú, Lima 36)', $this->arthur->getLocation());
+    }
 }

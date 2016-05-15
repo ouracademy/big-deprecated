@@ -1,9 +1,9 @@
 <?php
 
 use App\Domain\Event\Event;
-use App\Money\Money;
-use App\Money\Currency;
-use App\Time\TimePoint;
+use App\Domain\Money\Money;
+use App\Domain\Money\Currency;
+use App\Domain\Time\TimePoint;
 use App\Domain\Party\Person;
 use App\Domain\Event\EventRole;
 use App\Domain\Event\EventRoleType;

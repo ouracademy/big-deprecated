@@ -1,4 +1,4 @@
-<?php namespace App\Support;
+<?php namespace App\Domain\Support;
 
 class NamedObject
 {

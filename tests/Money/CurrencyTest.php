@@ -1,6 +1,6 @@
 <?php
 
-use App\Money\Currency;
+use App\Domain\Money\Currency;
 
 class CurrencyTest extends TestCase
 {

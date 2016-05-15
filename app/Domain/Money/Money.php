@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Money;
-
-use App\Money\Currency;
+namespace App\Domain\Money;
 
 class Money
 {

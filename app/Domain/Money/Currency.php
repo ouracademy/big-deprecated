@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Money;
-use App\Support\NamedObject;
+namespace App\Domain\Money;
+use App\Domain\Support\NamedObject;
 
 class Currency extends NamedObject
 {

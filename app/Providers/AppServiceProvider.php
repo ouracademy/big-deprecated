@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Data\EventRepository;
 use App\Domain\Event\Event;
-use App\Time\TimePoint;
+use App\Domain\Time\TimePoint;
 
 class AppServiceProvider extends ServiceProvider
 {

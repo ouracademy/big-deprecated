@@ -1,7 +1,7 @@
 <?php
 
-namespace App\Time;
-use App\Support\Range;
+namespace App\Domain\Time;
+use App\Domain\Support\Range;
 
 class TimePeriod extends Range implements TimeReference{
     //TODO Change if want to create open time periods

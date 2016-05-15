@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Support;
+namespace App\Domain\Support;
 
 /**
  * A range between magnitudes

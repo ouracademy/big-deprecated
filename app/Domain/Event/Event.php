@@ -1,7 +1,7 @@
 <?php namespace App\Domain\Event;
 
-use App\Money\Money;
-use App\Time\TimeReference;
+use App\Domain\Money\Money;
+use App\Domain\Time\TimeReference;
 use InvalidArgumentException;
 use App\Domain\Party\Party;
 use SplObjectStorage;
@@ -10,6 +10,8 @@ use SplObjectStorage;
 class Event
 {
     const CONFERENCE = "Conference";
+    const WORKSHOP = "Workshop";
+    
     private $name, $price, $description, $location, $timeRefence, $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns

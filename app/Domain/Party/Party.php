@@ -1,12 +1,12 @@
 <?php namespace App\Domain\Party;
 
-use App\Support\NamedObject;
+use App\Domain\Support\NamedObject;
 use App\Domain\Event\EventRole;
 use SplObjectStorage;
 
 abstract class Party extends NamedObject
 {
-    private $email;
+    private $email, $location;
     private $eventRoles;
     
     public function __construct($name){
@@ -20,6 +20,15 @@ abstract class Party extends NamedObject
     
     public function getEmail(){
         return $this->email;
+    }
+    
+    
+    public function setLocation($location){
+        $this->location = $location;
+    }
+    
+    public function getLocation(){
+        return $this->location;
     }
     
     function friendAddEventRole(EventRole $eventRole){

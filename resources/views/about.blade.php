@@ -23,8 +23,18 @@
         <div class="container">
             <div class="col-md-4">
                 <h2 class="page-header">Nosotros</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
+                <p>Business Ideas Group (BIG) es una empresa peruana que fomenta la cultura
+                emprendedora en el país a través de talleres, seminarios,
+                cursos, conferencias y consultorías en temas como:</p>
+                <ul>
+                	<li>Comercio Exterior</li>
+                	<li>Emprendimiento</li>
+                	<li>STARTUP</li>
+                	<li>Gestión Empresarial</li>
+                	<li>Innovación y Tecnología</li>
+                	<li>Marketing Digital</li>
+                	<li>TI</li>
+                </ul>
             </div>
             <div class="col-md-8">
                 <h2 class="page-header">¿Por qué nosotros?</h2>

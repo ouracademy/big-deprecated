@@ -1,7 +1,7 @@
 <?php namespace App\Data;
 
 use App\Domain\Event\Event;
-use App\Support\Set;
+use App\Domain\Support\Set;
 
 class EventRepository
 {   

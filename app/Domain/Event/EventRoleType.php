@@ -1,6 +1,6 @@
 <?php namespace App\Domain\Event;
 
-use App\Support\NamedObject;
+use App\Domain\Support\NamedObject;
 
 class EventRoleType extends NamedObject{
     public static $EVENT_ROLE_TYPES;

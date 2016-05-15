@@ -1,6 +1,6 @@
 <?php
 
-use App\Time\TimePoint;
+use App\Domain\Time\TimePoint;
 
 class TimePointTest extends TestCase
 {

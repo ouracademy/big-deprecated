@@ -57,7 +57,8 @@
                 <h2 class="page-header">Detalles de contacto</h2>
                 <ul class="list-unstyled">
                     <li>
-                        <i class="fa fa-map-marker"></i>Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)
+                        <i class="fa fa-map-marker"></i>
+                        {{ $BIG->getLocation() }}
                     </li>
                     <li>
                         <i class="fa fa-phone"></i>(01) 226-5452</li>

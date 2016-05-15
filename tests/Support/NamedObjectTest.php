@@ -1,6 +1,6 @@
 <?php
 
-use App\Support\NamedObject;
+use App\Domain\Support\NamedObject;
 
 class NamedObjectTest extends TestCase
 {

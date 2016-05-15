@@ -1,6 +1,6 @@
 <?php namespace App\Domain\Party;
 
-use App\Support\NamedObject;
+use App\Domain\Support\NamedObject;
 
 class Organization extends Party
 {

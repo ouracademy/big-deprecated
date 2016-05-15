@@ -18,6 +18,7 @@ class ContactController extends Controller
         
         $this->BIG = new Organization('BIG');
         $this->BIG->setEmail('informes@businessideasgroup.com.pe');
+        $this->BIG->setLocation('Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)');
     }
     
     public function getContact(){

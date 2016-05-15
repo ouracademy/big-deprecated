@@ -18,6 +18,8 @@ Route::get('services', ['as' => 'services', 'uses' => 'HomeController@services']
 Route::get('events', ['as' => 'events', 'uses' => 'EventController@index']);
 Route::get('event/{event}', ['as' => 'event', 'uses' => 'EventController@show']);
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

@@ -1,4 +1,4 @@
-<?php namespace App\Time;
+<?php namespace App\Domain\Time;
 
 use \DateTimeImmutable;
 use \DateTime;
