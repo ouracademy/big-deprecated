@@ -19,3 +19,20 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Event::class, function (Faker\Generator $faker) {
+    $name = $faker->name;
+    $start = $faker->dateTime;
+    
+    return [
+        'name' => $name,
+        'slug' => str_slug($name),
+        'price_amount' => $faker->randomNumber(2),
+        'price_currency' => $faker->currencyCode,
+        'location' => $faker->address,
+        'description' => $faker->text,
+        'start' => $start,
+        'end' => $faker->dateTimeBetween($start),
+        'type' => $faker->randomElement([App\Domain\Event\Event::CONFERENCE, App\Domain\Event\Event::WORKSHOP])
+    ];
+});

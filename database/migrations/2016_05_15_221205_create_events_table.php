@@ -4,7 +4,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use App\Domain\Event\Event;
 
-class CreateEventTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateEventTable extends Migration
      */
     public function up()
     {
-        Schema::create('event', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
             $table->string('slug', 100);
@@ -23,7 +23,7 @@ class CreateEventTable extends Migration
             $table->text('description');
             $table->dateTime('start');
             $table->dateTime('end');
-            $table->enum('type', [Event::CONFERENCE, EVENT::WORKSHOP]);        
+            $table->enum('type', [Event::CONFERENCE, EVENT::WORKSHOP]);   
             $table->timestamps();
         });
     }
@@ -35,6 +35,6 @@ class CreateEventTable extends Migration
      */
     public function down()
     {
-        Schema::drop('event');
+        Schema::drop('events');
     }
 }

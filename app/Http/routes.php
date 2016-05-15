@@ -15,6 +15,9 @@ Route::get('/', 'HomeController@home');
 Route::get('home', ['as' => 'home', 'uses' => 'HomeController@home']);
 Route::get('about', ['as' => 'about', 'uses' => 'HomeController@about']);
 Route::get('services', ['as' => 'services', 'uses' => 'HomeController@services']);
+/*Route::get('events', function(){
+    dd(App\Event::all());
+});*/
 Route::get('events', ['as' => 'events', 'uses' => 'EventController@index']);
 Route::get('event/{event}', ['as' => 'event', 'uses' => 'EventController@show']);
 
