@@ -11,14 +11,14 @@ use App\Domain\Event\EventRoleType;
 class EventTest extends TestCase
 {
     public function setUp(){
-        $this->event= new Event("Some name", Event::CONFERENCE);
+        $this->event= Event::CONFERENCE("Some name");
     }
     
     /**
      * @expectedException InvalidArgumentException
      */
     public function testWrongEventType(){
-        new Event("A wrong event","A wrong type");
+        new Event("A wrong event", "A wrong event type");
     }
     
     public function testName(){
@@ -30,7 +30,8 @@ class EventTest extends TestCase
     }
     
     public function testEventType(){
-        $this->assertEquals($this->event->getEventType(),Event::CONFERENCE);
+        //TODO change 'CONFERENCE' to EventTypes::CONFERENCE()
+        $this->assertEquals($this->event->getEventType(),'CONFERENCE');
     }
     
     public function testLocation(){

@@ -23,7 +23,7 @@ class CreateEventsTable extends Migration
             $table->text('description');
             $table->dateTime('start');
             $table->dateTime('end');
-            $table->enum('type', [Event::CONFERENCE, EVENT::WORKSHOP]);   
+            $table->enum('type', Event::$types);   
             $table->timestamps();
         });
     }

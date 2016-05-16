@@ -33,6 +33,14 @@ $factory->define(App\Event::class, function (Faker\Generator $faker) {
         'description' => $faker->text,
         'start' => $start,
         'end' => $faker->dateTimeBetween($start),
-        'type' => $faker->randomElement([App\Domain\Event\Event::CONFERENCE, App\Domain\Event\Event::WORKSHOP])
+        'type' => $faker->randomElement(App\Domain\Event\Event::$types)
+    ];
+});
+
+$factory->define(App\Party::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->email,
+        'location' => $faker->address
     ];
 });

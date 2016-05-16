@@ -29,13 +29,13 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->singleton(EventRepository::class, function () {
             $eventRepository = new EventRepository();
-            $lean = new Event("¿Por qué el Lean Startup lo va a cambiar todo ?", Event::CONFERENCE);
+            $lean = Event::CONFERENCE("¿Por qué el Lean Startup lo va a cambiar todo ?");
             $lean->setTimeReference(TimePoint::createFromDate(01, 03, 2016));
             
-            $startup = new Event("STARTUP WEEKEND EBUSINESS", Event::CONFERENCE);
+            $startup = Event::CONFERENCE("STARTUP WEEKEND EBUSINESS");
             $startup->setTimeReference(TimePoint::createFromDate(20, 03, 2016));
             
-            $xp = new Event("Extreme Programming 20 years later by Kent Beck", Event::CONFERENCE);
+            $xp = Event::CONFERENCE("Extreme Programming 20 years later by Kent Beck");
             $xp->setTimeReference(TimePoint::createFromDate(04, 05, 2016));
             
             $eventRepository->add($lean);

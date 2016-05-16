@@ -9,12 +9,18 @@ use SplObjectStorage;
 //TODO add photo property
 class Event
 {
-    const CONFERENCE = "Conference";
-    const WORKSHOP = "Workshop";
+    public static $types = [
+        "CONFERENCE", "WORKSHOP"
+        ];
     
     private $name, $price, $description, $location, $timeRefence, $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
+    
+    public static function __callStatic($method, $arguments)
+    {
+        return new self($arguments[0], $method);
+    }
     
     public function __construct($name, $eventType){
         $this->name = $name;
@@ -32,14 +38,10 @@ class Event
     }
     
     private function setEventType($eventType){
-        switch ($eventType) {
-            case self::CONFERENCE:
-                $this->eventType = $eventType;
-                break;
-            
-            default:
-                throw new InvalidArgumentException("Wrong event type");
-                break;
+        if(in_array($eventType,self::$types)){
+            $this->eventType = $eventType; 
+        }else {
+            throw new InvalidArgumentException("Wrong event type");
         }
     }
     
