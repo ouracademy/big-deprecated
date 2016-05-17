@@ -44,3 +44,17 @@ $factory->define(App\Party::class, function (Faker\Generator $faker) {
         'location' => $faker->address
     ];
 });
+
+$factory->defineAs(App\Party::class, 'organization',  function ($faker) use ($factory) {
+    $user = $factory->raw(App\Party::class);
+    return array_merge($user, ['type' => 'organization']);
+});
+
+$factory->defineAs(App\Party::class, 'person',  function ($faker) use ($factory) {
+    $user = $factory->raw(App\Party::class);
+    return array_merge($user, ['type' => 'person']);
+});
+
+$factory->define(App\Organization::class, function (Faker\Generator $faker) {
+    return [];
+});

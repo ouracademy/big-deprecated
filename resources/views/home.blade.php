@@ -14,24 +14,21 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="{{asset('img/home/slider/lean-canvas-strategyzer.jpg')}}" alt="...">
+          <img src="{{asset('img/home/slider/lean-canvas-strategyzer.jpg')}}" alt="strategy">
           <div class="carousel-caption">
             <h3>Bienvenido al mundo de las ideas</h3>
-            <p>Ayudamos a convertir su idea en un negocio</p>
           </div>
         </div>
         <div class="item">
-          <img src="{{asset('img/home/slider/conference.jpg')}}" alt="...">
+          <img src="{{asset('img/home/slider/conference.jpg')}}" alt="conference">
           <div class="carousel-caption">
             <h3>Grandes personas vienen de una gran educación</h3>
-            <p>...</p>
           </div>
         </div>
         <div class="item">
-          <img src="{{asset('img/home/slider/business-people.jpg')}}" alt="...">
+          <img src="{{asset('img/home/slider/business-people.jpg')}}" alt="business-people">
           <div class="carousel-caption">
             <h3>Creando la nueva generación de emprendedores</h3>
-            <p>...</p>
           </div>
         </div>
       </div>
@@ -51,7 +48,7 @@
           <div class="col-md-8 center-block text-center">
               <h2 class="page-header">Nosotros</h2>
               <p>BIG es una empresa peruana que fomenta la cultura emprendedora
-              en el país a través de talleres, seminarios, cursos y conferencias.</p>
+              en el país a través de talleres, seminarios, cursos y conferencias en temas de negocios y TI.</p>
           </div>
         </div>
     </section>

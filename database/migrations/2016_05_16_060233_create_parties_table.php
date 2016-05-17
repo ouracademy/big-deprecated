@@ -15,7 +15,7 @@ class CreatePartiesTable extends Migration
         Schema::create('parties', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
-            //TODO add type as enum
+            $table->enum('type', ['person', 'organization']);
             $table->string('email', 100);
             $table->string('location', 100);
             $table->timestamps();

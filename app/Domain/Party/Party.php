@@ -22,7 +22,6 @@ abstract class Party extends NamedObject
         return $this->email;
     }
     
-    
     public function setLocation($location){
         $this->location = $location;
     }
