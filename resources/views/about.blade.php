@@ -41,34 +41,34 @@
                 <div class="media">
 					<div class="media-left">
 						<div class="">
-							<i class="fa fa-check "></i>
+							<i class="glyphicon glyphicon-star"></i>
 						</div>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">Experiencia</h4>
-						<p>Somos una empresa dedicada al comercio exterior con 5 años de experiencia en este rubro.</p>
+						<h4 class="media-heading">Servicio Premium</h4>
+						<p>Brindamos educación empresarial de primer nivel a través de ponencias magistrales.</p>
 					</div>
 				</div>
 				<div class="media">
 					<div class="media-left">
 						<div class="">
-							<i class="fa fa-check "></i>
+							<i class="glyphicon glyphicon-education"></i>
 						</div>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">Experiencia</h4>
-						<p>Somos una empresa dedicada al comercio exterior con 5 años de experiencia en este rubro.</p>
+						<h4 class="media-heading">Diversidad de Ponencias</h4>
+						<p>Brindamos una gran variedad  de ponencias que abarcan desde innovación hasta TI</p>
 					</div>
 				</div>
 				<div class="media">
 					<div class="media-left">
 						<div class="">
-							<i class="fa fa-check "></i>
+							<i class="glyphicon glyphicon-user"></i>
 						</div>
 					</div>
 					<div class="media-body">
-						<h4 class="media-heading">Experiencia</h4>
-						<p>Somos una empresa dedicada al comercio exterior con 5 años de experiencia en este rubro.</p>
+						<h4 class="media-heading">Equipo profesional</h4>
+						<p>Contamos con un Staff de gran experiencia que laboran en prestigiosas entidades públicas y privadas</p>
 					</div>
 				</div>
             </div>
