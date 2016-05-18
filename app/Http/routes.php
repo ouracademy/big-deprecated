@@ -15,8 +15,9 @@ Route::get('/', 'HomeController@home');
 Route::get('home', ['as' => 'home', 'uses' => 'HomeController@home']);
 Route::get('about', ['as' => 'about', 'uses' => 'HomeController@about']);
 Route::get('services', ['as' => 'services', 'uses' => 'HomeController@services']);
-/*Route::get('events', function(){
-    dd(App\Event::all());
+/*Route::get('test', function(){
+    $events = EntityManager::getRepository(App\Domain\Event\Event::class)->findAll();//EntityManager::find('App\Domain\Event\Event', 1);
+    dd($events);
 });*/
 
 /*Route::get('organization', function(){

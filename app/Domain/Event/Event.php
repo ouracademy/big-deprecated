@@ -13,7 +13,7 @@ class Event
         "CONFERENCE", "WORKSHOP"
         ];
     
-    private $name, $price, $description, $location, $timeRefence, $eventType;
+    private $id, $name, $price, $description, $location, $timeRefence, $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
     
