@@ -18,3 +18,9 @@ App\Domain\Event\Event:
     eventType:
       type: string
       column: type
+    priceAmount:
+      type: integer
+      column: price_amount
+    priceCurrencyCode:
+      type: string
+      column: price_currency

@@ -2,5 +2,4 @@
 
 interface TimeReference
 {
-    public function format ($format);
 }

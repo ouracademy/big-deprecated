@@ -2,8 +2,8 @@
 
 use App\Domain\Event\Event;
 use App\Domain\Money\Money;
-use App\Domain\Money\Currency;
-use App\Domain\Time\TimePoint;
+use App\Domain\Money\Currencies;
+use App\Domain\Time\TimePeriod;
 use App\Domain\Party\Person;
 use App\Domain\Event\EventRole;
 use App\Domain\Event\EventRoleType;
@@ -40,7 +40,7 @@ class EventTest extends TestCase
     }
     
     public function testPrice(){
-        $price = new Money(50, Currency::SOLES());
+        $price = new Money(50, Currencies::SOL());
         $this->event->setPrice($price);
         $this->assertEquals($this->event->getPrice(),$price);
     }
@@ -50,9 +50,10 @@ class EventTest extends TestCase
         $this->assertEquals($this->event->getDescription(),'Some description');
     }
     
-    public function testTimeReference(){
-        $this->event->setTimeReference(TimePoint::createFromDate(24, 03, 2016));
-        $this->assertEquals($this->event->getTimeReference(), TimePoint::createFromDate(24, 03, 2016));
+    public function testTimePeriod(){
+        $timePeriod = new TimePeriod(date_create('28-03-2016'),date_create('04-04-2016'));
+        $this->event->setTimePeriod($timePeriod);
+        $this->assertEquals($this->event->getTimePeriod(), $timePeriod);
     }
     
     public function testAddPerformer(){

@@ -5,26 +5,23 @@ use App\Domain\Support\NamedObject;
 
 class Currency extends NamedObject
 {
-    public static $CURRENCIES;
-    private $symbol;
+    private $code, $name, $symbol;
     
-    public function __construct($name, $symbol){
+    public function __construct($code, $name, $symbol){
         parent::__construct($name);
+        $this->code = $code;
         $this->symbol = $symbol;
     }
     
-    //Used to don't access Currency::$CURRENCIES['SOLES']
-    public static function __callStatic($name, $arguments)
-    {
-        return self::$CURRENCIES[$name];
+    public static function getBuilder($code){
+        return new CurrencyBuilder($code);
+    }
+    
+    public function getCode(){
+       return $this->code; 
     }
     
     public function getSymbol(){
         return $this->symbol;
     }
 }
-
-Currency::$CURRENCIES = array(
-    'SOLES' => new Currency('Soles', 's/'),
-    'DOLLARS' => new Currency('Dollars', '$')
-);

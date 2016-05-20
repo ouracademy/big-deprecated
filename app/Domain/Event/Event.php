@@ -1,7 +1,8 @@
 <?php namespace App\Domain\Event;
 
 use App\Domain\Money\Money;
-use App\Domain\Time\TimeReference;
+use App\Domain\Money\Currencies;
+use App\Domain\Time\TimePeriod;
 use InvalidArgumentException;
 use App\Domain\Party\Party;
 use SplObjectStorage;
@@ -13,7 +14,8 @@ class Event
         "CONFERENCE", "WORKSHOP"
         ];
     
-    private $id, $name, $price, $description, $location, $timeRefence, $eventType;
+    private $id, $name, $priceAmount, $priceCurrencyCode, $description;
+    private $location, $timePeriod, $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
     
@@ -50,11 +52,12 @@ class Event
     }
     
     public function getPrice(){
-        return $this->price;
+        return new Money($this->priceAmount, Currencies::getFromCode($this->priceCurrencyCode));
     }
     
     public function setPrice(Money $price){
-        $this->price = $price;
+        $this->priceAmount = $price->getAmount();
+        $this->priceCurrencyCode = $price->getCurrency()->getCode();
     }
     
     public function getDescription(){
@@ -73,12 +76,12 @@ class Event
         $this->location = $location;
     }
     
-    public function getTimeReference(){
-        return $this->timeRefence;
+    public function getTimePeriod(){
+        return $this->timePeriod;
     }
     
-    public function setTimeReference(TimeReference $timeRefence){
-        $this->timeRefence = $timeRefence;
+    public function setTimePeriod(TimePeriod $timePeriod){
+        $this->timePeriod = $timePeriod;
     }
     
     public function addPerformer(Party $performer, EventRoleType $eventRoleType){

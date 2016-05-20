@@ -30,7 +30,10 @@
                     <p class="lead">
                         by <a href="index.php">Start Bootstrap</a>
                     </p>
-                    <p><i class="fa fa-clock-o"></i>Fecha: {{$event->getTimeReference()->format('d-m-Y')}}</p>
+                    <p><i class="fa fa-clock-o"></i>
+                        Fecha inicio: {{$event->getTimePeriod()->start()->format('d-m-Y')}} /  
+                        Fecha fin: {{$event->getTimePeriod()->end()->format('d-m-Y')}}
+                    </p>
                     <hr>
                     <a href="{{ route('event', $event->getSlug()) }}">
                         <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">

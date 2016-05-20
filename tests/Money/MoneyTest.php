@@ -1,14 +1,14 @@
 <?php
 
 use App\Domain\Money\Money;
-use App\Domain\Money\Currency;
+use App\Domain\Money\Currencies;
 
 class MoneyTest extends TestCase
 {
     private $someMoney;
     
     public function setUp(){
-        $this->someMoney = new Money(50,Currency::SOLES());
+        $this->someMoney = new Money(50,Currencies::SOL());
     }
     
     public function testAmount(){
@@ -16,6 +16,6 @@ class MoneyTest extends TestCase
     }
     
     public function testCurrency(){
-        $this->assertEquals($this->someMoney->getCurrency(),Currency::SOLES());
+        $this->assertEquals($this->someMoney->getCurrency(),Currencies::SOL());
     }
 }

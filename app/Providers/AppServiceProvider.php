@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 use App\Data\EventRepository;
 use App\Domain\Event\Event;
-use App\Domain\Time\TimePoint;
+use App\Domain\Time\TimePeriod;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,13 +30,13 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(EventRepository::class, function () {
             $eventRepository = new EventRepository();
             $lean = Event::CONFERENCE("¿Por qué el Lean Startup lo va a cambiar todo ?");
-            $lean->setTimeReference(TimePoint::createFromDate(01, 03, 2016));
+            $lean->setTimePeriod(new TimePeriod(date_create('01-03-2016'), date_create('02-03-2016')));
             
             $startup = Event::CONFERENCE("STARTUP WEEKEND EBUSINESS");
-            $startup->setTimeReference(TimePoint::createFromDate(20, 03, 2016));
+            $startup->setTimePeriod(new TimePeriod(date_create('01-03-2016'), date_create('20-03-2016')));
             
             $xp = Event::CONFERENCE("Extreme Programming 20 years later by Kent Beck");
-            $xp->setTimeReference(TimePoint::createFromDate(04, 05, 2016));
+            $xp->setTimePeriod(new TimePeriod(date_create('01-03-2016'), date_create('04-05-2016')));
             
             $eventRepository->add($lean);
             $eventRepository->add($startup);
