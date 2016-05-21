@@ -5,16 +5,9 @@
     {!! Html::style('css/about.css') !!}
 @endsection
 @section('content')
-    <header class="jumbotron absolute-background image-background" 
-        style="background-image: url('http://big-marthur.c9users.io/public/img/about/team.jpg')">
-        <div class="background black-background"></div>
-        <div class="content text-center">
-            <div class="container">
-                <h1>Nosotros</h1>
-                <p>Un equipo dedicado a formar grandes personas</p>
-            </div>
-        </div>
-    </header>
+    @include('partials.slider',['message' => 'Un equipo dedicado a formar grandes personas',
+                                'image' => 'img/about/team.jpg'])
+    
     <section class="container">
         <div class="col-lg-12">
             {!! Breadcrumbs::render() !!}

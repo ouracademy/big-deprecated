@@ -5,16 +5,8 @@
     {!! Html::style('css/absolute-background.css') !!}
 @endsection
 @section('content')
-    <div class="jumbotron absolute-background image-background" 
-        style="background-image: url('http://big-marthur.c9users.io/public/img/contact/business-world.jpg')">
-        <div class="background black-background"></div>
-        <div class="content text-center">
-            <div class="container">
-                <h1>Contáctenos</h1>
-                <p>Conéctate con nosotros</p>
-            </div>
-        </div>
-    </div>
+    @include('partials.slider',['message' => 'Conéctate con nosotros',
+                                'image' => 'img/contact/business-world.jpg'])
     <section class="container">
         <div class="col-lg-12">
             {!! Breadcrumbs::render() !!}

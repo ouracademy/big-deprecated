@@ -17,8 +17,7 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->string('slug', 100);
-            $table->integer('price_amount');
-            $table->string('price_currency', 64);
+            $table->string('price', 64);
             $table->string('location',100);//TODO change with geographic points
             $table->text('description');
             $table->dateTime('start');
