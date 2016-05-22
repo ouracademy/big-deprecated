@@ -25,6 +25,10 @@
 .page-header{
     text-transform: uppercase;
 }
+
+section .glyphicon{
+    font-size:4em;
+}
     
 @media screen and (min-width: 768px)
 {
@@ -34,10 +38,6 @@
     
     section p{
         font-size: 1.4em;
-    }
-    
-    section .glyphicon{
-        font-size:4em;
     }
     
     .carousel-inner>.item>a>img, .carousel-inner>.item>img {

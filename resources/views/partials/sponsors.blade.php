@@ -7,13 +7,13 @@
         </div>    
         <div class="row">    
             <div class="col-md-6 center-block text-center">
-                <div class="sponsor col-md-6 col-sm-4 col-xs-6">
+                <div class="sponsor col-md-6 col-xs-12">
                     <a href="http://www.emprendedorperuano.pe/">
                         <img class="img-responsive" src="{{asset('img/sponsors/emprendedor-peruano.png')}}" 
                             alt="Emprendedor Peruano">
                     </a>
                 </div>
-                <div class="sponsor col-md-6 col-sm-4 col-xs-6">
+                <div class="sponsor col-md-6 col-xs-12">
                     <a href="http://asep.pe/">
                         <img class="img-responsive" src="{{asset('img/sponsors/asep.png')}}" 
                             alt="Asociación de Emprendedores de Perú">

@@ -59,17 +59,17 @@
           </div>
           <div class="row">    
             <div class="col-md-8 center-block text-center">
-                <div class="col-md-4 col-sm-4 col-xs-6">
+                <div class="col-md-4 col-xs-12">
                     <div class="icon-ball">
                       <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
                     </div>
                     <h4>Cursos</h4>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-6">
+                <div class="col-md-4 col-xs-12">
                     <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
                     <h4>Talleres y Seminarios</h4>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-6">
+                <div class="col-md-4 col-xs-12">
                     <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
                     <h4>Conferencias</h4>
                 </div>
