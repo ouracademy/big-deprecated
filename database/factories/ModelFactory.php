@@ -11,7 +11,9 @@
 |
 */
 
-/*$factory->define(App\User::class, function (Faker\Generator $faker) {
+/*
+TODO: implement Entity for User...Doctrine
+$factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
@@ -35,3 +37,30 @@ $factory->define(App\Domain\Event\Event::class, function (Faker\Generator $faker
         'eventType' => $faker->randomElement(App\Domain\Event\Event::$types)
     ];
 });
+
+$factory->define(App\Domain\Party\Organization::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->email,
+        'location' => $faker->address
+    ];
+});
+
+/*$factory->define(App\Domain\Party\Party::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->email,
+        'location' => $faker->address
+    ];
+});
+
+$factory->defineAs(App\Domain\Party\Party::class, 'organization',  function ($faker) use ($factory) {
+    $user = $factory->raw(App\Party::class);
+    return array_merge($user, ['type' => 'organization']);
+});
+
+$factory->defineAs(App\Domain\Party\Party::class, 'person',  function ($faker) use ($factory) {
+    $user = $factory->raw(App\Party::class);
+    return array_merge($user, ['type' => 'person']);
+});
+*/

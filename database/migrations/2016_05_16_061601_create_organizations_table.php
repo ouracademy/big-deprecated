@@ -13,12 +13,12 @@ class CreateOrganizationsTable extends Migration
     public function up()
     {
         Schema::create('organizations', function (Blueprint $table) {
-            $table->integer('party_id')->unsigned();
-            $table->foreign('party_id')
+            $table->integer('id')->unsigned();
+            $table->foreign('id')
                   ->references('id')
                   ->on('parties')
                   ->onDelete('cascade');
-            $table->primary('party_id');
+            $table->primary('id');
             $table->timestamps();
         });
     }

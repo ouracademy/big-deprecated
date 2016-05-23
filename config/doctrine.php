@@ -28,8 +28,13 @@ return [
             'namespaces' => [
                 'App'
             ],
+            'mappings' => [
+                App\Infraestructure\Data\Mappings\EventMapping::class,
+                App\Infraestructure\Data\Mappings\PartyMapping::class,
+                App\Infraestructure\Data\Mappings\OrganizationMapping::class,
+            ],
             'paths'      => [
-                config_path('mappings')//base_path('app/Domain')
+                base_path('app')
             ],
             'repository' => Doctrine\ORM\EntityRepository::class,
             'proxies'    => [

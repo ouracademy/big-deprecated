@@ -6,8 +6,8 @@ use SplObjectStorage;
 
 abstract class Party extends NamedObject
 {
-    private $email, $location;
-    private $eventRoles;
+    protected $id, $email, $location;
+    protected $eventRoles;
     
     public function __construct($name){
         parent::__construct($name);

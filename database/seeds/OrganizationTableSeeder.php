@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class EventTableSeeder extends Seeder
+class OrganizationTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class EventTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Event::class, 10)->create();
+        entity(App\Domain\Party\Organization::class, 5)->create();
     }
 }

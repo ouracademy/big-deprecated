@@ -2,7 +2,7 @@
 
 class NamedObject
 {
-    private $name;
+    protected $name;
     
     public function __construct($name = 'no name'){
         $this->name = $name;
