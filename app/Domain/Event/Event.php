@@ -26,9 +26,17 @@ class Event
     
     public function __construct($name, $eventType){
         $this->name = $name;
-        $this->setEventType($eventType);
+        $this->addEventType($eventType);
         $this->eventRoles = new SplObjectStorage();
         $this->slug = str_slug($name);
+    }
+    
+    private function addEventType($eventType){
+        if(in_array($eventType,self::$types)){
+            $this->eventType = $eventType; 
+        }else {
+            throw new InvalidArgumentException("Wrong event type");
+        }
     }
     
     public function getName(){
@@ -37,14 +45,6 @@ class Event
     
     public function getEventType(){
         return $this->eventType;
-    }
-    
-    private function setEventType($eventType){
-        if(in_array($eventType,self::$types)){
-            $this->eventType = $eventType; 
-        }else {
-            throw new InvalidArgumentException("Wrong event type");
-        }
     }
     
     public function getSlug(){
