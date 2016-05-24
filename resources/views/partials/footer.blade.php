@@ -15,7 +15,8 @@
 					<ul class="social list-inline">
 						<li><a href="https://www.facebook.com/businessideasgroupperu/">
 							<i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/business-ideas-group">
+							<i class="fa fa-twitter"></i></a></li>
 						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 					</ul>
 				</div>

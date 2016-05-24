@@ -65,13 +65,10 @@
                                 <i class="fa fa-facebook-square fa-2x"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                            <a href="https://www.linkedin.com/company/business-ideas-group"><i class="fa fa-linkedin-square fa-2x"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
                         </li>
                     </ul>
                 </ul>
