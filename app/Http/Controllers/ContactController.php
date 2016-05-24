@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Services\Contact\EmailContactService;
 use App\Domain\Party\Organization;
 use App\Domain\Party\Person;
+use App\Http\Requests\ContactFormRequest;
 
 class ContactController extends Controller
 {
@@ -25,7 +23,7 @@ class ContactController extends Controller
         return view('contact')->with('BIG',$this->BIG);
     }
     
-    public function postContact(Request $request){
+    public function postContact(ContactFormRequest $request){
         $person = new Person($request->name);
         $person->setEmail($request->email);
         $this->contactService->contact($person, $this->BIG, $request->message);

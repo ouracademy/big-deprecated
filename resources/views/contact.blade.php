@@ -15,11 +15,10 @@
     <section>
         <div class="container">
             <div class="col-md-8">
-                @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
-                @endif
+                
+                @include('partials.status')
+				@include('partials.errors')
+                
                 <h2 class="page-header">Envíenos su mensaje</h2>
                 {!! Form::open(['route' => 'contact', 'name' => 'sentMessage']) !!}
                     <div class="control-group form-group">
