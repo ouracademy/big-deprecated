@@ -17,7 +17,7 @@ class Currencies
     
     public static function getFromCurrencyName($name){
         foreach(self::$CURRENCIES as $currencyCode => $currency){
-            if($currency->getName() == strtoupper($name)){
+            if(strcasecmp($currency->getName(), $name) == 0){
                 return $currency;
             }
         }
@@ -28,5 +28,5 @@ class Currencies
 
 Currencies::$CURRENCIES = array(
     'PEN' => Currency::getBuilder('PEN')->name('Sol')->symbol('s/')->build(),
-    'NULL'=> Currency::getBuilder('NULL')->name('a null object')->build()
+    'NULL'=> Currency::getBuilder('NULL')->name('null')->build()
 );

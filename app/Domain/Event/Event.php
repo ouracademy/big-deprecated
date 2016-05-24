@@ -14,7 +14,7 @@ class Event
         "CONFERENCE", "WORKSHOP"
         ];
     
-    private $id, $name, $priceAmount, $priceCurrencyCode, $description;
+    private $id, $name, $price, $description;
     private $location, $timePeriod, $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
@@ -52,12 +52,11 @@ class Event
     }
     
     public function getPrice(){
-        return new Money($this->priceAmount, Currencies::getFromCode($this->priceCurrencyCode));
+        return $this->price;
     }
     
     public function setPrice(Money $price){
-        $this->priceAmount = $price->getAmount();
-        $this->priceCurrencyCode = $price->getCurrency()->getCode();
+        $this->price = $price;
     }
     
     public function getDescription(){

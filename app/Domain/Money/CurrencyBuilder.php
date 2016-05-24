@@ -18,7 +18,19 @@ class CurrencyBuilder {
         return $this;
     }
     
+    public function getCode(){
+        return $this->code;
+    }
+    
+    public function getName(){
+        return $this->name;
+    }
+    
+    public function getSymbol(){
+        return $this->symbol;
+    }
+    
     public function build(){
-        return new Currency($this->code, $this->name, $this->symbol);
+        return new Currency($this);
     }
 }

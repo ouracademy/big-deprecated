@@ -29,6 +29,8 @@ class EventMapping extends EntityMapping
         $builder->string('slug');
         $builder->string('location');
         $builder->text('description');
+        $builder->field('money', 'price');
         $builder->string('eventType')->columnName('type');
+        
     }
 }

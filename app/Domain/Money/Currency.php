@@ -5,12 +5,12 @@ use App\Domain\Support\NamedObject;
 
 class Currency extends NamedObject
 {
-    private $code, $name, $symbol;
+    private $code, $symbol;
     
-    public function __construct($code, $name, $symbol){
-        parent::__construct($name);
-        $this->code = $code;
-        $this->symbol = $symbol;
+    public function __construct(CurrencyBuilder $builder){
+        parent::__construct($builder->getName());
+        $this->code = $builder->getCode();
+        $this->symbol = $builder->getSymbol();
     }
     
     public static function getBuilder($code){

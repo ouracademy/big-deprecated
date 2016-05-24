@@ -25,11 +25,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Domain\Event\Event::class, function (Faker\Generator $faker) { 
     $name = $faker->name;
     $start = $faker->dateTime;
+    $sol = App\Domain\Money\Currencies::SOL();
     
     return [
         'name' => $name,
         'slug' => str_slug($name),
-        'price' => $faker->randomNumber(2) . $faker->currencyCode,
+        'price' => new App\Domain\Money\Money($faker->randomNumber(2), $sol),
         'location' => $faker->address,
         'description' => $faker->text,
         'start' => $start,

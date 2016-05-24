@@ -115,7 +115,8 @@ return [
     |--------------------------------------------------------------------------
     */
     'custom_types'              => [
-        'json' => LaravelDoctrine\ORM\Types\Json::class
+        'json' => LaravelDoctrine\ORM\Types\Json::class,
+        'money' => App\Infraestructure\Data\Types\MoneyType::class,
     ],
     /*
     |--------------------------------------------------------------------------
