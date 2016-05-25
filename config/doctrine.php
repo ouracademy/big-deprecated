@@ -29,9 +29,13 @@ return [
                 'App'
             ],
             'mappings' => [
+                //Entities
                 App\Infraestructure\Data\Mappings\EventMapping::class,
                 App\Infraestructure\Data\Mappings\PartyMapping::class,
                 App\Infraestructure\Data\Mappings\OrganizationMapping::class,
+                
+                //Embeddables
+                App\Infraestructure\Data\Mappings\TimePeriodMapping::class,
             ],
             'paths'      => [
                 base_path('app')

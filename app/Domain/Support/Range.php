@@ -15,8 +15,8 @@ namespace App\Domain\Support;
 class Range {
     const EMPTY_RANGE = null;
     const INFINITY = INF;//TODO: ONLY WITH NUMBERS(FLOATS)
-    private $start;
-    private $end;
+    protected $start;
+    protected $end;
     
     public static function upTo($end) {
 		return new Range(self::INFINITY, $end);

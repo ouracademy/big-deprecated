@@ -4,6 +4,7 @@ namespace App\Infraestructure\Data\Mappings;
 use App\Domain\Event\Event;
 use LaravelDoctrine\Fluent\EntityMapping;
 use LaravelDoctrine\Fluent\Fluent;
+use App\Domain\Time\TimePeriod;
 
 class EventMapping extends EntityMapping
 {
@@ -30,6 +31,7 @@ class EventMapping extends EntityMapping
         $builder->string('location');
         $builder->text('description');
         $builder->field('money', 'price');
+        $builder->embed(TimePeriod::class);
         $builder->string('eventType')->columnName('type');
         
     }

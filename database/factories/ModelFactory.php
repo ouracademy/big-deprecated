@@ -25,6 +25,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Domain\Event\Event::class, function (Faker\Generator $faker) { 
     $name = $faker->name;
     $start = $faker->dateTime;
+    $end = $faker->dateTimeBetween($start);
     $sol = App\Domain\Money\Currencies::SOL();
     
     return [
@@ -33,8 +34,7 @@ $factory->define(App\Domain\Event\Event::class, function (Faker\Generator $faker
         'price' => new App\Domain\Money\Money($faker->randomNumber(2), $sol),
         'location' => $faker->address,
         'description' => $faker->text,
-        'start' => $start,
-        'end' => $faker->dateTimeBetween($start),
+        'timePeriod' => new App\Domain\Time\TimePeriod($start, $end),
         'eventType' => $faker->randomElement(App\Domain\Event\Event::$types)
     ];
 });

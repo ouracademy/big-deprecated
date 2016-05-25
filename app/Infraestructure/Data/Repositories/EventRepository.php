@@ -2,21 +2,20 @@
 
 use App\Domain\Event\EventRepository as EventRepositoryContract;
 use App\Domain\Event\Event;
-use App\Domain\Support\Set;
 
 class EventRepository implements EventRepositoryContract
 {   
-    private $events;
+/*    private $genericRepository;
     
-    public function __construct(){
-        $this->events = new Set;
+    public function __construct(ObjectRepository $genericRepository){
+        $this->genericRepository = $genericRepository;
     }
     
     public function all(){
-        return $this->events->all();
+        return $this->genericRepository->findAll();
     }
     
     public function add(Event $group){
         $this->events->add($group);
-    }
+    }*/
 }

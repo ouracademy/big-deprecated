@@ -20,8 +20,8 @@ class CreateEventsTable extends Migration
             $table->string('price', 64);
             $table->string('location',100);//TODO change with geographic points
             $table->text('description');
-            $table->dateTime('start');
-            $table->dateTime('end');
+            $table->dateTime('timePeriod_start');
+            $table->dateTime('timePeriod_end');
             $table->enum('type', Event::$types);   
             $table->timestamps();
         });
