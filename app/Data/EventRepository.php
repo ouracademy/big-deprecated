@@ -16,7 +16,7 @@ class EventRepository implements EventRepositoryContract
         return $this->events->all();
     }
     
-    public function add(Event $group){
-        $this->events->add($group);
+    public function add(Event $event){
+        $this->events->add($event);
     }
 }

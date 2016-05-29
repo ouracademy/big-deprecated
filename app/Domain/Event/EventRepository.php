@@ -4,5 +4,5 @@ interface EventRepository
 {   
     public function all();
     
-    public function add(Event $group);
+    public function add(Event $event);
 }
