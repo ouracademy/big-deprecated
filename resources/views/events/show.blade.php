@@ -1,9 +1,17 @@
-@extends('layouts.breadcrumbs')
+@extends('layouts.master')
 @section('title', $event->getName())
 @section('head')
-    {!! Html::style('css/about.css') !!}
+    {!! Html::style('css/absolute-background.css') !!}
 @endsection
-@section('container')
+@section('content')
+    @include('partials.slider',['message' => 'Conéctate con nosotros',
+                                'image' => 'img/contact/business-world.jpg'])
+    <section class="container">
+        <div class="col-lg-12">
+            {!! Breadcrumbs::render() !!}
+        </div>
+    </section>
+    
     <section class="row">
         <div class="col-lg-8">
 

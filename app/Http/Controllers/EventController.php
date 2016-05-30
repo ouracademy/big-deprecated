@@ -23,7 +23,7 @@ class EventController extends Controller
         return view('events.index')->with('events',$this->eventRepository->all());
     }
     
-    public function show($event){
+    public function showBySlug($event){
         return view('events.show')->with('event', $event);
     }
 }

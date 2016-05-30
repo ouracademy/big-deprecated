@@ -17,7 +17,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li {!! Request::is('home') ? 'class=active' : '' !!}><a href="{{url('home')}}">Inicio</a></li>
                 <li {!! Request::is('about') ? 'class=active' : '' !!}><a href="{{url('about')}}">Nosotros</a></li>
-                <li {!! Request::is('events') ? 'class=active' : '' !!}><a href="{{url('events')}}">Eventos</a></li>
+                <li {!! Request::is('event') ? 'class=active' : '' !!}><a href="{{url('event')}}">Eventos</a></li>
                 <li {!! Request::is('contact') ? 'class=active' : '' !!}><a href="{{url('contact')}}">Contáctenos</a></li>
             </ul>
         </div>

@@ -35,7 +35,7 @@ class RouteServiceProvider extends ServiceProvider
 
         parent::boot($router);
         
-        $router->bind('event', function ($slug) {
+        $router->bind('slug', function ($slug) {
             foreach($this->eventRepository->all() as $event){
                 if($event->getSlug() == $slug){
                     return $event;

@@ -14,17 +14,17 @@ Breadcrumbs::register('about', function($breadcrumbs)
 });
 
 // Inicio > Eventos
-Breadcrumbs::register('events', function($breadcrumbs)
+Breadcrumbs::register('event.index', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Eventos', route('events'));
+    $breadcrumbs->push('Eventos', route('event.index'));
 });
 
 // Inicio > Eventos > [Evento]
-Breadcrumbs::register('event', function($breadcrumbs, $event)
+Breadcrumbs::register('event.slug', function($breadcrumbs, $event)
 {
-    $breadcrumbs->parent('events');
-    $breadcrumbs->push($event->getName(), route('event', $event->getSlug()));
+    $breadcrumbs->parent('event.index');
+    $breadcrumbs->push($event->getName(), route('event.slug', $event->getSlug()));
 });
 
 
