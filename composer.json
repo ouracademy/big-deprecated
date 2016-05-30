@@ -10,8 +10,7 @@
         "laravelcollective/html": "5.2.*",
         "davejamesmiller/laravel-breadcrumbs": "^3.0",
         "laravel-doctrine/orm" : "1.1.*",
-        "laravel-doctrine/fluent" : "1.1.*",
-        "laravel-doctrine/migrations": "1.0.*",
+        "laravel-doctrine/fluent" : "1.1.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

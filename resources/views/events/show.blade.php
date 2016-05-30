@@ -8,7 +8,7 @@
                                 'image' => 'img/contact/business-world.jpg'])
     <section class="container">
         <div class="col-lg-12">
-            {!! Breadcrumbs::render() !!}
+            {!! Breadcrumbs::render('event.slug', $event) !!}
         </div>
     </section>
     

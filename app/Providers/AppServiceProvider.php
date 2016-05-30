@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-use App\Data\EventRepository;
+use App\Infraestructure\Data\Repositories\EventRepository;
 use App\Domain\Event\Event;
 use App\Domain\Time\TimePeriod;
 
@@ -27,6 +27,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind('App\Domain\Event\EventRepository', function($app){
+            return new EventRepository($app['em']);
+        });
+        
+        
+        /*
         $this->app->singleton(EventRepository::class, function () {
             $eventRepository = new EventRepository();
             $lean = Event::CONFERENCE("¿Por qué el Lean Startup lo va a cambiar todo ?");
@@ -43,6 +49,6 @@ class AppServiceProvider extends ServiceProvider
             $eventRepository->add($xp);
             
             return $eventRepository;
-        });
+        });*/
     }
 }

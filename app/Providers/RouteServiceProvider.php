@@ -5,8 +5,6 @@ namespace App\Providers;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
-use App\Data\EventRepository;
-
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -20,7 +18,6 @@ class RouteServiceProvider extends ServiceProvider
     
     public function __construct($app){
         parent::__construct($app);
-        $this->eventRepository = $this->app->make(EventRepository::class);
     }
     
     /**
@@ -34,15 +31,6 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot($router);
-        
-        $router->bind('slug', function ($slug) {
-            foreach($this->eventRepository->all() as $event){
-                if($event->getSlug() == $slug){
-                    return $event;
-                }
-            }
-            return null;
-        });
     }
 
     /**

@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Data\EventRepository;
-use App\Domain\Event\Event;
-use App\Time\TimePoint;
 
+use App\Domain\Event\EventRepository;
+use App\Domain\Event\Event;
 
 class EventController extends Controller
 {
@@ -23,7 +22,14 @@ class EventController extends Controller
         return view('events.index')->with('events',$this->eventRepository->all());
     }
     
-    public function showBySlug($event){
-        return view('events.show')->with('event', $event);
+    public function showBySlug($slug){
+        
+        foreach($this->eventRepository->all() as $event){
+            if($event->getSlug() == $slug){
+                $fetchedEvent = $event;
+                break;
+            }
+        }
+        return view('events.show')->with('event', $fetchedEvent);
     }
 }
