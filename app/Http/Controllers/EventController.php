@@ -23,7 +23,7 @@ class EventController extends Controller
     }
     
     public function showBySlug($slug){
-        
+        //TODO test with no slug
         foreach($this->eventRepository->all() as $event){
             if($event->getSlug() == $slug){
                 $fetchedEvent = $event;
