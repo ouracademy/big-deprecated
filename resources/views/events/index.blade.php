@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 @section('title', 'Eventos')
 @section('head')
     {!! Html::style('css/absolute-background.css') !!}
