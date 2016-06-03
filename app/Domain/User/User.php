@@ -1,17 +1,22 @@
-<?php namespace App\Domain\Party;
+<?php namespace App\Domain\User;
 
 use App\Domain\Support\NamedObject;
-use App\Domain\Event\EventRole;
-use SplObjectStorage;
 
 class User extends NamedObject
 {
-    protected $id, $email, $location;
-    protected $eventRoles;
+    protected $id;
+    protected $email;
+    protected $password;
+    protected $rememberToken;
     
-    public function __construct($name){
+    public function __construct($name, $password, $email){
         parent::__construct($name);
-        $this->eventRoles = new SplObjectStorage();
+        $this->password = $password;
+        $this->email = $email;
+    }
+    
+    public function getId(){
+        return $this->id;
     }
     
     public function setEmail($email){
@@ -22,15 +27,7 @@ class User extends NamedObject
         return $this->email;
     }
     
-    public function setLocation($location){
-        $this->location = $location;
-    }
-    
-    public function getLocation(){
-        return $this->location;
-    }
-    
-    function friendAddEventRole(EventRole $eventRole){
-        $this->eventRoles->attach($eventRole);
+    public function getPassword(){
+        return $this->password;
     }
 }

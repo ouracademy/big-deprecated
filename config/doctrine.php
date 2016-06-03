@@ -33,6 +33,7 @@ return [
                 App\Infraestructure\Data\Mappings\EventMapping::class,
                 App\Infraestructure\Data\Mappings\PartyMapping::class,
                 App\Infraestructure\Data\Mappings\OrganizationMapping::class,
+                App\Infraestructure\Data\Mappings\UserMapping::class,
                 
                 //Embeddables
                 App\Infraestructure\Data\Mappings\TimePeriodMapping::class,

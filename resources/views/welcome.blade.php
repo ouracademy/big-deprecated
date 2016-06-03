@@ -13,22 +13,23 @@
       </ol>
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="{{asset('img/home/slider/lean-canvas-strategyzer.jpg')}}" alt="strategy">
+        <div class="item active image-background">
+          <img class="black-background"/>
           <div class="carousel-caption">
-            <h3>Bienvenido al mundo de las ideas</h3>
+            <h3>El mundo espera por ti</h3>
+            <p>Ven y renueva tu mente</p>
           </div>
         </div>
-        <div class="item">
-          <img src="{{asset('img/home/slider/conference.jpg')}}" alt="conference">
+        <div class="item image-background">
+          <img class="black-background"/>
           <div class="carousel-caption">
             <h3>Grandes personas vienen de una gran educación</h3>
           </div>
         </div>
-        <div class="item">
-          <img src="{{asset('img/home/slider/business-people.jpg')}}" alt="business-people">
+        <div class="item image-background">
+          <img class="black-background"/>
           <div class="carousel-caption">
-            <h3>Creando la nueva generación de emprendedores</h3>
+            <h3>Formando a grandes personas</h3>
           </div>
         </div>
       </div>

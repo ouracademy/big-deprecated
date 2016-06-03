@@ -15,21 +15,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links -->
-                @if (Auth::guest())
-                    <li {!! Request::is('login') ? 'class=active' : '' !!}><a href="{{url('login')}}">Inicia sesión</a></li>
-                    <li {!! Request::is('register') ? 'class=active' : '' !!}><a href="{{url('register')}}">Registrate</a></li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                        </ul>
-                    </li>
-                @endif
+                <ul class="nav navbar-nav navbar-right">
+                <li {!! Request::is('/') ? 'class=active' : '' !!}><a href="{{url('/')}}">Inicio</a></li>
+                <li {!! Request::is('about') ? 'class=active' : '' !!}><a href="{{url('about')}}">Nosotros</a></li>
+                <li {!! Request::is('event') ? 'class=active' : '' !!}><a href="{{url('event')}}">Eventos</a></li>
+                <li {!! Request::is('contact') ? 'class=active' : '' !!}><a href="{{url('contact')}}">Contáctenos</a></li>
             </ul>
         </div>
     </div>

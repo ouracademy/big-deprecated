@@ -2,7 +2,6 @@
 @section('title', 'Contáctenos')
 @section('head')
     {!! Html::style('css/contact.css') !!}
-    {!! Html::style('css/absolute-background.css') !!}
 @endsection
 @section('content')
     @include('partials.slider',['message' => 'Conéctate con nosotros',

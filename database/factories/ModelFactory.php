@@ -11,16 +11,15 @@
 |
 */
 
-/*
-TODO: implement Entity for User...Doctrine
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+
+$factory->define(App\Domain\User\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'rememberToken' => str_random(10),
     ];
-});*/
+});
 
 $factory->define(App\Domain\Event\Event::class, function (Faker\Generator $faker) { 
     $name = $faker->name;
@@ -46,22 +45,3 @@ $factory->define(App\Domain\Party\Organization::class, function (Faker\Generator
         'location' => $faker->address
     ];
 });
-
-/*$factory->define(App\Domain\Party\Party::class, function (Faker\Generator $faker) {
-    return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-        'location' => $faker->address
-    ];
-});
-
-$factory->defineAs(App\Domain\Party\Party::class, 'organization',  function ($faker) use ($factory) {
-    $user = $factory->raw(App\Party::class);
-    return array_merge($user, ['type' => 'organization']);
-});
-
-$factory->defineAs(App\Domain\Party\Party::class, 'person',  function ($faker) use ($factory) {
-    $user = $factory->raw(App\Party::class);
-    return array_merge($user, ['type' => 'person']);
-});
-*/

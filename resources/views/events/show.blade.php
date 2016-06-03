@@ -1,8 +1,5 @@
 @extends('layouts.app')
 @section('title', $event->getName())
-@section('head')
-    {!! Html::style('css/absolute-background.css') !!}
-@endsection
 @section('content')
     @include('partials.slider',['message' => 'Conéctate con nosotros',
                                 'image' => 'img/contact/business-world.jpg'])
