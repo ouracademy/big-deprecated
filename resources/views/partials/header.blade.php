@@ -15,7 +15,6 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <ul class="nav navbar-nav navbar-right">
                 <li {!! Request::is('/') ? 'class=active' : '' !!}><a href="{{url('/')}}">Inicio</a></li>
                 <li {!! Request::is('about') ? 'class=active' : '' !!}><a href="{{url('about')}}">Nosotros</a></li>
                 <li {!! Request::is('event') ? 'class=active' : '' !!}><a href="{{url('event')}}">Eventos</a></li>
