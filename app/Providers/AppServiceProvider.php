@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
 use App\Infraestructure\Data\Repositories\EventRepository;
+use App\Infraestructure\Data\Repositories\UserRepository;
 use App\Domain\Event\Event;
 use App\Domain\Time\TimePeriod;
 
