@@ -1,6 +1,5 @@
 .item:first-child{
     background-image: url(../img/home/slider/world.jpg);
-    background-position: 0px;
 }
 
 .item:nth-child(2){
@@ -9,6 +8,11 @@
 
 .item:nth-child(3){
     background-image: url(../img/home/slider/business-people.jpg);
+    background-position: center 0px;
+}
+
+.image-background {
+    background-position: 0px;
 }
 
 .black-background{
