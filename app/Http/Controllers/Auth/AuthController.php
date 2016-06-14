@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Domain\User\User;
-use App\Domain\User\UserRepository;
+use App\Services\RegisterUser;
 
 use Validator;
 use App\Http\Controllers\Controller;
@@ -32,17 +32,17 @@ class AuthController extends Controller
      */
     protected $redirectTo = '/';
     
-    protected $userRepository;
+    protected $facade;
 
     /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository)
+    public function __construct(RegisterUser $facade)
     {
         $this->middleware('guest', ['except' => 'logout']);
-        $this->userRepository = $userRepository;
+        $this->facade = $facade;
     }
 
     /**
@@ -55,7 +55,6 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'lastName' => 'required|max:255',
             'email' => 'required|email|max:255|unique:'.User::class,
             'password' => 'required|confirmed|min:6',
         ]);
@@ -69,17 +68,10 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        $user = $register->firstName($data['name'])
-                         ->lastName($data['lastName'])
-                         ->email($data['email'])
-                         ->password($data['password'])
-                         ->execute();
+        $user = $this->facade->firstName($data['name'])
+                             ->email($data['email'])
+                             ->password($data['password'])
+                             ->execute();
         return $user;
-        
-        /*$user = new User($data['name']);
-        $user->setEmail($data['email']);
-        $user->setPassword($data['password']);
-        
-        return $this->userRepository->add($user);*/
     }
 }
