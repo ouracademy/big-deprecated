@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * @see App\Domain\User\User
+ * @deprecated since 1.2
+ */
 class User extends Authenticatable
 {
     /**

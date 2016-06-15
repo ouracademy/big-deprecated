@@ -1,6 +1,6 @@
 <?php namespace App\Domain\Support;
 
-class NamedObject
+trait NamedObject
 {
     protected $name;
     

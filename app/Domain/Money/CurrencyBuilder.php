@@ -1,8 +1,10 @@
-<?php
+<?php namespace App\Domain\Money;
 
-namespace App\Domain\Money;
+use App\Domain\Support\NamedObject;
+
 class CurrencyBuilder {
-    private $code, $name, $symbol;
+    use NamedObject;
+    private $code, $symbol;
     
     function __construct($code){
         $this->code = $code;
@@ -20,10 +22,6 @@ class CurrencyBuilder {
     
     public function getCode(){
         return $this->code;
-    }
-    
-    public function getName(){
-        return $this->name;
     }
     
     public function getSymbol(){

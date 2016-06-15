@@ -7,7 +7,7 @@ class NamedObjectTest extends TestCase
     private $namedObject;
     
     public function setUp(){
-        $this->namedObject= new NamedObject("Some named object");
+        $this->namedObject= new SomeNamedObject("Some named object");
     }
     
     public function testName(){
@@ -17,4 +17,8 @@ class NamedObjectTest extends TestCase
     public function testToString(){
         $this->assertEquals((string)$this->namedObject,"Some named object");
     }
+}
+
+class SomeNamedObject{
+    use NamedObject;
 }

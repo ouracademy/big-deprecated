@@ -1,5 +1,7 @@
 <?php namespace App\Domain\Event;
 
+use App\Domain\Support\NamedObject;
+use App\Domain\Support\DomainObject;
 use App\Domain\Money\Money;
 use App\Domain\Money\Currencies;
 use App\Domain\Time\TimePeriod;
@@ -10,11 +12,13 @@ use SplObjectStorage;
 //TODO add photo property
 class Event
 {
+    use NamedObject, DomainObject;
+    
     public static $types = [
         "CONFERENCE", "WORKSHOP"
         ];
     
-    private $id, $name, $price, $description;
+    private $price, $description;
     private $location, $timePeriod, $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
@@ -37,14 +41,6 @@ class Event
         }else {
             throw new InvalidArgumentException("Wrong event type");
         }
-    }
-    
-    public function getId(){
-        return $this->id;
-    }
-    
-    public function getName(){
-        return $this->name;
     }
     
     public function getEventType(){

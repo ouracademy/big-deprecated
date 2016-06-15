@@ -1,23 +1,21 @@
 <?php namespace App\Domain\User;
 
 use App\Domain\Support\NamedObject;
+use App\Domain\Support\DomainObject;
 use Illuminate\Contracts\Auth\Authenticatable;
 
-class User extends NamedObject implements Authenticatable
+class User implements Authenticatable
 {
-    protected $id;
+    use NamedObject, DomainObject;
+    
     protected $email;
     protected $password;
     protected $rememberToken;
     
     public function __construct($name, $password, $email){
-        parent::__construct($name);
+        $this->name = $name;
         $this->password = $password;
         $this->email = $email;
-    }
-    
-    public function getId(){
-        return $this->id;
     }
     
     public function setEmail($email){

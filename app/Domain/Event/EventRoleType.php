@@ -2,7 +2,8 @@
 
 use App\Domain\Support\NamedObject;
 
-class EventRoleType extends NamedObject{
+class EventRoleType{
+    use NamedObject;
     public static $EVENT_ROLE_TYPES;
     
     //Used to don't access EventRole::$EVENT_ROLE_TYPES

@@ -3,12 +3,13 @@
 namespace App\Domain\Money;
 use App\Domain\Support\NamedObject;
 
-class Currency extends NamedObject
+class Currency
 {
+    use NamedObject;
     private $code, $symbol;
     
     public function __construct(CurrencyBuilder $builder){
-        parent::__construct($builder->getName());
+        $this->name = $builder->getName();
         $this->code = $builder->getCode();
         $this->symbol = $builder->getSymbol();
     }

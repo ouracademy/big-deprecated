@@ -1,16 +1,19 @@
 <?php namespace App\Domain\Party;
 
 use App\Domain\Support\NamedObject;
+use App\Domain\Support\DomainObject;
 use App\Domain\Event\EventRole;
 use SplObjectStorage;
 
-abstract class Party extends NamedObject
+abstract class Party
 {
-    protected $id, $email, $location;
+    use NamedObject, DomainObject;
+    
+    protected $email, $location;
     protected $eventRoles;
     
     public function __construct($name){
-        parent::__construct($name);
+        $this->name = $name;
         $this->eventRoles = new SplObjectStorage();
     }
     
