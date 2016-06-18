@@ -2,11 +2,13 @@
 
 use App\Domain\Support\NamedObject;
 use App\Domain\Support\DomainObject;
+use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User implements Authenticatable
+class User implements Authenticatable, CanResetPasswordContract
 {
-    use NamedObject, DomainObject;
+    use NamedObject, DomainObject, CanResetPassword;
     
     protected $email;
     protected $password;
@@ -28,6 +30,12 @@ class User implements Authenticatable
     
     public function getPassword(){
         return $this->password;
+    }
+    
+    
+    //TODO TEST THIS...
+    public function setPassword($password){
+        $this->password = $password;
     }
     
     
