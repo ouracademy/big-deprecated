@@ -31,6 +31,6 @@ class TicketMapping extends EntityMapping
         $builder->integer('totalQuantity')->unsigned();
         $builder->integer('quantityAvailable')->unsigned();
         $builder->manyToOne(Event::class);
-        $builder->unique(['event_id', 'id']);
+        $builder->unique(['event_id', 'name']);
     }
 }

@@ -23,7 +23,7 @@ class CreateTicketsTable extends Migration
                   ->references('id')
                   ->on('events')
                   ->onDelete('cascade');
-            $table->unique(['id','event_id']);
+            $table->unique(['event_id','name']);
             $table->timestamps();
         });
     }

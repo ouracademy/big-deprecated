@@ -21,14 +21,15 @@
                     Fecha inicio: {{$event->getTimePeriod()->start()->format('d-m-Y')}} /  
                     Fecha fin: {{$event->getTimePeriod()->end()->format('d-m-Y')}}</p>
                 <hr>
-                
+                @foreach($event->getTickets() as $ticket)
                 <div class="panel panel-default" style="border-left-color:#337ab7; border-left-width: 5px;">
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="list-inline">
-                                  <li><h3 style="margin-top:0px;">Popular</h3></li>
-                                  <li><p style="display:inline-block;">Disponibles: <span class="badge">42</span></p></li>
+                                  <li><h3 style="margin-top:0px;">{{$ticket->getName()}}</h3></li>
+                                  <li><p style="display:inline-block;">Disponibles:
+                                      <span class="badge">{{$ticket->getQuantityAvailable()}}</span></p></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
@@ -48,32 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default" style="border-left-color:#337ab7; border-left-width: 5px;">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list-inline">
-                                  <li><h3 style="margin-top:0px;">VIP</h3></li>
-                                  <li><p style="display:inline-block;">Disponibles: <span class="badge">5</span></p></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <select class="form-control">
-                                  <option>1</option>
-                                  <option>2</option>
-                                  <option>3</option>
-                                  <option>4</option>
-                                  <option>5</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                s/90.00
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 <div>
                     <a href="{{route('participant.create')}}" class="btn btn-primary">Registrate</a>
                 </div>

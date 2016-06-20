@@ -52,12 +52,16 @@ $factory->define(App\Domain\Event\Ticket::class, function (Faker\Generator $fake
     $totalQuantity = $faker->randomNumber(2);
 
     return [
-        'name' => $faker->randomElement(['VIP','Popular']),
+        'name' => 'Popular',
         'price' => new App\Domain\Money\Money($faker->randomNumber(2), $sol),
         'totalQuantity' => $totalQuantity,
         'quantityAvailable' => $faker->numberBetween(0, $totalQuantity)
     ];
 });
 
+$factory->defineAs(App\Domain\Event\Ticket::class, 'VIP', function ($faker) use ($factory) {
+    $ticket = $factory->raw(App\Domain\Event\Ticket::class);
 
+    return array_merge($ticket, ['name' => 'VIP']);
+});
         
