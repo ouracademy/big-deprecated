@@ -25,12 +25,10 @@ $factory->define(App\Domain\Event\Event::class, function (Faker\Generator $faker
     $name = $faker->name;
     $start = $faker->dateTime;
     $end = $faker->dateTimeBetween($start);
-    $sol = App\Domain\Money\Currencies::SOL();
     
     return [
         'name' => $name,
         'slug' => str_slug($name),
-        'price' => new App\Domain\Money\Money($faker->randomNumber(2), $sol),
         'location' => $faker->address,
         'description' => $faker->text,
         'timePeriod' => new App\Domain\Time\TimePeriod($start, $end),
@@ -45,3 +43,8 @@ $factory->define(App\Domain\Party\Organization::class, function (Faker\Generator
         'location' => $faker->address
     ];
 });
+
+
+//$sol = App\Domain\Money\Currencies::SOL();
+//'price' => new App\Domain\Money\Money($faker->randomNumber(2), $sol),
+        

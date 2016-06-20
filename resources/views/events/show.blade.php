@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-primary">Registrate</button>
+                    <a href="{{route('participant.create')}}" class="btn btn-primary">Registrate</a>
                 </div>
                 
                 <hr>

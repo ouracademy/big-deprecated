@@ -1,8 +1,6 @@
 <?php
 
 use App\Domain\Event\Event;
-use App\Domain\Money\Money;
-use App\Domain\Money\Currencies;
 use App\Domain\Time\TimePeriod;
 use App\Domain\Party\Person;
 use App\Domain\Event\EventRole;
@@ -37,12 +35,6 @@ class EventTest extends TestCase
     public function testLocation(){
         $this->event->setLocation('Some location');
         $this->assertEquals($this->event->getLocation(),'Some location');
-    }
-    
-    public function testPrice(){
-        $price = new Money(50, Currencies::SOL());
-        $this->event->setPrice($price);
-        $this->assertEquals($this->event->getPrice(),$price);
     }
     
     public function testDescription(){

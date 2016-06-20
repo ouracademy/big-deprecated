@@ -18,8 +18,10 @@ class Event
         "CONFERENCE", "WORKSHOP"
         ];
     
-    private $price, $description;
-    private $location, $timePeriod, $eventType;
+    private $description;
+    private $location;
+    private $timePeriod;
+    private $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
     
@@ -49,14 +51,6 @@ class Event
     
     public function getSlug(){
         return $this->slug;
-    }
-    
-    public function getPrice(){
-        return $this->price;
-    }
-    
-    public function setPrice(Money $price){
-        $this->price = $price;
     }
     
     public function getDescription(){

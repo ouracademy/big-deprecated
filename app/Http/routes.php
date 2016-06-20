@@ -19,3 +19,4 @@ Route::get('event/{slug}', ['as' => 'event.slug', 'uses' => 'EventController@sho
 Route::resource('event', 'EventController');
 Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@getContact']);
 Route::post('/contact', 'ContactController@postContact');
+Route::resource('participant', 'ParticipantController');
