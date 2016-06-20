@@ -1,11 +1,12 @@
 <?php
 namespace App\Infraestructure\Data\Mappings;
 
-use App\Domain\Party\Party;
+use App\Domain\Event\Ticket;
+use App\Domain\Event\Event;
 use LaravelDoctrine\Fluent\EntityMapping;
 use LaravelDoctrine\Fluent\Fluent;
 
-class PartyMapping extends EntityMapping
+class TicketMapping extends EntityMapping
 {
     /**
      * Returns the fully qualified name of the class that this mapper maps.
@@ -14,7 +15,7 @@ class PartyMapping extends EntityMapping
      */
     public function mapFor()
     {
-        return Party::class;
+        return Ticket::class;
     }
 
     /**
@@ -26,8 +27,10 @@ class PartyMapping extends EntityMapping
     {
         $builder->increments('id');
         $builder->string('name')->length(100);
-        $builder->string('email')->length(100);
-        $builder->string('location')->length(100);
-        $builder->joinedTableInheritance()->column('type');
+        $builder->field('money', 'price');
+        $builder->integer('totalQuantity')->unsigned();
+        $builder->integer('quantityAvailable')->unsigned();
+        $builder->manyToOne(Event::class);
+        $builder->unique(['event_id', 'id']);
     }
 }

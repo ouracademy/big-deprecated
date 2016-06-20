@@ -25,7 +25,7 @@ class UserMapping extends EntityMapping
     public function map(Fluent $builder)
     {
         $builder->increments('id');
-        $builder->string('name');
+        $builder->string('name')->length(100);
         $builder->string('email')->unique();
         $builder->string('password')->length(60);
         $builder->rememberToken();

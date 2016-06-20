@@ -5,6 +5,7 @@ use App\Domain\Time\TimePeriod;
 use App\Domain\Party\Person;
 use App\Domain\Event\EventRole;
 use App\Domain\Event\EventRoleType;
+use App\Domain\Event\Ticket;
 
 class EventTest extends TestCase
 {
@@ -77,5 +78,12 @@ class EventTest extends TestCase
         $organizers = $this->event->getPerformersByRole(EventRoleType::ORGANIZER());
         $this->assertEquals(1,count($organizers));
         $this->assertTrue($organizers->contains($alex));
+    }
+    
+    public function testAddTicket(){
+        $someTicket = entity(Ticket::class)->make();
+        $this->assertEmpty($this->event->getTickets());
+        $this->event->addTicket($someTicket);
+        $this->assertEquals(1,count($this->event->getTickets()));
     }
 }

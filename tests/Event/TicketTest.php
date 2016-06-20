@@ -18,7 +18,23 @@ class TicketTest extends TestCase
         $this->assertEquals($this->ticket->getPrice(), new Money(50, Currencies::SOL()));
     }
     
-    public function testQuantity(){
-        $this->assertEquals($this->ticket->getQuantity(), 10);
+    public function testTotalQuantity(){
+        $this->assertEquals($this->ticket->getTotalQuantity(), 10);
+    }
+    
+    public function testQuantityAvailable(){
+        $this->assertEquals($this->ticket->getQuantityAvailable(), 10);
+    }
+    
+    public function testSellTickets(){
+        $this->ticket->sell(4);
+        $this->assertEquals($this->ticket->getQuantityAvailable(), 6);
+    }
+    
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testSellMoreTicketsThanAvailable(){
+        $this->ticket->sell(20);
     }
 }

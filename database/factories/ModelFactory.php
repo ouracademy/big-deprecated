@@ -32,7 +32,9 @@ $factory->define(App\Domain\Event\Event::class, function (Faker\Generator $faker
         'location' => $faker->address,
         'description' => $faker->text,
         'timePeriod' => new App\Domain\Time\TimePeriod($start, $end),
-        'eventType' => $faker->randomElement(App\Domain\Event\Event::$types)
+        'eventType' => $faker->randomElement(App\Domain\Event\Event::$types),
+        'eventRoles' => new SplObjectStorage(),
+        'tickets' => new Doctrine\Common\Collections\ArrayCollection()
     ];
 });
 
@@ -45,6 +47,17 @@ $factory->define(App\Domain\Party\Organization::class, function (Faker\Generator
 });
 
 
-//$sol = App\Domain\Money\Currencies::SOL();
-//'price' => new App\Domain\Money\Money($faker->randomNumber(2), $sol),
+$factory->define(App\Domain\Event\Ticket::class, function (Faker\Generator $faker) {
+    $sol = App\Domain\Money\Currencies::SOL();
+    $totalQuantity = $faker->randomNumber(2);
+
+    return [
+        'name' => $faker->randomElement(['VIP','Popular']),
+        'price' => new App\Domain\Money\Money($faker->randomNumber(2), $sol),
+        'totalQuantity' => $totalQuantity,
+        'quantityAvailable' => $faker->numberBetween(0, $totalQuantity)
+    ];
+});
+
+
         

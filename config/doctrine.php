@@ -31,6 +31,7 @@ return [
             'mappings' => [
                 //Entities
                 App\Infraestructure\Data\Mappings\EventMapping::class,
+                App\Infraestructure\Data\Mappings\TicketMapping::class,
                 App\Infraestructure\Data\Mappings\PartyMapping::class,
                 App\Infraestructure\Data\Mappings\OrganizationMapping::class,
                 App\Infraestructure\Data\Mappings\UserMapping::class,
@@ -84,7 +85,7 @@ return [
             |--------------------------------------------------------------------------
             */
             'mapping_types'              => [
-                //'enum' => 'string'
+                'enum' => 'string'
             ]
         ]
     ],

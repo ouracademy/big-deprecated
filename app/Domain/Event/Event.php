@@ -8,6 +8,7 @@ use App\Domain\Time\TimePeriod;
 use InvalidArgumentException;
 use App\Domain\Party\Party;
 use SplObjectStorage;
+use Doctrine\Common\Collections\ArrayCollection;
 
 //TODO add photo property
 class Event
@@ -24,6 +25,7 @@ class Event
     private $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
+    private $tickets;
     
     public static function __callStatic($method, $arguments)
     {
@@ -34,8 +36,10 @@ class Event
         $this->name = $name;
         $this->addEventType($eventType);
         $this->eventRoles = new SplObjectStorage();
+        $this->tickets = new ArrayCollection();
         $this->slug = str_slug($name);
     }
+    
     
     private function addEventType($eventType){
         if(in_array($eventType,self::$types)){
@@ -104,5 +108,14 @@ class Event
         }
         
         return $performers;
+    }
+    
+    public function addTicket(Ticket $ticket){
+        $this->tickets->add($ticket);
+        $ticket->friendAddEvent($this);
+    }
+    
+    public function getTickets(){
+        return $this->tickets;
     }
 }
