@@ -8,7 +8,7 @@
 				cursos y conferencias.</p>
 				<a href="{{url('about')}}">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
 			</div>
-			
+
 			<div class="col-md-6 col-sm-6">
 				<h4 class="title">Mantente en contácto</h4>
 				<div class="social-network">
@@ -26,16 +26,16 @@
 				Estaremos muy agradecidos en responderle y ofrecerle el mejor
 				servicio.</p>
 			</div>
-		</div> 
+		</div>
 	</div>
-  
+
 	<div class="footer-bottom">
 		<div class="container">
-			<p class="pull-left">Copyright © 2016 Business Ideas Group (BIG).   
-			Diseñado por BIG y <a href="https://www.facebook.com/Ouracademy-661881453944170/?fref=ts">Ouracademy</a></p>
+			<p class="pull-left">Copyright © 2016 Business Ideas Group (BIG).
+			Diseñado por BIG y <a href="https://www.facebook.com/academyForUs/">Ouracademy</a></p>
 			<ul class="list-inline pull-right">
 				<li><a href="{{url('about')}}">Nosotros</a></li>
-				<li><a href="{{url('contact')}}">Contáctenos</a></li>					
+				<li><a href="{{url('contact')}}">Contáctenos</a></li>
 			</ul>
 		</div>
 	</div>
