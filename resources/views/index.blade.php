@@ -1,8 +1,14 @@
 <html>
   <head>
-    <title>Angular 2 QuickStart</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
+    <meta name="author" content="Arthur Mauricio">
+    <meta name="author" content="Ouracademy">
+    <meta name="author" content="Business Ideas Group">
+
+    <title>Business Ideas Group</title>
     <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
     <script src="angular2app/node_modules/core-js/client/shim.min.js"></script>
@@ -17,6 +23,6 @@
   </head>
   <!-- 3. Display the application -->
   <body>
-    <my-app>Loading...</my-app>
+    <app>Loading...</app>
   </body>
 </html>
