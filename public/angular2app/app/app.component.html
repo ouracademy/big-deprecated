@@ -8,20 +8,21 @@
                 <span class="icon-bar"></span>
             </button>
             <abbr title="Business Ideas Group">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" routerLink="/">
                     <img src="img/logo.jpg"/>
                 </a>
             </abbr>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="/login">Inicia sesión</a></li>
-                  <li><a href="/register">Registrate</a></li>
+                  <li><a routerLink="/login">Inicia sesión</a></li>
+                  <li><a routerLink="/register">Registrate</a></li>
                 </ul>
         </div>
     </div>
 </nav>
 
+<router-outlet></router-outlet>
 
 <footer>
 	<div class="footer-top container">
@@ -31,7 +32,7 @@
 				<p>BIG es una empresa peruana que fomenta la cultura
 				emprendedora en el país a través de talleres, seminarios,
 				cursos y conferencias.</p>
-				<a href="about">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
+				<a routerLink="/about">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
 			</div>
 
 			<div class="col-md-6 col-sm-6">
@@ -59,8 +60,8 @@
 			<p class="pull-left">Copyright © 2016 Business Ideas Group (BIG).
 			Diseñado por BIG y <a href="https://www.facebook.com/academyForUs/">Ouracademy</a></p>
 			<ul class="list-inline pull-right">
-				<li><a href="about">Nosotros</a></li>
-				<li><a href="contact">Contáctenos</a></li>
+				<li><a routerLink="about">Nosotros</a></li>
+				<li><a routerLink="contact">Contáctenos</a></li>
 			</ul>
 		</div>
 	</div>
