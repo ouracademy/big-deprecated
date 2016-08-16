@@ -7,6 +7,7 @@ import { routing }        from "./app.routing";
 import { WelcomeComponent }  from "./welcome/welcome.component";
 import { AboutComponent }  from "./about/about.component";
 import { SponsorsComponent }  from "./shared/sponsors.component";
+import { SliderComponent }  from "./shared/slider.component";
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { SponsorsComponent }  from "./shared/sponsors.component";
     AppComponent,
     WelcomeComponent,
     AboutComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    SliderComponent
   ],
   bootstrap:    [ AppComponent ]
 })

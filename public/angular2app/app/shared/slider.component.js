@@ -9,23 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AboutComponent = (function () {
-    function AboutComponent() {
-        this.slider = {
-            title: "Nosotros",
-            image: "about-slider",
-            message: "Un equipo dedicado a formar grandes personas"
-        };
+var SliderComponent = (function () {
+    function SliderComponent() {
     }
-    AboutComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SliderComponent.prototype, "title", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SliderComponent.prototype, "imageId", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], SliderComponent.prototype, "message", void 0);
+    SliderComponent = __decorate([
         core_1.Component({
-            selector: "about",
-            templateUrl: "angular2app/app/about/about.component.html",
-            styleUrls: ["angular2app/app/about/about.component.css"]
+            selector: "slider",
+            templateUrl: "angular2app/app/shared/slider.component.html"
         }), 
         __metadata('design:paramtypes', [])
-    ], AboutComponent);
-    return AboutComponent;
+    ], SliderComponent);
+    return SliderComponent;
 }());
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+exports.SliderComponent = SliderComponent;
+//# sourceMappingURL=slider.component.js.map
