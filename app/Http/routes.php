@@ -14,6 +14,11 @@
 Route::get('/',  function() {
   return view("index");
 });
+
+Route::get('{any}', function ($any) {
+  return view("index");
+})->where('any', '.*');
+
 // Route::get('/',  ['as' => 'welcome', 'uses' => 'HomeController@index']);
 // Route::auth();
 // Route::get('/home',  ['as' => 'welcome', 'uses' => 'HomeController@index']);
