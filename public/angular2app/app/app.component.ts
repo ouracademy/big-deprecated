@@ -8,4 +8,6 @@ export class AppComponent {
   onActivate(e) {
     window.scrollTo(0, 0);
   }
+
+  
 }

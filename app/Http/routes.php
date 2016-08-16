@@ -19,10 +19,7 @@ Route::get('{any}', function ($any) {
   return view("index");
 })->where('any', '.*');
 
-// Route::get('/',  ['as' => 'welcome', 'uses' => 'HomeController@index']);
 // Route::auth();
-// Route::get('/home',  ['as' => 'welcome', 'uses' => 'HomeController@index']);
-// Route::get('/about', ['as' => 'about', 'uses' => 'HomeController@about']);
 // Route::get('event/{slug}', ['as' => 'event.slug', 'uses' => 'EventController@showBySlug']);
 // Route::resource('event', 'EventController');
 // Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@getContact']);

@@ -14,10 +14,12 @@
             </abbr>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                  <li><a routerLink="/login">Inicia sesión</a></li>
-                  <li><a routerLink="/register">Registrate</a></li>
-                </ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Inicio</a></li>
+                <li routerLinkActive="active"><a routerLink="about">Nosotros</a></li>
+                <li routerLinkActive="active"><a routerLink="event">Eventos</a></li>
+                <li routerLinkActive="active"><a routerLink="contact">Contáctenos</a></li>
+			</ul>
         </div>
     </div>
 </nav>
