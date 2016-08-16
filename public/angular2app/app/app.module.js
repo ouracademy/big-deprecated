@@ -14,6 +14,7 @@ var app_component_1 = require("./app.component");
 var app_routing_1 = require("./app.routing");
 var welcome_component_1 = require("./welcome/welcome.component");
 var about_component_1 = require("./about/about.component");
+var contact_component_1 = require("./contact/contact.component");
 var sponsors_component_1 = require("./shared/sponsors.component");
 var slider_component_1 = require("./shared/slider.component");
 var AppModule = (function () {
@@ -29,6 +30,7 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 welcome_component_1.WelcomeComponent,
                 about_component_1.AboutComponent,
+                contact_component_1.ContactComponent,
                 sponsors_component_1.SponsorsComponent,
                 slider_component_1.SliderComponent
             ],

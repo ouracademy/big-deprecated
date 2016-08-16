@@ -9,23 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AboutComponent = (function () {
-    function AboutComponent() {
+var ContactComponent = (function () {
+    function ContactComponent() {
         this.slider = {
-            title: "Nosotros",
-            image: "img/about/team.jpg",
-            message: "Un equipo dedicado a formar grandes personas"
+            title: "Contáctenos",
+            image: "img/contact/business-world.jpg",
+            message: "Conéctate con nosotros"
+        };
+        this.BIG = {
+            email: "info@businessideasgroup.com.pe",
+            location: "Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)"
         };
     }
-    AboutComponent = __decorate([
+    ContactComponent = __decorate([
         core_1.Component({
-            selector: "about",
-            templateUrl: "angular2app/app/about/about.component.html",
-            styleUrls: ["angular2app/app/about/about.component.css"]
+            selector: "contact",
+            templateUrl: "angular2app/app/contact/contact.component.html",
+            styleUrls: ["angular2app/app/contact/contact.component.css"]
         }), 
         __metadata('design:paramtypes', [])
-    ], AboutComponent);
-    return AboutComponent;
+    ], ContactComponent);
+    return ContactComponent;
 }());
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+exports.ContactComponent = ContactComponent;
+//# sourceMappingURL=contact.component.js.map

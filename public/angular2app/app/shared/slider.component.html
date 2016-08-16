@@ -1,4 +1,5 @@
-<div id="{{imageId}}" class="jumbotron absolute-background image-background">
+<div class="jumbotron absolute-background image-background" 
+    [ngStyle]="{'background-image': 'url(' + imageURL + ')'}">
         <div class="background black-background"></div>
         <div class="content text-center">
             <div class="container">

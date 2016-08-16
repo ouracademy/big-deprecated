@@ -8,7 +8,7 @@ export class SliderComponent {
   @Input()
   title: string;
   @Input()
-  imageId: string;
+  imageURL: string;
   @Input()
   message: string;
 }

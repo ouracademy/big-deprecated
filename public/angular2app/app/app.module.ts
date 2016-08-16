@@ -6,6 +6,7 @@ import { routing }        from "./app.routing";
 
 import { WelcomeComponent }  from "./welcome/welcome.component";
 import { AboutComponent }  from "./about/about.component";
+import { ContactComponent }  from "./contact/contact.component";
 import { SponsorsComponent }  from "./shared/sponsors.component";
 import { SliderComponent }  from "./shared/slider.component";
 
@@ -18,6 +19,7 @@ import { SliderComponent }  from "./shared/slider.component";
     AppComponent,
     WelcomeComponent,
     AboutComponent,
+    ContactComponent,
     SponsorsComponent,
     SliderComponent
   ],

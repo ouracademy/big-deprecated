@@ -1,0 +1,65 @@
+<slider [title]="slider.title" [imageURL]="slider.image" [message]="slider.message"></slider>
+<section class="container">
+    <div class="col-lg-12">
+        
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="col-md-8">
+            <h2 class="page-header">Envíenos su mensaje</h2>
+            <form name="sentMessage">
+                <div class="control-group form-group">
+                    <div class="controls">
+                      <label for="name">Nombre completo</label>
+                      <input name="name" type="text" required="true" class="form-control"/>
+                      <p class="help-block"></p>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label for="email">Dirección de email</label>
+                        <input name="email" type="email" required class="form-control"/>
+                    </div>
+                </div>
+                <div class="control-group form-group">
+                    <div class="controls">
+                        <label for="message">Mensaje</label>
+                        <textarea name="message" required class="form-control" rows="10" cols="100" maxlength="999"></textarea>
+                    </div>
+                </div>
+                <div id="success"></div><!-- For success/fail messages -->
+                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+            </form>
+        </div>
+        <div class="col-md-4 contact-details">
+            <h2 class="page-header">Detalles de contacto</h2>
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fa fa-map-marker"></i>
+                    {{ BIG.location }}
+                </li>
+                <li>
+                    <i class="fa fa-phone"></i>(01) 226-5452</li>
+                <li>
+                    <i class="fa fa-envelope-o"></i>
+                    <a href="mailto:{{BIG.email}}">
+                        {{BIG.email}}</a>
+                </li>
+                <li><i class="fa fa-clock-o"></i>Lunes - Viernes: 9:00 AM a 10:00 PM</li>
+                <ul class="list-unstyled list-inline list-social-icons">
+                    <li>
+                        <a href="https://www.facebook.com/businessideasgroupperu/">
+                            <i class="fa fa-facebook-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/business-ideas-group"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</section>

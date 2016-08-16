@@ -12,6 +12,9 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
     }
+    AppComponent.prototype.onActivate = function (e) {
+        window.scrollTo(0, 0);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: "app",

@@ -19,7 +19,7 @@ var SliderComponent = (function () {
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], SliderComponent.prototype, "imageId", void 0);
+    ], SliderComponent.prototype, "imageURL", void 0);
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)

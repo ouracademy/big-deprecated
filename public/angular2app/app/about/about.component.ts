@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
 export class AboutComponent {
   slider = {
     title: "Nosotros",
-    image: "about-slider",
+    image: "img/about/team.jpg",
     message: "Un equipo dedicado a formar grandes personas"
   };
 }
