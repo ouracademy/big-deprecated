@@ -4,4 +4,8 @@ import { Component } from "@angular/core";
   selector: "app",
   templateUrl: "angular2app/app/app.component.html"
 })
-export class AppComponent { }
+export class AppComponent {
+  onActivate(e) {
+    window.scrollTo(0, 0);
+  }
+}
