@@ -9,8 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var message_1 = require('./message');
+var contact_service_1 = require('./contact.service');
 var ContactComponent = (function () {
-    function ContactComponent() {
+    function ContactComponent(contactService) {
+        this.contactService = contactService;
         this.slider = {
             title: "Contáctenos",
             image: "img/contact/business-world.jpg",
@@ -20,14 +23,25 @@ var ContactComponent = (function () {
             email: "info@businessideasgroup.com.pe",
             location: "Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)"
         };
+        this.newMessage();
     }
+    ContactComponent.prototype.onSubmit = function () {
+        var _this = this;
+        this.contactService.send(this.message).then(function () {
+            console.log("Enviadoo!!");
+            _this.newMessage();
+        });
+    };
+    ContactComponent.prototype.newMessage = function () {
+        this.message = new message_1.default({ name: "", email: "" }, "");
+    };
     ContactComponent = __decorate([
         core_1.Component({
             selector: "contact",
             templateUrl: "angular2app/app/contact/contact.component.html",
             styleUrls: ["angular2app/app/contact/contact.component.css"]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [contact_service_1.ContactService])
     ], ContactComponent);
     return ContactComponent;
 }());

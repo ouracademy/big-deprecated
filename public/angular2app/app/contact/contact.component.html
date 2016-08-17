@@ -8,27 +8,31 @@
     <div class="container">
         <div class="col-md-8">
             <h2 class="page-header">Envíenos su mensaje</h2>
-            <form name="sentMessage">
+            <form (ngSubmit)="onSubmit()">
                 <div class="control-group form-group">
                     <div class="controls">
                       <label for="name">Nombre completo</label>
-                      <input name="name" type="text" required="true" class="form-control"/>
-                      <p class="help-block"></p>
+                      <input id="name" name="name" type="text" required="true" 
+                        class="form-control" [(ngModel)]="message.from.name"  #name="ngModel"/>
+                      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                        Nombre es requerido
+                       </div>
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
                         <label for="email">Dirección de email</label>
-                        <input name="email" type="email" required class="form-control"/>
+                        <input id="email" name="email" type="email" required 
+                            class="form-control" [(ngModel)]="message.from.email"/>
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
                         <label for="message">Mensaje</label>
-                        <textarea name="message" required class="form-control" rows="10" cols="100" maxlength="999"></textarea>
+                        <textarea id="message" name="message" required class="form-control"
+                         rows="10" cols="100" maxlength="999" [(ngModel)]="message.message"></textarea>
                     </div>
                 </div>
-                <div id="success"></div><!-- For success/fail messages -->
                 <button type="submit" class="btn btn-primary">Enviar mensaje</button>
             </form>
         </div>

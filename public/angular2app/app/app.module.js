@@ -10,11 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var http_1 = require('@angular/http');
+var forms_1 = require('@angular/forms');
 var app_component_1 = require("./app.component");
 var app_routing_1 = require("./app.routing");
 var welcome_component_1 = require("./welcome/welcome.component");
 var about_component_1 = require("./about/about.component");
 var contact_component_1 = require("./contact/contact.component");
+var contact_service_1 = require('./contact/contact.service');
 var event_list_component_1 = require("./event/event-list.component");
 var sponsors_component_1 = require("./shared/sponsors.component");
 var slider_component_1 = require("./shared/slider.component");
@@ -25,7 +28,9 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                app_routing_1.routing
+                app_routing_1.routing,
+                http_1.HttpModule,
+                forms_1.FormsModule
             ],
             declarations: [
                 app_component_1.AppComponent,
@@ -35,6 +40,9 @@ var AppModule = (function () {
                 contact_component_1.ContactComponent,
                 sponsors_component_1.SponsorsComponent,
                 slider_component_1.SliderComponent
+            ],
+            providers: [
+                contact_service_1.ContactService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
