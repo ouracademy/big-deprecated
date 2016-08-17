@@ -15,13 +15,11 @@ Route::get('/',  function() {
   return view("index");
 });
 
-Route::get('{any}', function ($any) {
-  return view("index");
-})->where('any', '.*');
-
 // Route::auth();
 // Route::get('event/{slug}', ['as' => 'event.slug', 'uses' => 'EventController@showBySlug']);
 // Route::resource('event', 'EventController');
-// Route::get('/contact', ['as' => 'contact', 'uses' => 'ContactController@getContact']);
-// Route::post('/contact', 'ContactController@postContact');
 // Route::resource('participant', 'ParticipantController');
+
+Route::get('{any}', function ($any) {
+  return view("index");
+})->where('any', '.*');

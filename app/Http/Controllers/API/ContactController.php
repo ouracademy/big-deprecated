@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
+use App\Http\Controllers\Controller;
 use App\Services\Contact\EmailContactService;
 use App\Domain\Party\Organization;
 use App\Domain\Party\Person;
@@ -19,14 +20,14 @@ class ContactController extends Controller
         $this->BIG->setLocation('Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)');
     }
     
-    public function getContact(){
-        return view('contact')->with('BIG',$this->BIG);
-    }
-    
     public function postContact(ContactFormRequest $request){
         $person = new Person($request->name);
         $person->setEmail($request->email);
         $this->contactService->contact($person, $this->BIG, $request->message);
-        return back()->withStatus('Mensaje enviado!, estaremos respondiendole lo más pronto posible');
+
+        return response()->json([
+            'status' => 'Mensaje enviado!, estaremos respondiendole lo más pronto posible'
+        ]);
+    
     }
 }
