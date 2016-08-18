@@ -18,6 +18,8 @@ export class ContactComponent {
     location: "Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)"
   };
   message: Message;
+  messageSended: boolean = false;
+  active = true;
 
   constructor(private contactService:ContactService) {
     this.newMessage();
@@ -25,12 +27,14 @@ export class ContactComponent {
 
   onSubmit() {
     this.contactService.send(this.message).then(() => {
-      console.log("Enviadoo!!");
+      this.messageSended = true;
       this.newMessage();
     })
   }
 
   private newMessage() {
     this.message = new Message({ name: "", email: "" }, "");
+    this.active = false;
+    setTimeout(() => this.active = true, 0);
   }
 }

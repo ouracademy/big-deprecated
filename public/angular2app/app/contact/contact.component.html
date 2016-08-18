@@ -7,8 +7,11 @@
 <section>
     <div class="container">
         <div class="col-md-8">
+            <div *ngIf="messageSended" class="alert alert-success">
+                Mensaje enviado!, estaremos respondiendole lo más pronto posible
+            </div>
             <h2 class="page-header">Envíenos su mensaje</h2>
-            <form (ngSubmit)="onSubmit()">
+            <form (ngSubmit)="onSubmit()" *ngIf="active">
                 <div class="control-group form-group">
                     <div class="controls">
                       <label for="name">Nombre completo</label>

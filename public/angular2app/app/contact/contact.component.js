@@ -23,17 +23,22 @@ var ContactComponent = (function () {
             email: "info@businessideasgroup.com.pe",
             location: "Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)"
         };
+        this.messageSended = false;
+        this.active = true;
         this.newMessage();
     }
     ContactComponent.prototype.onSubmit = function () {
         var _this = this;
         this.contactService.send(this.message).then(function () {
-            console.log("Enviadoo!!");
+            _this.messageSended = true;
             _this.newMessage();
         });
     };
     ContactComponent.prototype.newMessage = function () {
+        var _this = this;
         this.message = new message_1.default({ name: "", email: "" }, "");
+        this.active = false;
+        setTimeout(function () { return _this.active = true; }, 0);
     };
     ContactComponent = __decorate([
         core_1.Component({

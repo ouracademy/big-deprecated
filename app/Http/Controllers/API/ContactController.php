@@ -24,9 +24,9 @@ class ContactController extends Controller
         $person = new Person($request->get('from.name'));
         $person->setEmail($request->get('from.email'));
         $this->contactService->contact($person, $this->BIG, $request->message);
-
+        
         return response()->json([
-            'status' => 'Mensaje enviado!, estaremos respondiendole lo más pronto posible'
+            'data' => 'Message sended!'
         ]);
     
     }
