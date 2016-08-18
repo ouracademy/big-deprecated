@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var message_1 = require('./message');
 var contact_service_1 = require('./contact.service');
+var forms_1 = require('@angular/forms');
 var ContactComponent = (function () {
-    function ContactComponent(contactService) {
+    function ContactComponent(contactService, builder) {
         this.contactService = contactService;
         this.slider = {
             title: "Contáctenos",
@@ -23,22 +23,24 @@ var ContactComponent = (function () {
             email: "info@businessideasgroup.com.pe",
             location: "Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)"
         };
-        this.messageSended = false;
-        this.active = true;
-        this.newMessage();
+        this.submitAttemp = false;
+        this.message = new forms_1.FormControl("", forms_1.Validators.required);
+        this.name = new forms_1.FormControl("", forms_1.Validators.required);
+        this.email = new forms_1.FormControl("", forms_1.Validators.required);
+        this.contactForm = builder.group({
+            message: this.message,
+            from: builder.group({
+                name: this.name,
+                email: this.email
+            })
+        });
     }
     ContactComponent.prototype.onSubmit = function () {
         var _this = this;
-        this.contactService.send(this.message).then(function () {
-            _this.messageSended = true;
-            _this.newMessage();
+        this.contactService.send(this.contactForm.value).then(function () {
+            _this.contactForm.reset();
+            _this.submitAttemp = true;
         });
-    };
-    ContactComponent.prototype.newMessage = function () {
-        var _this = this;
-        this.message = new message_1.default({ name: "", email: "" }, "");
-        this.active = false;
-        setTimeout(function () { return _this.active = true; }, 0);
     };
     ContactComponent = __decorate([
         core_1.Component({
@@ -46,7 +48,7 @@ var ContactComponent = (function () {
             templateUrl: "angular2app/app/contact/contact.component.html",
             styleUrls: ["angular2app/app/contact/contact.component.css"]
         }), 
-        __metadata('design:paramtypes', [contact_service_1.ContactService])
+        __metadata('design:paramtypes', [contact_service_1.ContactService, forms_1.FormBuilder])
     ], ContactComponent);
     return ContactComponent;
 }());

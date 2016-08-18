@@ -7,36 +7,43 @@
 <section>
     <div class="container">
         <div class="col-md-8">
-            <div *ngIf="messageSended" class="alert alert-success">
+            <div *ngIf="submitAttemp" class="alert alert-success">
                 Mensaje enviado!, estaremos respondiendole lo más pronto posible
             </div>
             <h2 class="page-header">Envíenos su mensaje</h2>
-            <form (ngSubmit)="onSubmit()" *ngIf="active">
-                <div class="control-group form-group">
-                    <div class="controls">
-                      <label for="name">Nombre completo</label>
-                      <input id="name" name="name" type="text" required="true" 
-                        class="form-control" [(ngModel)]="message.from.name"  #name="ngModel"/>
-                      <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                        Nombre es requerido
-                       </div>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <div formGroupName="from">                    
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label for="name">Nombre completo</label>
+                            <input id="name" formControlName="name" type="text" class="form-control"/>
+                            <div [hidden]="name.valid  ||  name.pristine" class="alert alert-danger">
+                                Nombre es requerido.
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="control-group form-group">
-                    <div class="controls">
-                        <label for="email">Dirección de email</label>
-                        <input id="email" name="email" type="email" required 
-                            class="form-control" [(ngModel)]="message.from.email"/>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label for="email">Dirección de email</label>
+                            <input id="email" formControlName="email" type="email" class="form-control" />
+                            <div [hidden]="email.valid  ||  email.pristine" class="alert alert-danger">
+                                Email es requerido.
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="control-group form-group">
                     <div class="controls">
                         <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" required class="form-control"
-                         rows="10" cols="100" maxlength="999" [(ngModel)]="message.message"></textarea>
+                        <textarea id="message" formControlName="message" 
+                            class="form-control" rows="10" cols="100" maxlength="999" ></textarea>
+                        <div [hidden]="message.valid  ||  message.pristine" class="alert alert-danger">
+                            Mensaje es requerido.
+                        </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                <button [disabled]="!contactForm.valid" type="submit"
+                     class="btn btn-primary">Enviar mensaje</button>
             </form>
         </div>
         <div class="col-md-4 contact-details">
