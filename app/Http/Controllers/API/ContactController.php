@@ -21,9 +21,10 @@ class ContactController extends Controller
     }
     
     public function postContact(ContactFormRequest $request){
-        $person = new Person($request->get('from.name'));
-        $person->setEmail($request->get('from.email'));
-        $this->contactService->contact($person, $this->BIG, $request->message);
+        $data = $request->all();
+        $person = new Person($data['from']['name']);
+        $person->setEmail($data['from']['email']);
+        $this->contactService->contact($person, $this->BIG, $data['message']);
         
         return response()->json([
             'data' => 'Message sended!'
