@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Illuminate\Http\Request;
+use App\Http\Requests;
 use App\Domain\Event\EventRepository;
 use App\Domain\Event\Event;
 
@@ -19,7 +18,22 @@ class EventController extends Controller
     }
     
     public function index(){
-        return view('events.index')->with('events',$this->eventRepository->all());
+        //TODO move this to a EventDTO...
+        $eventsInJSON = array();
+        foreach($this->eventRepository->all() as $event){
+            array_push($eventsInJSON, [
+                "name" => $event->getName(),
+                "slug" => $event->getSlug(),
+                "timePeriod" => [
+                    "start" => $event->getTimePeriod()->start(),
+                    "end" => $event->getTimePeriod()->end()
+                ]
+            ]);
+        }
+        
+        return response()->json([
+            'data' => $eventsInJSON
+        ]);
     }
     
     public function showBySlug($slug){
