@@ -10,15 +10,15 @@ var appRoutes = [
         component: welcome_component_1.WelcomeComponent
     },
     {
-        path: "about",
+        path: "nosotros",
         component: about_component_1.AboutComponent
     },
     {
-        path: "event",
+        path: "eventos",
         component: event_list_component_1.EventListComponent
     },
     {
-        path: "contact",
+        path: "contáctenos",
         component: contact_component_1.ContactComponent
     }
 ];

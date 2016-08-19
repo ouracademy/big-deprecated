@@ -95,6 +95,10 @@ footer .title{
     background: #2FBBED;
 }
 
+.social a .fa-youtube-play:after {
+    background: #e72e25;
+}
+
 .social a .fa-linkedin:after {
     background: #1884BB;
 }

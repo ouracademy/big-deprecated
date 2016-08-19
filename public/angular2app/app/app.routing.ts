@@ -11,15 +11,15 @@ const appRoutes: Routes = [
     component: WelcomeComponent
   },
   {
-      path: "about",
+      path: "nosotros",
       component: AboutComponent
   },
   {
-      path: "event",
+      path: "eventos",
       component: EventListComponent
   },
   {
-      path: "contact",
+      path: "contáctenos",
       component: ContactComponent
   }
 ];
