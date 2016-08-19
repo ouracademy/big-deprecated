@@ -16,6 +16,13 @@ var EventListComponent = (function () {
             image: "img/events/entrepreneur.jpg",
             title: "Eventos"
         };
+        this.events = new Array({
+            name: "Un evento",
+            timePeriod: {
+                start: new Date(),
+                end: new Date()
+            }
+        });
     }
     EventListComponent = __decorate([
         core_1.Component({

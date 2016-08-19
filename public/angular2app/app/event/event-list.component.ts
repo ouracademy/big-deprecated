@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Event } from './event';
 
 @Component({
     selector: 'event-list',
@@ -15,4 +16,13 @@ export class EventListComponent {
         image: "img/events/entrepreneur.jpg",
         title: "Eventos"
     }
+    events: Array<Event> = new Array<Event>(
+        {
+            name: "Un evento",
+            timePeriod: {
+                start: new Date(),
+                end: new Date()
+            }
+        }
+    );
 }
