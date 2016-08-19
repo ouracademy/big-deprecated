@@ -1,4 +1,4 @@
-Move twitter bootstrap to angular2, use:
-https://github.com/valor-software/ng2-bootstrap
-or 
-https://ng-bootstrap.github.io/#/components/carousel
+
+1. Move twitter bootstrap to angular2, use: https://github.com/valor-software/ng2-bootstrap 
+or https://ng-bootstrap.github.io/#/components/carousel
+2. Add email validation(for now using HTML5 validation)
