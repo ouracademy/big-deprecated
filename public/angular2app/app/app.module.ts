@@ -11,6 +11,7 @@ import { AboutComponent }  from "./about/about.component";
 import { ContactComponent }  from "./contact/contact.component";
 import { ContactService } from './contact/contact.service';
 import { EventListComponent }  from "./event/event-list.component";
+import { EventService } from './event/event.service';
 import { SponsorsComponent }  from "./shared/sponsors.component";
 import { SliderComponent }  from "./shared/slider.component";
 
@@ -31,7 +32,8 @@ import { SliderComponent }  from "./shared/slider.component";
     SliderComponent
   ],
   providers: [
-    ContactService
+    ContactService,
+    EventService
   ],
   bootstrap:    [ AppComponent ]
 })

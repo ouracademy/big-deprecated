@@ -15,8 +15,8 @@
                 <p class="lead">
                     by <a href="index.php">Start Bootstrap</a>
                 </p>
-                <p><i class="fa fa-clock-o"></i> Fecha inicio: {{event.timePeriod.start}} / Fecha fin:
-                    {{event.timePeriod.end}}
+                <p><i class="fa fa-clock-o"></i> Fecha inicio: {{event.timePeriod.start | date: 'd MMMM y'}} / Fecha fin:
+                    {{event.timePeriod.end | date: 'd MMMM y'}}
                 </p>
                 <hr>
                 <a [routerLink]="['/event', event.slug]">

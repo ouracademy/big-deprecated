@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Event } from './event';
+import { EventService } from './event.service';
 
 @Component({
     selector: 'event-list',
@@ -10,19 +11,23 @@ import { Event } from './event';
         }
     `]
 })
-export class EventListComponent {
+export class EventListComponent implements OnInit {
     slider = {
         message: "Próximamente grandes eventos",
         image: "img/events/entrepreneur.jpg",
         title: "Eventos"
     }
-    events: Array<Event> = new Array<Event>(
-        {
-            name: "Un evento",
-            timePeriod: {
-                start: new Date(),
-                end: new Date()
-            }
-        }
-    );
+    events: Array<Event>;
+
+    constructor(private eventService: EventService) { }
+
+    ngOnInit() {
+        this.getEvents();
+    }
+
+    private getEvents() {
+        this.eventService.getEvents()
+            .then(events => this.events = events);
+    }
+
 }

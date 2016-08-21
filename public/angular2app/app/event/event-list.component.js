@@ -9,28 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var event_service_1 = require('./event.service');
 var EventListComponent = (function () {
-    function EventListComponent() {
+    function EventListComponent(eventService) {
+        this.eventService = eventService;
         this.slider = {
             message: "Próximamente grandes eventos",
             image: "img/events/entrepreneur.jpg",
             title: "Eventos"
         };
-        this.events = new Array({
-            name: "Un evento",
-            timePeriod: {
-                start: new Date(),
-                end: new Date()
-            }
-        });
     }
+    EventListComponent.prototype.ngOnInit = function () {
+        this.getEvents();
+    };
+    EventListComponent.prototype.getEvents = function () {
+        var _this = this;
+        this.eventService.getEvents()
+            .then(function (events) { return _this.events = events; });
+    };
     EventListComponent = __decorate([
         core_1.Component({
             selector: 'event-list',
             templateUrl: 'angular2app/app/event/event-list.component.html',
             styles: ["\n        .jumbotron{\n            margin-bottom:0px;\n        }\n    "]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [event_service_1.EventService])
     ], EventListComponent);
     return EventListComponent;
 }());

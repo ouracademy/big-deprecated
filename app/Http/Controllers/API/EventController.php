@@ -25,8 +25,8 @@ class EventController extends Controller
                 "name" => $event->getName(),
                 "slug" => $event->getSlug(),
                 "timePeriod" => [
-                    "start" => $event->getTimePeriod()->start(),
-                    "end" => $event->getTimePeriod()->end()
+                    "start" => $event->getTimePeriod()->start()->format('c'),
+                    "end" => $event->getTimePeriod()->end()->format('c')
                 ]
             ]);
         }

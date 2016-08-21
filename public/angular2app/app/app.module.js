@@ -19,6 +19,7 @@ var about_component_1 = require("./about/about.component");
 var contact_component_1 = require("./contact/contact.component");
 var contact_service_1 = require('./contact/contact.service');
 var event_list_component_1 = require("./event/event-list.component");
+var event_service_1 = require('./event/event.service');
 var sponsors_component_1 = require("./shared/sponsors.component");
 var slider_component_1 = require("./shared/slider.component");
 var AppModule = (function () {
@@ -42,7 +43,8 @@ var AppModule = (function () {
                 slider_component_1.SliderComponent
             ],
             providers: [
-                contact_service_1.ContactService
+                contact_service_1.ContactService,
+                event_service_1.EventService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
