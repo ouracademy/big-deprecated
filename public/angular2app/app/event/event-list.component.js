@@ -25,8 +25,20 @@ var EventListComponent = (function () {
     EventListComponent.prototype.getEvents = function () {
         var _this = this;
         this.eventService.getEvents()
-            .then(function (events) { return _this.events = events; });
+            .then(function (events) {
+            _this.events = events;
+            if (!_this.emptyEvents) {
+                _this.slider.message = "Grandes eventos para grandes personas";
+            }
+        });
     };
+    Object.defineProperty(EventListComponent.prototype, "emptyEvents", {
+        get: function () {
+            return this.events == null || this.events.length === 0;
+        },
+        enumerable: true,
+        configurable: true
+    });
     EventListComponent = __decorate([
         core_1.Component({
             selector: 'event-list',

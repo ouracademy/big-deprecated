@@ -5,7 +5,7 @@
     </div>
 </section>
 
-<section>
+<section *ngIf="!emptyEvents">
     <div class="container">
         <div class="col-md-8">
             <div *ngFor="let event of events">

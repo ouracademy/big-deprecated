@@ -27,7 +27,16 @@ export class EventListComponent implements OnInit {
 
     private getEvents() {
         this.eventService.getEvents()
-            .then(events => this.events = events);
+            .then(events => {
+                this.events = events;
+                if(!this.emptyEvents) {
+                    this.slider.message = "Grandes eventos para grandes personas";
+                }
+            });
+    }
+
+    get emptyEvents(): boolean{
+        return this.events == null || this.events.length === 0;
     }
 
 }
