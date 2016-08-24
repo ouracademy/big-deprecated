@@ -18,7 +18,7 @@
     <script src="angular2app/node_modules/systemjs/dist/system.src.js"></script>
 
     <!-- Bootstrap Core CSS -->
-    {!! Html::style('vendor/bootstrap/css/bootstrap.min.css') !!}
+    <link rel="stylesheet" href="angular2app/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
     {!! Html::style('css/layout.css') !!}
     <!-- Custom Fonts -->
@@ -42,6 +42,6 @@
   <body>
     <app>Loading...</app>
     {!! Html::script('vendor/jquery/jquery-1.12.0.min.js') !!}
-    {!! Html::script('vendor/bootstrap/js/bootstrap.min.js') !!}
+    <script src="angular2app/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
