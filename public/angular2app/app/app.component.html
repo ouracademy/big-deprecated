@@ -23,9 +23,9 @@
         </div>
     </div>
 </nav>
-
 <main>
-  <router-outlet (activate)="onActivate($event)"></router-outlet>
+	<a id="scrollUp" (click)="scrollUp()"><i class="glyphicon glyphicon-chevron-up"></i></a>
+  	<router-outlet (activate)="onActivate($event)"></router-outlet>
 </main>
 
 <footer>

@@ -5,10 +5,10 @@
 (function(global) {
   // map tells the System loader where to look for things
   var map = {
-    'app':                        'angular2app/app', // 'dist',
-    '@angular':                   'angular2app/node_modules/@angular',
-    'angular2-in-memory-web-api': 'angular2app/node_modules/angular2-in-memory-web-api',
-    'rxjs':                       'angular2app/node_modules/rxjs'
+    'app':                        'app', // 'dist',
+    '@angular':                   'node_modules/@angular',
+    'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
+    'rxjs':                       'node_modules/rxjs'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
@@ -42,7 +42,8 @@
   ngPackageNames.forEach(setPackageConfig);
   var config = {
     map: map,
-    packages: packages
+    packages: packages,
+    baseURL: '/angular2app'
   };
   System.config(config);
 })(this);

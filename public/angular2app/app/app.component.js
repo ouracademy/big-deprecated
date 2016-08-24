@@ -15,6 +15,15 @@ var AppComponent = (function () {
     AppComponent.prototype.onActivate = function (e) {
         window.scrollTo(0, 0);
     };
+    // onScroll(event) {
+    //   if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+    //       console.log("Un boton");
+    //       //document.getElementById("myImg").className = "slideUp";
+    //   }
+    // }
+    AppComponent.prototype.scrollUp = function () {
+        window.scrollTo(0, 0);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: "app",

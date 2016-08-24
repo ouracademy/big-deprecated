@@ -67,3 +67,13 @@ main > .row{
 .center-block{
     float: none;
 }
+
+#scrollUp {
+    padding:20px;
+    background:#024959;
+    font-size:20px;
+    color:#fff;
+    position: fixed;
+    bottom:20px;
+    right:20px;
+}
