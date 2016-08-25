@@ -21,8 +21,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: "app",
-            templateUrl: "angular2app/app/app.component.html",
-            styleUrls: ["angular2app/app/absolute-background.css"]
+            templateUrl: "angular2app/app/app.component.html"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

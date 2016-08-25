@@ -2,8 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "app",
-  templateUrl: "angular2app/app/app.component.html",
-  styleUrls: ["angular2app/app/absolute-background.css"]
+  templateUrl: "angular2app/app/app.component.html"
 })
 export class AppComponent {
   onActivate(e) {
