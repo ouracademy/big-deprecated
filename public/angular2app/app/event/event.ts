@@ -5,9 +5,15 @@ export interface Event {
     timePeriod: TimePeriod;
     eventType?: string;
     slug?: string;
+    tickets?: Ticket[];
 }
 
 interface TimePeriod{
     start: Date;
     end: Date;
+}
+
+interface Ticket{
+    name: string;
+    quantityAvailable: number;
 }

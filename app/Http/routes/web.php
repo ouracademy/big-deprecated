@@ -16,7 +16,6 @@ Route::get('/',  function() {
 });
 
 // Route::auth();
-// Route::get('event/{slug}', ['as' => 'event.slug', 'uses' => 'EventController@showBySlug']);
 // Route::resource('participant', 'ParticipantController');
 
 Route::get('{any}', function ($any) {

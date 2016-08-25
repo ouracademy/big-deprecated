@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="angular2app/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
     {!! Html::style('css/layout.css') !!}
+    {!! Html::style('css/absolute-background.css') !!}
     <!-- Custom Fonts -->
     {!! Html::style('vendor/font-awesome/css/font-awesome.min.css') !!}
-    {!! Html::style('css/absolute-background.css') !!}
-
+    
     <!-- 2. Configure SystemJS -->
     <script src="angular2app/systemjs.config.js"></script>
     <script>

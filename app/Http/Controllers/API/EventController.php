@@ -44,6 +44,26 @@ class EventController extends Controller
                 break;
             }
         }
-        return view('events.show')->with('event', $fetchedEvent);
+
+        //TODO move this to a TicketDTO...
+         $ticketsInJSON = array();
+        foreach($fetchedEvent->getTickets() as $ticket){
+            array_push($ticketsInJSON, [
+                "name" => $ticket->getName(),
+                "quantityAvailable" => $ticket->getQuantityAvailable()
+            ]);
+        }
+
+        return response()->json([
+            'data' => [
+                'name' => $fetchedEvent->getName(),
+                'description' => $fetchedEvent->getDescription(),
+                'tickets' => $ticketsInJSON,
+                "timePeriod" => [
+                    "start" => $event->getTimePeriod()->start()->format('c'),
+                    "end" => $event->getTimePeriod()->end()->format('c')
+                ]
+            ]
+        ]);
     }
 }

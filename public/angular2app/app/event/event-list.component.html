@@ -10,7 +10,7 @@
         <div class="col-md-8">
             <div *ngFor="let event of events">
                 <h2>
-                    <a [routerLink]="['/event', event.slug]">{{ event.name }}</a>
+                    <a [routerLink]="['/eventos', event.slug]">{{ event.name }}</a>
                 </h2>
                 <p class="lead">
                     by <a href="index.php">Start Bootstrap</a>
@@ -19,7 +19,7 @@
                     {{event.timePeriod.end | date: 'd MMMM y'}}
                 </p>
                 <hr>
-                <a [routerLink]="['/event', event.slug]">
+                <a [routerLink]="['/eventos', event.slug]">
                     <img class="img-responsive img-hover" src="http://placehold.it/900x300" alt="">
                 </a>
                 <hr>

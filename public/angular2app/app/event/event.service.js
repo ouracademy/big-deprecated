@@ -26,6 +26,16 @@ var EventService = (function () {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     };
+    EventService.prototype.getEvent = function (slug) {
+        var url = this.apiURL + "/" + slug;
+        return this.http.get(url)
+            .toPromise()
+            .then(function (res) {
+            console.log(res.json().data);
+            return res.json().data;
+        })
+            .catch(this.handleError);
+    };
     EventService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
