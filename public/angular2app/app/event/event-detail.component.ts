@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventService } from './event.service';
-import { Event } from './event';
+import { Event, Ticket } from './event';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs/Subscription';
 export class EventDetailComponent implements OnInit {
     private sub: Subscription;
     private event: Event;
+    private maxTicketsPerPerson: number = 4;
 
     constructor(
         private route: ActivatedRoute,
@@ -29,7 +30,13 @@ export class EventDetailComponent implements OnInit {
         this.sub.unsubscribe();
     }
 
-    get emptyEvent(){
+    get emptyEvent() {
         return this.event == null;
+    }
+
+    numberOfTickets(ticket: Ticket): Array<number> {
+        let ticketOptions = this.maxTicketsPerPerson > ticket.quantityAvailable ?
+            ticket.quantityAvailable : this.maxTicketsPerPerson;
+        return Array.from({ length: ticketOptions + 1 }, (v, k) => k);//+ 1 because array starts at 0
     }
 }

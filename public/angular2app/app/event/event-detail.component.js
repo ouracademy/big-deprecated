@@ -16,6 +16,7 @@ var EventDetailComponent = (function () {
         this.route = route;
         this.router = router;
         this.service = service;
+        this.maxTicketsPerPerson = 4;
     }
     EventDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -34,6 +35,11 @@ var EventDetailComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    EventDetailComponent.prototype.numberOfTickets = function (ticket) {
+        var ticketOptions = this.maxTicketsPerPerson > ticket.quantityAvailable ?
+            ticket.quantityAvailable : this.maxTicketsPerPerson;
+        return Array.from({ length: ticketOptions + 1 }, function (v, k) { return k; }); //+ 1 because array starts at 0
+    };
     EventDetailComponent = __decorate([
         core_1.Component({
             selector: 'event-detail',

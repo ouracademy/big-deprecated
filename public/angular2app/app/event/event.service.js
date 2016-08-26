@@ -30,10 +30,7 @@ var EventService = (function () {
         var url = this.apiURL + "/" + slug;
         return this.http.get(url)
             .toPromise()
-            .then(function (res) {
-            console.log(res.json().data);
-            return res.json().data;
-        })
+            .then(function (res) { return res.json().data; })
             .catch(this.handleError);
     };
     EventService = __decorate([

@@ -27,11 +27,7 @@ export class EventService {
         let url = `${this.apiURL}/${slug}`;
         return this.http.get(url)
             .toPromise()
-            .then(res => {
-                console.log(res.json().data);
-                return res.json().data as Event;
-
-            })
+            .then(res => res.json().data as Event)
             .catch(this.handleError);
     }
 }

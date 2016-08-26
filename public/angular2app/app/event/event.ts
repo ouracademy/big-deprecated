@@ -13,7 +13,7 @@ interface TimePeriod{
     end: Date;
 }
 
-interface Ticket{
+export interface Ticket{
     name: string;
     quantityAvailable: number;
 }

@@ -14,7 +14,7 @@ require('rxjs/add/operator/toPromise');
 var ContactService = (function () {
     function ContactService(http) {
         this.http = http;
-        this.apiURL = 'http://localhost:8000/contact'; // URL to web api
+        this.apiURL = '/contact'; // URL to web api
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     ContactService.prototype.send = function (message) {

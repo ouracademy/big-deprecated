@@ -6,7 +6,7 @@ import Message from './message';
 @Injectable()
 export class ContactService {
 
-    private apiURL = 'http://localhost:8000/contact';  // URL to web api
+    private apiURL = '/contact';  // URL to web api
     private headers: Headers;
 
     constructor(private http: Http) { 

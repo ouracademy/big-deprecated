@@ -115,7 +115,7 @@ class Event
         $ticket->friendAddEvent($this);
     }
     
-    public function getTickets(){
+    public function getTickets() {
         return $this->tickets;
     }
 }
