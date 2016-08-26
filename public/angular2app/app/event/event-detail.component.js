@@ -16,13 +16,21 @@ var EventDetailComponent = (function () {
         this.route = route;
         this.router = router;
         this.service = service;
+        this.slider = {
+            message: "",
+            image: "img/events/entrepreneur.jpg",
+            title: ""
+        };
         this.maxTicketsPerPerson = 4;
     }
     EventDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
             var name = params['name'];
-            _this.service.getEvent(name).then(function (event) { return _this.event = event; });
+            _this.service.getEvent(name).then(function (event) {
+                _this.event = event;
+                _this.slider.title = event.name;
+            });
         });
     };
     EventDetailComponent.prototype.ngOnDestroy = function () {
@@ -38,7 +46,8 @@ var EventDetailComponent = (function () {
     EventDetailComponent.prototype.numberOfTickets = function (ticket) {
         var ticketOptions = this.maxTicketsPerPerson > ticket.quantityAvailable ?
             ticket.quantityAvailable : this.maxTicketsPerPerson;
-        return Array.from({ length: ticketOptions + 1 }, function (v, k) { return k; }); //+ 1 because array starts at 0
+        //+ 1 because array starts at 0
+        return Array.from({ length: ticketOptions + 1 }, function (v, k) { return k; });
     };
     EventDetailComponent = __decorate([
         core_1.Component({

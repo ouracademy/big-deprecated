@@ -9,9 +9,15 @@ import { Subscription } from 'rxjs/Subscription';
     templateUrl: 'angular2app/app/event/event-detail.component.html'
 })
 export class EventDetailComponent implements OnInit {
+    slider = {
+        message: "",
+        image: "img/events/entrepreneur.jpg",
+        title: ""
+    }
     private sub: Subscription;
     private event: Event;
     private maxTicketsPerPerson: number = 4;
+    
 
     constructor(
         private route: ActivatedRoute,
@@ -22,7 +28,10 @@ export class EventDetailComponent implements OnInit {
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
             let name = params['name'];
-            this.service.getEvent(name).then(event => this.event = event);
+            this.service.getEvent(name).then(event => {
+                this.event = event;
+                this.slider.title = event.name;
+            });
         });
     }
 
@@ -37,6 +46,8 @@ export class EventDetailComponent implements OnInit {
     numberOfTickets(ticket: Ticket): Array<number> {
         let ticketOptions = this.maxTicketsPerPerson > ticket.quantityAvailable ?
             ticket.quantityAvailable : this.maxTicketsPerPerson;
-        return Array.from({ length: ticketOptions + 1 }, (v, k) => k);//+ 1 because array starts at 0
+        
+        //+ 1 because array starts at 0
+        return Array.from({ length: ticketOptions + 1 }, (v, k) => k);
     }
 }
