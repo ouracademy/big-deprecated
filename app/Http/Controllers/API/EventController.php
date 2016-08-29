@@ -50,7 +50,11 @@ class EventController extends Controller
         foreach($fetchedEvent->getTickets() as $ticket){
             array_push($ticketsInJSON, [
                 "name" => $ticket->getName(),
-                "quantityAvailable" => $ticket->getQuantityAvailable()
+                "quantityAvailable" => $ticket->getQuantityAvailable(),
+                "price" => [
+                    "amount" => $ticket->getPrice()->getAmount(),
+                    "currency" => $ticket->getPrice()->getCurrency()->getCode()
+                ]
             ]);
         }
 

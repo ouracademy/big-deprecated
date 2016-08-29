@@ -16,4 +16,10 @@ interface TimePeriod{
 export interface Ticket{
     name: string;
     quantityAvailable: number;
+    price: Money;
+}
+
+interface Money {
+    amount: number;
+    currency: string;
 }
