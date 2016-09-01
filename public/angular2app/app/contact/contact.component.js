@@ -44,9 +44,10 @@ var ContactComponent = (function () {
     };
     ContactComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: "contact",
-            templateUrl: "angular2app/app/contact/contact.component.html",
-            styleUrls: ["angular2app/app/contact/contact.component.css"]
+            templateUrl: "contact.component.html",
+            styleUrls: ["contact.component.css"]
         }), 
         __metadata('design:paramtypes', [contact_service_1.ContactService, forms_1.FormBuilder])
     ], ContactComponent);

@@ -5,8 +5,9 @@ import { Event, Ticket } from './event';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
+    moduleId: module.id,
     selector: 'event-detail',
-    templateUrl: 'angular2app/app/event/event-detail.component.html'
+    templateUrl: 'event-detail.component.html'
 })
 export class EventDetailComponent implements OnInit {
     slider = {

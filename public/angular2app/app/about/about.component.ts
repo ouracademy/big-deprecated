@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
 
 @Component({
+  moduleId: module.id,
   selector: "about",
-  templateUrl: "angular2app/app/about/about.component.html",
-  styleUrls: ["angular2app/app/about/about.component.css"]
+  templateUrl: "about.component.html",
+  styleUrls: ["about.component.css"]
 })
 export class AboutComponent {
   slider = {

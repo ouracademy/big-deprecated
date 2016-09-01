@@ -1,7 +1,8 @@
 import { Component } from "@angular/core";
 
 @Component({
+  moduleId: module.id,
   selector: "sponsors",
-  templateUrl: "angular2app/app/shared/sponsors.component.html"
+  templateUrl: "sponsors.component.html"
 })
 export class SponsorsComponent { }

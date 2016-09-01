@@ -4,9 +4,10 @@ import { ContactService } from './contact.service';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
+  moduleId: module.id,
   selector: "contact",
-  templateUrl: "angular2app/app/contact/contact.component.html",
-  styleUrls: ["angular2app/app/contact/contact.component.css"]
+  templateUrl: "contact.component.html",
+  styleUrls: ["contact.component.css"]
 })
 export class ContactComponent {
   slider = {

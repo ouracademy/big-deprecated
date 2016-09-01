@@ -41,8 +41,9 @@ var EventListComponent = (function () {
     });
     EventListComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'event-list',
-            templateUrl: 'angular2app/app/event/event-list.component.html',
+            templateUrl: 'event-list.component.html',
             styles: ["\n        .jumbotron{\n            margin-bottom:0px;\n        }\n    "]
         }), 
         __metadata('design:paramtypes', [event_service_1.EventService])

@@ -1,8 +1,9 @@
 import { Component, Input } from "@angular/core";
 
 @Component({
+  moduleId: module.id,
   selector: "slider",
-  templateUrl: "angular2app/app/shared/slider.component.html"
+  templateUrl: "slider.component.html"
 })
 export class SliderComponent {
   @Input()

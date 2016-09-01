@@ -14,9 +14,10 @@ var WelcomeComponent = (function () {
     }
     WelcomeComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: "welcome",
-            templateUrl: "angular2app/app/welcome/welcome.component.html",
-            styleUrls: ["angular2app/app/welcome/welcome.component.css"]
+            templateUrl: "welcome.component.html",
+            styleUrls: ["welcome.component.css"]
         }), 
         __metadata('design:paramtypes', [])
     ], WelcomeComponent);

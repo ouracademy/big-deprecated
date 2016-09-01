@@ -26,8 +26,9 @@ var SliderComponent = (function () {
     ], SliderComponent.prototype, "message", void 0);
     SliderComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: "slider",
-            templateUrl: "angular2app/app/shared/slider.component.html"
+            templateUrl: "slider.component.html"
         }), 
         __metadata('design:paramtypes', [])
     ], SliderComponent);

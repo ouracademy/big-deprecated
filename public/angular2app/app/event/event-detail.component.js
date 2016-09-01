@@ -51,8 +51,9 @@ var EventDetailComponent = (function () {
     };
     EventDetailComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'event-detail',
-            templateUrl: 'angular2app/app/event/event-detail.component.html'
+            templateUrl: 'event-detail.component.html'
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, event_service_1.EventService])
     ], EventDetailComponent);

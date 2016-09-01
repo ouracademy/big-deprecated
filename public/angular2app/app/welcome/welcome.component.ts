@@ -1,8 +1,9 @@
 import { Component } from "@angular/core";
 
 @Component({
+  moduleId: module.id,
   selector: "welcome",
-  templateUrl: "angular2app/app/welcome/welcome.component.html",
-  styleUrls: ["angular2app/app/welcome/welcome.component.css"]
+  templateUrl: "welcome.component.html",
+  styleUrls: ["welcome.component.css"]
 })
 export class WelcomeComponent { }

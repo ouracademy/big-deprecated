@@ -19,9 +19,10 @@ var AboutComponent = (function () {
     }
     AboutComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: "about",
-            templateUrl: "angular2app/app/about/about.component.html",
-            styleUrls: ["angular2app/app/about/about.component.css"]
+            templateUrl: "about.component.html",
+            styleUrls: ["about.component.css"]
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);

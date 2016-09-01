@@ -14,8 +14,9 @@ var SponsorsComponent = (function () {
     }
     SponsorsComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: "sponsors",
-            templateUrl: "angular2app/app/shared/sponsors.component.html"
+            templateUrl: "sponsors.component.html"
         }), 
         __metadata('design:paramtypes', [])
     ], SponsorsComponent);

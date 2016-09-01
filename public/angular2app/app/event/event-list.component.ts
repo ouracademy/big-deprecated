@@ -3,8 +3,9 @@ import { Event } from './event';
 import { EventService } from './event.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'event-list',
-    templateUrl: 'angular2app/app/event/event-list.component.html',
+    templateUrl: 'event-list.component.html',
     styles: [`
         .jumbotron{
             margin-bottom:0px;
