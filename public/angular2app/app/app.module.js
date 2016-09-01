@@ -13,7 +13,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require("./app.component");
-var app_routing_1 = require("./app.routing");
+var app_routing_1 = require('./app.routing');
 var welcome_component_1 = require("./welcome/welcome.component");
 var about_component_1 = require("./about/about.component");
 var contact_component_1 = require("./contact/contact.component");
@@ -21,8 +21,10 @@ var contact_service_1 = require('./contact/contact.service');
 var event_list_component_1 = require("./event/event-list.component");
 var event_detail_component_1 = require("./event/event-detail.component");
 var event_service_1 = require('./event/event.service');
+var participant_register_component_1 = require('./participant/participant-register.component');
 var sponsors_component_1 = require("./shared/sponsors.component");
 var slider_component_1 = require("./shared/slider.component");
+var login_component_1 = require('./login.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -40,13 +42,16 @@ var AppModule = (function () {
                 about_component_1.AboutComponent,
                 event_list_component_1.EventListComponent,
                 event_detail_component_1.EventDetailComponent,
+                participant_register_component_1.ParticipantRegisterComponent,
                 contact_component_1.ContactComponent,
                 sponsors_component_1.SponsorsComponent,
-                slider_component_1.SliderComponent
+                slider_component_1.SliderComponent,
+                login_component_1.LoginComponent
             ],
             providers: [
                 contact_service_1.ContactService,
-                event_service_1.EventService
+                event_service_1.EventService,
+                app_routing_1.appRoutingProviders
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

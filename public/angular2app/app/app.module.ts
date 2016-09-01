@@ -4,7 +4,8 @@ import { HttpModule }     from '@angular/http';
 import { ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent }  from "./app.component";
-import { routing }        from "./app.routing";
+import { routing,
+         appRoutingProviders } from './app.routing';
 
 import { WelcomeComponent }  from "./welcome/welcome.component";
 import { AboutComponent }  from "./about/about.component";
@@ -13,8 +14,12 @@ import { ContactService } from './contact/contact.service';
 import { EventListComponent }  from "./event/event-list.component";
 import { EventDetailComponent } from "./event/event-detail.component";
 import { EventService } from './event/event.service';
+import { ParticipantRegisterComponent } from './participant/participant-register.component';
+
 import { SponsorsComponent }  from "./shared/sponsors.component";
 import { SliderComponent }  from "./shared/slider.component";
+import { LoginComponent } from './login.component';
+
 
 @NgModule({
   imports: [
@@ -29,13 +34,16 @@ import { SliderComponent }  from "./shared/slider.component";
     AboutComponent,
     EventListComponent,
     EventDetailComponent,
+    ParticipantRegisterComponent,
     ContactComponent,
     SponsorsComponent,
-    SliderComponent
+    SliderComponent,
+    LoginComponent
   ],
   providers: [
     ContactService,
-    EventService
+    EventService,
+    appRoutingProviders
   ],
   bootstrap:    [ AppComponent ]
 })

@@ -1,10 +1,18 @@
+import { ModuleWithProviders }   from '@angular/core';
 import { Routes, RouterModule } from "@angular/router";
+import { loginRoutes,
+         authProviders }      from './login.routing';
+import { AuthGuard } from './auth-guard.service';
+
 
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { AboutComponent } from "./about/about.component";
 import { EventListComponent } from "./event/event-list.component";
 import { EventDetailComponent } from "./event/event-detail.component";
 import { ContactComponent } from "./contact/contact.component";
+import { LoginComponent } from './login.component';
+
+import { ParticipantRegisterComponent } from './participant/participant-register.component';
 
 const appRoutes: Routes = [
   {
@@ -22,11 +30,20 @@ const appRoutes: Routes = [
   {
       path: "eventos/:name",
       component: EventDetailComponent
+  },  
+  {
+      path: "registrarme/al/evento/:name",
+      component: ParticipantRegisterComponent,
+      canActivate: [AuthGuard]
   },
   {
-      path: "contáctenos",
+      path: "contactenos",
       component: ContactComponent
-  }
+  },
+  { path: 'login', component: LoginComponent }
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+export const appRoutingProviders: any[] = [
+  authProviders
+];
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
