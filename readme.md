@@ -2,8 +2,8 @@
 
 This is a web application event management system that it's on construction.
 
-BigEvents is a web application based on Laravel and Angular2. It uses the best
-of both worlds.
+BigEvents is a web application based on Laravel 5 and Angular 2. It uses the best
+of both worlds. **Now uses Laravel 5.2 and Angular 2 RC6**
 
 The event management contains:
 
@@ -73,6 +73,15 @@ npm start
 ```
 
 Go to http://localhost:8000, you will see your new app running!
+
+##TODO
+1. Move twitter bootstrap to angular2, use: https://github.com/valor-software/ng2-bootstrap 
+or https://ng-bootstrap.github.io/#/components/carousel
+2. Add email validation(for now using HTML5 validation)
+3. Slide image 100% height
+4. Event detail make paddin bottom, delete blank line in slider
+5. Move from doctrine to eloquent
+6. Move to laravel 5.3
 
 ## License
 
