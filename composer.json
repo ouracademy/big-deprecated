@@ -8,7 +8,6 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "5.2.*",
-        "davejamesmiller/laravel-breadcrumbs": "^3.0",
         "laravel-doctrine/orm" : "1.2.*",
         "laravel-doctrine/fluent" : "1.1.*"
     },

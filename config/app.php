@@ -160,7 +160,6 @@ return [
          * Vendor Service Providers...
          */
         Collective\Html\HtmlServiceProvider::class,
-        DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         LaravelDoctrine\ORM\DoctrineServiceProvider::class,
 
     ],
@@ -214,7 +213,6 @@ return [
          */
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
-        'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
         'EntityManager' => LaravelDoctrine\ORM\Facades\EntityManager::class,
         'Registry'      => LaravelDoctrine\ORM\Facades\Registry::class,
         'Doctrine'      => LaravelDoctrine\ORM\Facades\Doctrine::class,
