@@ -18,7 +18,7 @@ import { ParticipantRegisterComponent } from './participant/participant-register
 
 import { SponsorsComponent }  from "./shared/sponsors.component";
 import { SliderComponent }  from "./shared/slider.component";
-import { LoginComponent } from './login.component';
+import { LoginComponent } from './auth/login.component';
 
 
 @NgModule({

@@ -24,7 +24,7 @@ var event_service_1 = require('./event/event.service');
 var participant_register_component_1 = require('./participant/participant-register.component');
 var sponsors_component_1 = require("./shared/sponsors.component");
 var slider_component_1 = require("./shared/slider.component");
-var login_component_1 = require('./login.component');
+var login_component_1 = require('./auth/login.component');
 var AppModule = (function () {
     function AppModule() {
     }
