@@ -159,7 +159,6 @@ return [
         /*
          * Vendor Service Providers...
          */
-        Collective\Html\HtmlServiceProvider::class,
         LaravelDoctrine\ORM\DoctrineServiceProvider::class,
 
     ],
@@ -211,8 +210,6 @@ return [
         /*
          * Vendor Service Aliases...
          */
-        'Form'      => Collective\Html\FormFacade::class,
-        'Html'      => Collective\Html\HtmlFacade::class,
         'EntityManager' => LaravelDoctrine\ORM\Facades\EntityManager::class,
         'Registry'      => LaravelDoctrine\ORM\Facades\Registry::class,
         'Doctrine'      => LaravelDoctrine\ORM\Facades\Doctrine::class,

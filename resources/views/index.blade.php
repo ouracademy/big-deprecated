@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}" type="image/x-icon">
-    <meta name="author" content="Arthur Mauricio">
     <meta name="author" content="Ouracademy">
     <meta name="author" content="Business Ideas Group">
 
@@ -20,11 +19,11 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="angular2app/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    {!! Html::style('css/layout.css') !!}
-    {!! Html::style('css/absolute-background.css') !!}
+    <link media="all" type="text/css" rel="stylesheet" href="css/layout.css">
+    <link media="all" type="text/css" rel="stylesheet" href="css/absolute-background.css">
     <!-- Custom Fonts -->
-    {!! Html::style('vendor/font-awesome/css/font-awesome.min.css') !!}
-    
+    <link media="all" type="text/css" rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+
     <!-- 2. Configure SystemJS -->
     <script src="angular2app/systemjs.config.js"></script>
     <script>
@@ -41,7 +40,7 @@
   <!-- 3. Display the application -->
   <body>
     <app>Loading...</app>
-    {!! Html::script('vendor/jquery/jquery-1.12.0.min.js') !!}
+    <script src="vendor/jquery/jquery-1.12.0.min.js"></script>
     <script src="angular2app/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
