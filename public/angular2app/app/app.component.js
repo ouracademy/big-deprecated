@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
     }
+    //TODO should be removed on Angular RC7 or final
     AppComponent.prototype.onActivate = function (e) {
         window.scrollTo(0, 0);
     };

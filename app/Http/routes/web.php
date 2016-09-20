@@ -11,11 +11,11 @@
 |
 */
 
+//Route::auth();
 Route::get('/',  function() {
   return view("index");
 });
 
-// Route::auth();
 // Route::resource('participant', 'ParticipantController');
 
 Route::get('{any}', function ($any) {

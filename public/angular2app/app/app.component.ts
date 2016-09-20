@@ -6,6 +6,7 @@ import { Component } from "@angular/core";
   templateUrl: "app.component.html"
 })
 export class AppComponent {
+  //TODO should be removed on Angular RC7 or final
   onActivate(e) {
     window.scrollTo(0, 0);
   }
