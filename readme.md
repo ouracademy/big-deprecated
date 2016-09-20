@@ -3,7 +3,7 @@
 This is a web application event management system that it's on construction.
 
 BigEvents is a web application based on Laravel 5 and Angular 2. It uses the best
-of both worlds. **Now uses Laravel 5.2 and Angular 2 RC6**
+of both worlds. **Now uses Laravel 5.2 and Angular 2 - final**
 
 The event management contains:
 
