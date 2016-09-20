@@ -12,13 +12,18 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
     }
-    //TODO should be removed on Angular RC7 or final
     AppComponent.prototype.onActivate = function (e) {
         window.scrollTo(0, 0);
     };
-    AppComponent.prototype.scrollUp = function () {
-        window.scrollTo(0, 0);
+    AppComponent.prototype.updateScrollUp = function (event) {
+        console.debug("Scroll Event", document.body.scrollTop);
     };
+    __decorate([
+        core_1.HostListener('window:scroll', ['$event']), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', void 0)
+    ], AppComponent.prototype, "updateScrollUp", null);
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

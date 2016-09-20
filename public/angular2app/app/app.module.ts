@@ -20,13 +20,15 @@ import { SponsorsComponent }  from "./shared/sponsors.component";
 import { SliderComponent }  from "./shared/slider.component";
 import { LoginComponent } from './auth/login.component';
 
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 @NgModule({
   imports: [
     BrowserModule,
     routing,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2PageScrollModule
   ],
   declarations: [
     AppComponent,

@@ -25,6 +25,7 @@ var participant_register_component_1 = require('./participant/participant-regist
 var sponsors_component_1 = require("./shared/sponsors.component");
 var slider_component_1 = require("./shared/slider.component");
 var login_component_1 = require('./auth/login.component');
+var ng2_page_scroll_1 = require('ng2-page-scroll');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,7 +35,8 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_1.routing,
                 http_1.HttpModule,
-                forms_1.ReactiveFormsModule
+                forms_1.ReactiveFormsModule,
+                ng2_page_scroll_1.Ng2PageScrollModule
             ],
             declarations: [
                 app_component_1.AppComponent,

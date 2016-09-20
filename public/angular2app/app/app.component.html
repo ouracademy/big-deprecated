@@ -23,8 +23,10 @@
         </div>
     </div>
 </nav>
-<main>
-	<a id="scrollUp" (click)="scrollUp()"><i class="glyphicon glyphicon-chevron-up"></i></a>
+<main id="top">
+	<a pageScroll [pageScrollOffset]="50" [pageScrollDuration]="1000" id="scrollUp" href="#top">
+		<i class="glyphicon glyphicon-chevron-up"></i>
+	</a>
   	<router-outlet (activate)="onActivate($event)"></router-outlet>
 </main>
 
