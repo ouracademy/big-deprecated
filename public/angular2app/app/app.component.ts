@@ -9,4 +9,17 @@ export class AppComponent {
   onActivate(e) {
     window.scrollTo(0, 0);
   }
+
+  track($event: Event) {
+    // TODO refactor to an angular 2 way..
+    let doc = document.documentElement;
+    let top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+    let scrollUp = window.document.getElementById('scrollUp');
+
+    if(top < 350) {
+      scrollUp.style.display = 'none';
+    } else {
+      scrollUp.style.display = 'inline-block';
+    }
+  }
 }

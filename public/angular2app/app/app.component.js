@@ -15,15 +15,17 @@ var AppComponent = (function () {
     AppComponent.prototype.onActivate = function (e) {
         window.scrollTo(0, 0);
     };
-    AppComponent.prototype.updateScrollUp = function (event) {
-        console.debug("Scroll Event", document.body.scrollTop);
+    AppComponent.prototype.track = function ($event) {
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+        var scrollUp = window.document.getElementById('scrollUp');
+        if (top < 350) {
+            scrollUp.style.display = 'none';
+        }
+        else {
+            scrollUp.style.display = 'inline-block';
+        }
     };
-    __decorate([
-        core_1.HostListener('window:scroll', ['$event']), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object]), 
-        __metadata('design:returntype', void 0)
-    ], AppComponent.prototype, "updateScrollUp", null);
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
