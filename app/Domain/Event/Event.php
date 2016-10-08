@@ -26,6 +26,7 @@ class Event
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
     private $tickets;
+    public $imageURL;
     
     public static function __callStatic($method, $arguments)
     {

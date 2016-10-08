@@ -16,6 +16,7 @@ var AppComponent = (function () {
         window.scrollTo(0, 0);
     };
     AppComponent.prototype.track = function ($event) {
+        // TODO refactor to an angular 2 way..
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
         var scrollUp = window.document.getElementById('scrollUp');

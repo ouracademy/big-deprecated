@@ -6,6 +6,7 @@ export interface Event {
     eventType?: string;
     slug?: string;
     tickets?: Ticket[];
+    imageURL: string;
 }
 
 interface TimePeriod{

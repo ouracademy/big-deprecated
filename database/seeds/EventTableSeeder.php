@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Domain\Event\EventRepository;
+use App\Domain\Event\Event;
 
 class EventTableSeeder extends Seeder
 {
@@ -19,7 +20,17 @@ class EventTableSeeder extends Seeder
      */
     public function run()
     {
-        $events = entity(App\Domain\Event\Event::class, 5)->make();
+        $events = entity(Event::class, 5)->make();
+        $event = Event::CONFERENCE("TEAM BUILDING");
+        $event->setDescription('Construyendo equipos sólidos');
+        $event->setLocation('Lima, Perú');
+        $start = new DateTime('2016-11-14');
+        $end = new DateTime('2016-11-15');
+        $timePeriod = new App\Domain\Time\TimePeriod($start, $end);
+        $event->setTimePeriod($timePeriod);
+        $event->imageURL = 'img/events/team-building.jpg';
+
+        $events->push($event);
         foreach($events as $event){
             $this->addTickets($event);
             $this->eventRepository->add($event);

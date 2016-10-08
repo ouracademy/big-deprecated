@@ -22,6 +22,7 @@ class CreateEventsTable extends Migration
             $table->dateTime('timePeriod_start');
             $table->dateTime('timePeriod_end');
             $table->enum('type', Event::$types);   
+            $table->string('image_url', 500)->nullable();
             $table->timestamps();
         });
     }

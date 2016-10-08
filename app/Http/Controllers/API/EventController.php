@@ -66,7 +66,8 @@ class EventController extends Controller
                 "timePeriod" => [
                     "start" => $event->getTimePeriod()->start()->format('c'),
                     "end" => $event->getTimePeriod()->end()->format('c')
-                ]
+                ],
+                'imageURL' => $event->imageURL
             ]
         ]);
     }

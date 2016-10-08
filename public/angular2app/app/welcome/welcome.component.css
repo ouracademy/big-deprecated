@@ -47,21 +47,9 @@
 .page-header{
     text-transform: uppercase;
 }
-
-section .glyphicon{
-    font-size:4em;
-}
     
 @media screen and (min-width: 768px)
 {
-    section .container{
-        padding-top: 50px;
-    }
-    
-    section p{
-        font-size: 1.4em;
-    }
-    
     .carousel-inner>.item>a>img, .carousel-inner>.item>img {
         height: 620px;
         width: 100%;

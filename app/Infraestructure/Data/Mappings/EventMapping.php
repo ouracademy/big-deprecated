@@ -36,5 +36,6 @@ class EventMapping extends EntityMapping
                 ->mappedBy('event')
                 ->cascadePersist();
         $builder->string('eventType')->columnName('type');
+        $builder->string('imageURL')->length(100)->columnName('image_url');
     }
 }

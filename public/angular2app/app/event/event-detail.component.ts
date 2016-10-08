@@ -7,7 +7,8 @@ import { Subscription } from 'rxjs/Subscription';
 @Component({
     moduleId: module.id,
     selector: 'event-detail',
-    templateUrl: 'event-detail.component.html'
+    templateUrl: 'event-detail.component.html',
+    styleUrls: ['event-detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
     slider = {
@@ -18,7 +19,7 @@ export class EventDetailComponent implements OnInit {
     private sub: Subscription;
     private event: Event;
     private maxTicketsPerPerson: number = 4;
-    
+
 
     constructor(
         private route: ActivatedRoute,
@@ -32,6 +33,7 @@ export class EventDetailComponent implements OnInit {
             this.service.getEvent(name).then(event => {
                 this.event = event;
                 this.slider.title = event.name;
+                this.slider.image = event.imageURL;
             });
         });
     }
@@ -47,7 +49,7 @@ export class EventDetailComponent implements OnInit {
     numberOfTickets(ticket: Ticket): Array<number> {
         let ticketOptions = this.maxTicketsPerPerson > ticket.quantityAvailable ?
             ticket.quantityAvailable : this.maxTicketsPerPerson;
-        
+
         //+ 1 because array starts at 0
         return Array.from({ length: ticketOptions + 1 }, (v, k) => k);
     }

@@ -1,5 +1,6 @@
 @import url('partials/header.css');
 @import url('partials/footer.css');
+@import 'https://fonts.googleapis.com/css?family=Montserrat';   
 
 /* Global Styles */
 html,
@@ -47,6 +48,21 @@ main > .row{
     }
 }
 
+section .glyphicon{
+    font-size:4em;
+}
+
+@media screen and (min-width: 768px)
+{
+    section .container{
+        padding-top: 50px;
+    }
+    
+    section p{
+        font-size: 1.4em;
+    }
+}
+
 /*Change this*/
 .jumbotron .container{
     color:white;
@@ -76,4 +92,8 @@ main > .row{
     position: fixed;
     bottom:20px;
     right:20px;
+}
+
+.blue {
+    color:#2b74b7;  
 }
