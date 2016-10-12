@@ -1,0 +1,13 @@
+<div class="jumbotron absolute-background image-background" 
+    [ngStyle]="{'background-image': 'url(' + slider.imageURL + ')'}">
+        <div class="background black-background"></div>
+        <div class="content text-center">
+            <div class="container">
+                <h1>{{slider.title}}</h1>
+                <p>{{slider.message}}</p>
+                <div *ngIf="slider.button">
+                    <a href="{{slider.button.URL}}" class="btn btn-default">{{slider.button.text}}</a>
+                </div>
+            </div>
+        </div>
+</div>

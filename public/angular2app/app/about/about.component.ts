@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Slider } from '../shared/slider/slider';
 
 @Component({
   moduleId: module.id,
@@ -7,9 +8,9 @@ import { Component } from "@angular/core";
   styleUrls: ["about.component.css"]
 })
 export class AboutComponent {
-  slider = {
+  slider: Slider = {
     title: "Nosotros",
-    image: "img/about/team.jpg",
+    imageURL: "img/about/team.jpg",
     message: "Un equipo dedicado a formar grandes personas"
   };
 }

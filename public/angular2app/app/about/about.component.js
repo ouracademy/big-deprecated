@@ -13,7 +13,7 @@ var AboutComponent = (function () {
     function AboutComponent() {
         this.slider = {
             title: "Nosotros",
-            image: "img/about/team.jpg",
+            imageURL: "img/about/team.jpg",
             message: "Un equipo dedicado a formar grandes personas"
         };
     }

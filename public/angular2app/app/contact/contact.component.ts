@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import Message from './message';
 import { ContactService } from './contact.service';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { Slider } from '../shared/slider/slider';
 
 @Component({
   moduleId: module.id,
@@ -10,9 +11,9 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
   styleUrls: ["contact.component.css"]
 })
 export class ContactComponent {
-  slider = {
+  slider: Slider = {
     title: "Contáctenos",
-    image: "img/contact/business-world.jpg",
+    imageURL: "img/contact/business-world.jpg",
     message: "Conéctate con nosotros"
   };
   BIG = {

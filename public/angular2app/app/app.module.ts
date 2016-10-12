@@ -17,7 +17,7 @@ import { EventService } from './event/event.service';
 import { ParticipantRegisterComponent } from './participant/participant-register.component';
 
 import { SponsorsComponent }  from "./shared/sponsors.component";
-import { SliderComponent }  from "./shared/slider.component";
+import { SliderComponent }  from "./shared/slider/slider.component";
 import { LoginComponent } from './auth/login.component';
 
 import {Ng2PageScrollModule} from 'ng2-page-scroll';

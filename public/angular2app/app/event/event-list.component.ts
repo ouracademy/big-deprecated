@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from './event';
 import { EventService } from './event.service';
+import { Slider } from '../shared/slider/slider';
 
 @Component({
     moduleId: module.id,
@@ -13,9 +14,9 @@ import { EventService } from './event.service';
     `]
 })
 export class EventListComponent implements OnInit {
-    slider = {
+    slider: Slider = {
         message: "Próximamente grandes eventos",
-        image: "img/events/entrepreneur.jpg",
+        imageURL: "img/events/entrepreneur.jpg",
         title: "Eventos"
     }
     events: Array<Event>;

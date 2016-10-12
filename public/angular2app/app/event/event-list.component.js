@@ -15,7 +15,7 @@ var EventListComponent = (function () {
         this.eventService = eventService;
         this.slider = {
             message: "Próximamente grandes eventos",
-            image: "img/events/entrepreneur.jpg",
+            imageURL: "img/events/entrepreneur.jpg",
             title: "Eventos"
         };
     }

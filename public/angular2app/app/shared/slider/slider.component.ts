@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Slider } from './slider';
 
 @Component({
   moduleId: module.id,
@@ -7,9 +8,5 @@ import { Component, Input } from "@angular/core";
 })
 export class SliderComponent {
   @Input()
-  title: string;
-  @Input()
-  imageURL: string;
-  @Input()
-  message: string;
+  slider: Slider;
 }

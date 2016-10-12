@@ -17,9 +17,8 @@ var EventDetailComponent = (function () {
         this.router = router;
         this.service = service;
         this.slider = {
-            message: "",
-            image: "img/events/entrepreneur.jpg",
-            title: ""
+            title: '',
+            imageURL: ''
         };
         this.maxTicketsPerPerson = 4;
     }
@@ -29,8 +28,15 @@ var EventDetailComponent = (function () {
             var name = params['name'];
             _this.service.getEvent(name).then(function (event) {
                 _this.event = event;
-                _this.slider.title = event.name;
-                _this.slider.image = event.imageURL;
+                _this.slider = {
+                    title: event.name,
+                    imageURL: event.imageURL,
+                    message: event.description,
+                    button: {
+                        text: 'Registrate',
+                        URL: 'https://businessideasgroup.typeform.com/to/Hq9Gq5'
+                    }
+                };
             });
         });
     };

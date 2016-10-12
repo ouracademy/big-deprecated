@@ -1,9 +1,9 @@
-.jumbotron {
-    height: 400px !important;
+:host /deep/ .jumbotron {
+    height: 400px;
 }
 
-.image-background {
-    background-position-y: center !important;
+:host /deep/ .image-background {
+    background-position-y: center;
 }
 
 .speaker-image {

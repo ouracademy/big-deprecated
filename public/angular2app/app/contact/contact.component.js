@@ -16,7 +16,7 @@ var ContactComponent = (function () {
         this.contactService = contactService;
         this.slider = {
             title: "Contáctenos",
-            image: "img/contact/business-world.jpg",
+            imageURL: "img/contact/business-world.jpg",
             message: "Conéctate con nosotros"
         };
         this.BIG = {

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { EventService } from './event.service';
 import { Event, Ticket } from './event';
 import { Subscription } from 'rxjs/Subscription';
+import { Slider } from '../shared/slider/slider';
 
 @Component({
     moduleId: module.id,
@@ -11,11 +12,10 @@ import { Subscription } from 'rxjs/Subscription';
     styleUrls: ['event-detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
-    slider = {
-        message: "",
-        image: "img/events/entrepreneur.jpg",
-        title: ""
-    }
+    slider: Slider = {
+        title: '',
+        imageURL: ''
+    };
     private sub: Subscription;
     private event: Event;
     private maxTicketsPerPerson: number = 4;
@@ -32,8 +32,15 @@ export class EventDetailComponent implements OnInit {
             let name = params['name'];
             this.service.getEvent(name).then(event => {
                 this.event = event;
-                this.slider.title = event.name;
-                this.slider.image = event.imageURL;
+                this.slider = {
+                    title: event.name,
+                    imageURL: event.imageURL,
+                    message: event.description,
+                    button: {
+                        text: 'Registrate',
+                        URL: 'https://businessideasgroup.typeform.com/to/Hq9Gq5'
+                    }
+                }
             });
         });
     }

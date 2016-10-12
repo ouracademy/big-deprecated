@@ -14,16 +14,8 @@ var SliderComponent = (function () {
     }
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', String)
-    ], SliderComponent.prototype, "title", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], SliderComponent.prototype, "imageURL", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', String)
-    ], SliderComponent.prototype, "message", void 0);
+        __metadata('design:type', Object)
+    ], SliderComponent.prototype, "slider", void 0);
     SliderComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
