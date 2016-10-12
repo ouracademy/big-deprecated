@@ -11,13 +11,12 @@
     width: 200px;
     height: 200px;
     opacity: 1;
-    background-image: url(http://storage.googleapis.com/instapage-user-media/6025a85e/3549858-0-person-801829-960-72.jpg);
+    background-image: url('img/events/speaker-team-building.jpg');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
     -webkit-background-size: cover;
 }
-
 
 @media screen and (min-width: 768px)
 {

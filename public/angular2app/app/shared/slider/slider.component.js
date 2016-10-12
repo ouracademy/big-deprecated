@@ -20,7 +20,8 @@ var SliderComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: "slider",
-            templateUrl: "slider.component.html"
+            templateUrl: "slider.component.html",
+            styles: ["\n    .btn {\n        font-size: 20px;\n        color: white;\n        background-color: rgba(255, 255, 255, 0);\n        border: 2px solid white;\n    }\n  "]
         }), 
         __metadata('design:paramtypes', [])
     ], SliderComponent);
