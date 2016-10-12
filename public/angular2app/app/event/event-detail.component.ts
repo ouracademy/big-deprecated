@@ -4,6 +4,7 @@ import { EventService } from './event.service';
 import { Event, Ticket } from './event';
 import { Subscription } from 'rxjs/Subscription';
 import { Slider } from '../shared/slider/slider';
+import { Location } from '../shared/location';
 
 @Component({
     moduleId: module.id,
@@ -19,6 +20,10 @@ export class EventDetailComponent implements OnInit {
     private sub: Subscription;
     private event: Event;
     private maxTicketsPerPerson: number = 4;
+    map = {
+        location: new Location('Lima', { latitude: -12.085668, longitude: -77.034303 }),
+        zoom: 12
+    };
 
 
     constructor(
@@ -59,5 +64,15 @@ export class EventDetailComponent implements OnInit {
 
         //+ 1 because array starts at 0
         return Array.from({ length: ticketOptions + 1 }, (v, k) => k);
+    }
+
+    get latitude(): number {
+        let result = this.map.location.latitude;
+        return result;
+    }
+
+    get longitude(): number {
+        let result = this.map.location.longitude;
+        return result;
     }
 }

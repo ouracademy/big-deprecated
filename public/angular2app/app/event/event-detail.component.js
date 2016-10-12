@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var event_service_1 = require('./event.service');
+var location_1 = require('../shared/location');
 var EventDetailComponent = (function () {
     function EventDetailComponent(route, router, service) {
         this.route = route;
@@ -21,6 +22,10 @@ var EventDetailComponent = (function () {
             imageURL: ''
         };
         this.maxTicketsPerPerson = 4;
+        this.map = {
+            location: new location_1.Location('Lima', { latitude: -12.085668, longitude: -77.034303 }),
+            zoom: 12
+        };
     }
     EventDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -56,6 +61,22 @@ var EventDetailComponent = (function () {
         //+ 1 because array starts at 0
         return Array.from({ length: ticketOptions + 1 }, function (v, k) { return k; });
     };
+    Object.defineProperty(EventDetailComponent.prototype, "latitude", {
+        get: function () {
+            var result = this.map.location.latitude;
+            return result;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(EventDetailComponent.prototype, "longitude", {
+        get: function () {
+            var result = this.map.location.longitude;
+            return result;
+        },
+        enumerable: true,
+        configurable: true
+    });
     EventDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
