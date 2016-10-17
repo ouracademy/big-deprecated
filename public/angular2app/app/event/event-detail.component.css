@@ -2,6 +2,10 @@
     height: 400px;
 }
 
+:host /deep/ .jumbotron h1{
+    font-size: 53px;
+}
+
 :host /deep/ .image-background {
     background-position-y: center;
 }

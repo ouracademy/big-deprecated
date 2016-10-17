@@ -21,7 +21,7 @@ class EventTableSeeder extends Seeder
     public function run()
     {
         $events = entity(Event::class, 5)->make();
-        $event = Event::CONFERENCE("TEAM BUILDING");
+        $event = Event::CONFERENCE("Coaching & Team Building");
         $event->setDescription('Construyendo equipos sólidos');
         $event->setLocation('Lima, Perú');
         $start = new DateTime('2016-11-14');
