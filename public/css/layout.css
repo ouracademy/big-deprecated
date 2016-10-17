@@ -70,6 +70,7 @@ section .glyphicon{
 
 .jumbotron{
     height: 300px;
+    margin-bottom: -20px;
 }
 
 .jumbotron h1{

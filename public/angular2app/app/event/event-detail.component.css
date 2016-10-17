@@ -28,3 +28,22 @@
 #map {
     height: 300px;
 }
+
+.icon_container_small {
+    background: #2b74b7;
+    height: 30px;
+    width: 30px;
+    border-radius: 90%;
+    margin-top: 4px;
+    padding-top: 5px;
+    padding-left: 2px;
+    font-size: 18px;
+}
+
+.icon_container_small i {
+    color: white;
+}
+
+.media-heading {
+    margin-top: 5px;
+}
