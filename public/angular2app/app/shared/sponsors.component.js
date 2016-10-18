@@ -16,7 +16,8 @@ var SponsorsComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: "sponsors",
-            templateUrl: "sponsors.component.html"
+            templateUrl: "sponsors.component.html",
+            styles: ["\n      #hakan {\n        height:112px;\n      }\n\n      .sponsor {\n          padding-top:20px;\n      }\n  "]
         }), 
         __metadata('design:paramtypes', [])
     ], SponsorsComponent);

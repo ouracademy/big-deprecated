@@ -43,10 +43,6 @@
 .carousel-caption p{
     font-size: 1.5em;
 }
-
-.page-header{
-    text-transform: uppercase;
-}
     
 @media screen and (min-width: 768px)
 {
