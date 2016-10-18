@@ -23,6 +23,7 @@ i{
 
 .page-header{
     border-bottom: none;
+    text-transform: uppercase;
 }
 
 .page-header small{
