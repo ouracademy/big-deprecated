@@ -40,7 +40,5 @@
   <!-- 3. Display the application -->
   <body>
     <app>Loading...</app>
-    <script src="vendor/jquery/jquery-1.12.0.min.js"></script>
-    <script src="angular2app/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
