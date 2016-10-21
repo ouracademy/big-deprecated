@@ -28,6 +28,7 @@ var login_component_1 = require('./auth/login.component');
 var config_1 = require('./config');
 var ng2_page_scroll_1 = require('ng2-page-scroll');
 var core_2 = require('angular2-google-maps/core');
+var ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -39,6 +40,8 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 forms_1.ReactiveFormsModule,
                 ng2_page_scroll_1.Ng2PageScrollModule,
+                ng2_bootstrap_1.CarouselModule,
+                ng2_bootstrap_1.ModalModule,
                 core_2.AgmCoreModule.forRoot({
                     apiKey: config_1.config.googleMapAPIKey
                 }),

@@ -1,12 +1,12 @@
-.item:first-child{
+:host /deep/ #slide-0 {
     background-image: url(../img/home/slider/world.jpg);
 }
 
-.item:nth-child(2){
+:host /deep/ #slide-1 {
     background-image: url(../img/home/slider/study.jpg);
 }
 
-.item:nth-child(3){
+:host /deep/ #slide-2 {
     background-image: url(../img/home/slider/business-people.jpg);
     background-position: center 0px;
 }
@@ -15,51 +15,47 @@
     background-position: 0px;
 }
 
-.black-background{
+.black-background {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.25);
 }
 
-.service .caption{
+.service .caption {
     margin-top: -20px;
 }
 
-.service{
+.service {
     border: none;
 }
 
-.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+img.black-background {
     height: 400px;
 }
 
-.carousel-caption{
+.carousel-caption {
     top: 15%;
 }
 
-.carousel-caption h3{
+.carousel-caption h3 {
     font-size: 2.5em;
 }
 
-.carousel-caption p{
+.carousel-caption p {
     font-size: 1.5em;
 }
-    
-@media screen and (min-width: 768px)
-{
-    .carousel-inner>.item>a>img, .carousel-inner>.item>img {
+
+@media screen and (min-width: 768px) {
+    img.black-background {
         height: 620px;
         width: 100%;
     }
-    
-    .carousel-caption{
+    .carousel-caption {
         top: 30%;
     }
-    
-    .carousel-caption h3{
+    .carousel-caption h3 {
         font-size: 5em;
     }
-    
-    .carousel-caption p{
+    .carousel-caption p {
         font-size: 2em;
     }
 }

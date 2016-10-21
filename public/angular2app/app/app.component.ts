@@ -1,4 +1,4 @@
-import { Component, HostListener } from "@angular/core";
+import { Component, HostListener, ViewContainerRef } from "@angular/core";
 
 @Component({
   moduleId: module.id,
@@ -6,6 +6,13 @@ import { Component, HostListener } from "@angular/core";
   templateUrl: "app.component.html"
 })
 export class AppComponent {
+  private viewContainerRef: ViewContainerRef;
+
+  public constructor(viewContainerRef: ViewContainerRef) {
+    // You need this small hack in order to catch application root view container ref
+    this.viewContainerRef = viewContainerRef;
+  }
+
   onActivate(e) {
     window.scrollTo(0, 0);
   }
@@ -16,7 +23,7 @@ export class AppComponent {
     let top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
     let scrollUp = window.document.getElementById('scrollUp');
 
-    if(top < 350) {
+    if (top < 350) {
       scrollUp.style.display = 'none';
     } else {
       scrollUp.style.display = 'inline-block';

@@ -11,6 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var WelcomeComponent = (function () {
     function WelcomeComponent() {
+        this.slides = [
+            {
+                phrase: 'El mundo espera por ti',
+                subphrase: 'Ven y renueva tu mente'
+            },
+            { phrase: 'Grandes personas vienen de una gran educación' },
+            { phrase: 'Formando a grandes personas' }
+        ];
     }
     WelcomeComponent = __decorate([
         core_1.Component({
