@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="angular2app/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Custom CSS -->
     <link media="all" type="text/css" rel="stylesheet" href="css/layout.css">
-    <link media="all" type="text/css" rel="stylesheet" href="css/absolute-background.css">
     <!-- Custom Fonts -->
     <link media="all" type="text/css" rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
 

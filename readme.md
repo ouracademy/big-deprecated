@@ -75,13 +75,11 @@ npm start
 Go to http://localhost:8000, you will see your new app running!
 
 ##TODO
-1. Move twitter bootstrap to angular2, use: https://github.com/valor-software/ng2-bootstrap 
-or https://ng-bootstrap.github.io/#/components/carousel
-2. Add email validation(for now using HTML5 validation)
-3. Slide image 100% height
-4. Event detail make paddin bottom, delete blank line in slider
-5. Move from doctrine to eloquent
-6. Move to laravel 5.3
+1. Add email validation(for now using HTML5 validation)
+2. Slide image 100% height
+3. Event detail make paddin bottom, delete blank line in slider
+4. Move from doctrine to eloquent
+5. Move to laravel 5.3
 
 ## License
 

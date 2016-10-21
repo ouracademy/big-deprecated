@@ -1,101 +1,102 @@
 @import url('partials/header.css');
 @import url('partials/footer.css');
-@import 'https://fonts.googleapis.com/css?family=Montserrat';   
+@import url('absolute-background.css');
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
 
 /* Global Styles */
+
 html,
 body {
     height: 100%;
 }
 
-i{
+i {
     margin-left: 5px;
-    margin-right:2px;
+    margin-right: 2px;
 }
 
 .navbar-default .navbar-nav>li>a {
     text-transform: uppercase;
 }
 
-#header .page-header{
+#header .page-header {
     text-transform: none;
 }
 
-.page-header{
+.page-header {
     border-bottom: none;
     text-transform: uppercase;
 }
 
-.page-header small{
+.page-header small {
     text-transform: none;
 }
 
-.gray{
+.gray {
     background-color: #E7E7E7;
 }
 
-a:hover{
-    text-decoration:none;
+a:hover {
+    text-decoration: none;
 }
 
-main > .row{
-    margin:0;
+main>.row {
+    margin: 0;
 }
-    
-@media screen and (min-width: 768px)
-{
-    section .container{
+
+@media screen and (min-width: 768px) {
+    section .container {
         padding-bottom: 50px;
     }
 }
 
-section .glyphicon{
-    font-size:4em;
+section .glyphicon {
+    font-size: 4em;
 }
 
-@media screen and (min-width: 768px)
-{
-    section .container{
+@media screen and (min-width: 768px) {
+    section .container {
         padding-top: 50px;
     }
-    
-    section p{
+    section p {
         font-size: 1.4em;
     }
 }
 
+
 /*Change this*/
-.jumbotron .container{
-    color:white;
+
+.jumbotron .container {
+    color: white;
 }
 
-.jumbotron{
+.jumbotron {
     height: 300px;
     margin-bottom: -20px;
 }
 
-.jumbotron h1{
+.jumbotron h1 {
     text-transform: uppercase;
 }
 
-.jumbotron.absolute-background .content{
+.jumbotron.absolute-background .content {
     top: 30%;
 }
 
-.center-block{
+.center-block {
     float: none;
 }
 
 #scrollUp {
-    padding:20px;
-    background:#2b74b7;
-    font-size:20px;
-    color:#fff;
+    padding: 20px;
+    background: #2b74b7;
+    font-size: 20px;
+    color: #fff;
     position: fixed;
-    bottom:20px;
-    right:20px;
+    bottom: 20px;
+    right: 20px;
 }
 
 .blue {
-    color:#2b74b7;  
+    color: #2b74b7;
 }

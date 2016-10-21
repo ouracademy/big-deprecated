@@ -20,21 +20,21 @@ class EventTableSeeder extends Seeder
      */
     public function run()
     {
-        $events = entity(Event::class, 5)->make();
-        $event = Event::CONFERENCE("Coaching & Team Building");
-        $event->setDescription('Construyendo equipos sólidos');
-        $event->setLocation('Lima, Perú');
+        //$events = entity(Event::class, 5)->make();
+        $bigTalk1 = Event::CONFERENCE("Coaching & Team Building");
+        $bigTalk1->setDescription('Construyendo equipos sólidos');
+        $bigTalk1->setLocation('Lima, Perú');
         $start = new DateTime('2016-11-14');
         $end = new DateTime('2016-11-15');
         $timePeriod = new App\Domain\Time\TimePeriod($start, $end);
-        $event->setTimePeriod($timePeriod);
-        $event->imageURL = 'img/events/team-building.jpg';
+        $bigTalk1->setTimePeriod($timePeriod);
+        $bigTalk1->imageURL = 'img/events/team-building.jpg';
 
-        $events->push($event);
-        foreach($events as $event){
-            $this->addTickets($event);
-            $this->eventRepository->add($event);
-        }
+        //$events->push($bigTalk1);
+        //foreach($events as $event){
+            $this->addTickets($bigTalk1);
+            $this->eventRepository->add($bigTalk1);
+        //}
     }
     
     private function addTickets($event){

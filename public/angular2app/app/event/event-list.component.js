@@ -9,10 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var event_service_1 = require('./event.service');
 var EventListComponent = (function () {
-    function EventListComponent(eventService) {
+    function EventListComponent(eventService, router) {
         this.eventService = eventService;
+        this.router = router;
         this.slider = {
             message: "Próximamente grandes eventos",
             imageURL: "img/events/entrepreneur.jpg",
@@ -30,6 +32,10 @@ var EventListComponent = (function () {
             if (!_this.emptyEvents) {
                 _this.slider.message = "Grandes eventos para grandes personas";
             }
+            if (_this.events.length === 1) {
+                var event_1 = _this.events[0];
+                _this.router.navigate(['/eventos', event_1.slug]);
+            }
         });
     };
     Object.defineProperty(EventListComponent.prototype, "emptyEvents", {
@@ -46,7 +52,7 @@ var EventListComponent = (function () {
             templateUrl: 'event-list.component.html',
             styles: ["\n        .jumbotron{\n            margin-bottom:0px;\n        }\n    "]
         }), 
-        __metadata('design:paramtypes', [event_service_1.EventService])
+        __metadata('design:paramtypes', [event_service_1.EventService, router_1.Router])
     ], EventListComponent);
     return EventListComponent;
 }());
