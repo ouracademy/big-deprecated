@@ -2,7 +2,7 @@
     height: 400px;
 }
 
-:host /deep/ .jumbotron h1{
+:host /deep/ .jumbotron h1 {
     font-size: 53px;
 }
 
@@ -22,9 +22,8 @@
     -webkit-background-size: cover;
 }
 
-@media screen and (min-width: 768px)
-{
-    section p{
+@media screen and (min-width: 768px) {
+    section p {
         font-size: 1.2em;
     }
 }
@@ -62,8 +61,16 @@
     padding: 20px;
 }
 
-
-.more-info button{
+.more-info button {
     text-transform: uppercase;
     font-size: 1.2em;
+}
+
+.modal-body .page-header {
+    padding-bottom: 9px;
+    margin: 10px 0 10px;
+}
+
+.modal-body p {
+    font-size: 16px;
 }
