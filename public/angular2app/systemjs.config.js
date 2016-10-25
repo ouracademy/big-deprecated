@@ -25,7 +25,7 @@
             // other libraries
             'rxjs': 'npm:rxjs',
             'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
-            'ng2-page-scroll': 'npm:ng2-page-scroll',
+            'ng2-page-scroll': 'npm:ng2-page-scroll/bundles/ng2-page-scroll.umd.js',
             'angular2-google-maps/core': 'npm:angular2-google-maps/core',
             'moment': 'npm:moment/moment.js',
             'ng2-bootstrap/ng2-bootstrap': 'npm:ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
@@ -48,10 +48,6 @@
             },
             'angular2-google-maps/core': {
                 main: './index.js',
-                defaultExtension: 'js'
-            },
-            'ng2-page-scroll': {
-                main: './ng2-page-scroll',
                 defaultExtension: 'js'
             }
         }
