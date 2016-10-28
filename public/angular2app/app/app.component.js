@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent(viewContainerRef) {
+        this.isMenuCollapsed = true;
         // You need this small hack in order to catch application root view container ref
         this.viewContainerRef = viewContainerRef;
     }
@@ -28,6 +29,12 @@ var AppComponent = (function () {
         else {
             scrollUp.style.display = 'inline-block';
         }
+    };
+    AppComponent.prototype.collapsed = function (event) {
+        // Do nothing
+    };
+    AppComponent.prototype.expanded = function (event) {
+        // Do nothing
     };
     AppComponent = __decorate([
         core_1.Component({

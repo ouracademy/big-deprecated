@@ -1,82 +1,81 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-				aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-            </button>
-			<abbr title="Business Ideas Group">
+			</button>
+
+            <abbr title="Business Ideas Group">
                 <a class="navbar-brand" routerLink="/">
                     <img src="img/logo.jpg"/>
                 </a>
             </abbr>
-		</div>
-		<div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right">
-				<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Inicio</a></li>
-				<li routerLinkActive="active"><a routerLink="nosotros">Nosotros</a></li>
-				<li routerLinkActive="active"><a routerLink="eventos">Eventos</a></li>
-				<li routerLinkActive="active"><a routerLink="contactenos">Contáctenos</a></li>
-			</ul>
-		</div>
-	</div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isMenuCollapsed">
+            <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="isMenuCollapsed = true"><a routerLink="/">Inicio</a></li>
+                <li routerLinkActive="active"><a routerLink="nosotros" (click)="isMenuCollapsed = true">Nosotros</a></li>
+                <li routerLinkActive="active"><a routerLink="eventos" (click)="isMenuCollapsed = true">Eventos</a></li>
+                <li routerLinkActive="active"><a routerLink="contactenos" (click)="isMenuCollapsed = true">Contáctenos</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 <main id="top">
-	<a (window:scroll)="track($event)" pageScroll [pageScrollOffset]="50" [pageScrollDuration]="1000" id="scrollUp" href="#top">
-		<i class="glyphicon glyphicon-chevron-up"></i>
-	</a>
-	<router-outlet (activate)="onActivate($event)"></router-outlet>
+    <a (window:scroll)="track($event)" pageScroll [pageScrollOffset]="50" [pageScrollDuration]="1000" id="scrollUp" href="#top">
+        <i class="glyphicon glyphicon-chevron-up"></i>
+    </a>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
 </main>
 
 <footer>
-	<div class="footer-top container">
-		<div class="row">
-			<div class="col-md-6 col-sm-6">
-				<h4 class="title">¿Quiénes somos?</h4>
-				<p>BIG es una empresa peruana que fomenta la cultura emprendedora en el país a través de talleres, seminarios, cursos y
-					conferencias.</p>
-				<a routerLink="/nosotros">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
-			</div>
+    <div class="footer-top container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <h4 class="title">¿Quiénes somos?</h4>
+                <p>BIG es una empresa peruana que fomenta la cultura emprendedora en el país a través de talleres, seminarios, cursos y conferencias.
+                </p>
+                <a routerLink="/nosotros">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
+            </div>
 
-			<div class="col-md-6 col-sm-6">
-				<h4 class="title">Mantente en contácto</h4>
-				<div class="social-network">
-					<ul class="social list-inline">
-						<li>
-							<a href="https://www.facebook.com/businessideasgroupperu/">
-								<i class="fa fa-facebook"></i></a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fa fa-twitter"></i></a>
-						</li>
-						<li>
-							<a href="https://www.youtube.com/channel/UC7nyCydiTAQ_PWq22sgMbDg">
-								<i class="fa fa-youtube-play"></i></a>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/company/business-ideas-group">
-								<i class="fa fa-linkedin"></i></a>
-						</li>
-					</ul>
-				</div>
-				<p>Establezca una mejor relación con nosotros a través nuestras redes sociales. Envíenos sus preguntas, dudas y sugerencias.
-					Estaremos muy agradecidos en responderle y ofrecerle el mejor servicio.
-				</p>
-			</div>
-		</div>
-	</div>
+            <div class="col-md-6 col-sm-6">
+                <h4 class="title">Mantente en contácto</h4>
+                <div class="social-network">
+                    <ul class="social list-inline">
+                        <li>
+                            <a href="https://www.facebook.com/businessideasgroupperu/">
+                                <i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UC7nyCydiTAQ_PWq22sgMbDg">
+                                <i class="fa fa-youtube-play"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/business-ideas-group">
+                                <i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Establezca una mejor relación con nosotros a través nuestras redes sociales. Envíenos sus preguntas, dudas y sugerencias. Estaremos muy agradecidos en responderle y ofrecerle el mejor servicio.
+                </p>
+            </div>
+        </div>
+    </div>
 
-	<div class="footer-bottom">
-		<div class="container">
-			<p class="pull-left">Copyright © 2016 Business Ideas Group (BIG). Diseñado por BIG y <a href="https://www.facebook.com/academyForUs/">Ouracademy</a></p>
-			<ul class="list-inline pull-right">
-				<li><a routerLink="nosotros">Nosotros</a></li>
-				<li><a routerLink="contactenos">Contáctenos</a></li>
-			</ul>
-		</div>
-	</div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left">Copyright © 2016 Business Ideas Group (BIG). Diseñado por BIG y <a href="https://www.facebook.com/academyForUs/">Ouracademy</a></p>
+            <ul class="list-inline pull-right">
+                <li><a routerLink="nosotros">Nosotros</a></li>
+                <li><a routerLink="contactenos">Contáctenos</a></li>
+            </ul>
+        </div>
+    </div>
 </footer>

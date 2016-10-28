@@ -25,7 +25,7 @@ import { LoginComponent } from './auth/login.component';
 import { config } from './config';
 import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { AgmCoreModule } from 'angular2-google-maps/core';
-import { CarouselModule, ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { CarouselModule, ModalModule, CollapseModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 @NgModule({
   imports: [
@@ -36,6 +36,7 @@ import { CarouselModule, ModalModule } from 'ng2-bootstrap/ng2-bootstrap';
     Ng2PageScrollModule,
     CarouselModule,
     ModalModule,
+    CollapseModule,
     AgmCoreModule.forRoot({
       apiKey: config.googleMapAPIKey
     }),

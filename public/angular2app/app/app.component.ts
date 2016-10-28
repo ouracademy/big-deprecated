@@ -7,6 +7,7 @@ import { Component, ViewContainerRef } from '@angular/core';
 })
 export class AppComponent {
   private viewContainerRef: ViewContainerRef;
+  public isMenuCollapsed: boolean = true;
 
   public constructor(viewContainerRef: ViewContainerRef) {
     // You need this small hack in order to catch application root view container ref
@@ -28,5 +29,13 @@ export class AppComponent {
     } else {
       scrollUp.style.display = 'inline-block';
     }
+  }
+
+  public collapsed(event: any): void {
+    // Do nothing
+  }
+
+  public expanded(event: any): void {
+    // Do nothing
   }
 }
