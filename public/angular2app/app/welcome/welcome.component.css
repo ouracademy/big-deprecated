@@ -4,6 +4,7 @@
 
 :host /deep/ #slide-1 {
     background-image: url(../img/home/slider/study.jpg);
+    background-position: center 0px;
 }
 
 :host /deep/ #slide-2 {

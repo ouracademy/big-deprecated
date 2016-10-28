@@ -21,8 +21,8 @@ export class EventDetailComponent implements OnInit {
     private event: Event;
     private maxTicketsPerPerson: number = 4;
     map = {
-        location: new Location('Lima', { latitude: -12.085668, longitude: -77.034303 }),
-        zoom: 15
+        location: new Location('Lima', { latitude: -12.0943939, longitude: -77.0370744 }),
+        zoom: 17
     };
 
 

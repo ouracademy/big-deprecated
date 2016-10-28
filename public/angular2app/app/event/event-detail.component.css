@@ -74,3 +74,17 @@
 .modal-body p {
     font-size: 16px;
 }
+
+.dark {
+    color: white;
+    background-color: #232323;
+}
+
+.dark .container {
+    padding-bottom: 35px;
+}
+
+.dark .page-header {
+    padding-bottom: 0px;
+    margin: 10px 0 10px;
+}

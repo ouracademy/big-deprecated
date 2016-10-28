@@ -23,8 +23,8 @@ var EventDetailComponent = (function () {
         };
         this.maxTicketsPerPerson = 4;
         this.map = {
-            location: new location_1.Location('Lima', { latitude: -12.085668, longitude: -77.034303 }),
-            zoom: 15
+            location: new location_1.Location('Lima', { latitude: -12.0943939, longitude: -77.0370744 }),
+            zoom: 17
         };
     }
     EventDetailComponent.prototype.ngOnInit = function () {
