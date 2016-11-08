@@ -2,13 +2,50 @@
     height: 400px;
 }
 
-:host /deep/ .jumbotron h1 {
-    font-size: 53px;
-}
-
 :host /deep/ .image-background {
     background-position-y: center;
 }
+
+.dark {
+    color: white;
+    background-color: #232323;
+}
+
+.dark .container {
+    padding-bottom: 20px;
+}
+
+.dark h2 {
+   font-size: 1.5em;
+}
+
+.dark h3 {
+   font-size: 1.17em;
+}
+
+@media (min-width: 992px) {
+    :host /deep/ .jumbotron h1 {
+        font-size: 53px;
+    }
+
+    .dark .page-header {
+        padding-bottom: 0px;
+        margin: 10px    0 10px;
+    }
+
+    .dark h2 {
+        font-size: 28px;
+    }
+
+    .dark h3 {
+        font-size: 22px;
+    }
+}
+
+#what-you-will-learn .col-xs-12{
+    margin-top: 15px;
+}
+
 
 .speaker-image {
     border-radius: 50%;
@@ -73,18 +110,4 @@
 
 .modal-body p {
     font-size: 16px;
-}
-
-.dark {
-    color: white;
-    background-color: #232323;
-}
-
-.dark .container {
-    padding-bottom: 35px;
-}
-
-.dark .page-header {
-    padding-bottom: 0px;
-    margin: 10px 0 10px;
 }
