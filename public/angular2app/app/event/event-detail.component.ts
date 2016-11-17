@@ -9,7 +9,7 @@ import { Location } from '../shared/location';
 @Component({
     moduleId: module.id,
     selector: 'event-detail',
-    templateUrl: 'event-detail.component.html',
+    templateUrl: 'event-detail.component.html?tmplv=v0.0.1',
     styleUrls: ['event-detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
