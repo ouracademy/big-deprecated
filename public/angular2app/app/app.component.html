@@ -1,7 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse"
+                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -25,9 +26,11 @@
     </div>
 </nav>
 <main id="top">
-    <a (window:scroll)="track($event)" pageScroll [pageScrollOffset]="50" [pageScrollDuration]="1000" id="scrollUp" href="#top">
-        <i class="glyphicon glyphicon-chevron-up"></i>
-    </a>
+    <div id="scroll-up">
+        <a id="scrollUp" (window:scroll)="track($event)" pageScroll [pageScrollOffset]="50" [pageScrollDuration]="1000" href="#top">
+            <i class="glyphicon glyphicon-chevron-up"></i>
+        </a>
+    </div>
     <router-outlet (activate)="onActivate($event)"></router-outlet>
 </main>
 
@@ -36,7 +39,8 @@
         <div class="row">
             <div class="col-md-6 col-sm-6">
                 <h4 class="title">¿Quiénes somos?</h4>
-                <p>BIG es una empresa peruana que fomenta la cultura emprendedora en el país a través de talleres, seminarios, cursos y conferencias.
+                <p>BIG es una empresa peruana que fomenta la cultura emprendedora en el país a través de talleres, seminarios,
+                    cursos y conferencias.
                 </p>
                 <a routerLink="/nosotros">Conócenos<i class="glyphicon glyphicon-arrow-right"></i></a>
             </div>
@@ -63,7 +67,8 @@
                         </li>
                     </ul>
                 </div>
-                <p>Establezca una mejor relación con nosotros a través nuestras redes sociales. Envíenos sus preguntas, dudas y sugerencias. Estaremos muy agradecidos en responderle y ofrecerle el mejor servicio.
+                <p>Establezca una mejor relación con nosotros a través nuestras redes sociales. Envíenos sus preguntas, dudas
+                    y sugerencias. Estaremos muy agradecidos en responderle y ofrecerle el mejor servicio.
                 </p>
             </div>
         </div>

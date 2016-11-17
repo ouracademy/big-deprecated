@@ -87,6 +87,13 @@ section .glyphicon {
     float: none;
 }
 
+
+@media (max-width: 480px) {
+  #scroll-up {
+    display: none;
+  }
+}
+
 #scrollUp {
     padding: 20px;
     background: #2b74b7;
