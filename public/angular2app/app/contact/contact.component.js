@@ -47,7 +47,7 @@ var ContactComponent = (function () {
             moduleId: module.id,
             selector: 'contact',
             templateUrl: 'contact.component.html',
-            styleUrls: ['contact.component.css']
+            styleUrls: ['contact.component.css?v0.0.1']
         }), 
         __metadata('design:paramtypes', [contact_service_1.ContactService, forms_1.FormBuilder])
     ], ContactComponent);

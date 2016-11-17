@@ -8,7 +8,7 @@ import { Slider } from '../shared/slider/slider';
   moduleId: module.id,
   selector: 'contact',
   templateUrl: 'contact.component.html',
-  styleUrls: ['contact.component.css']
+  styleUrls: ['contact.component.css?v0.0.1']
 })
 export class ContactComponent {
   slider: Slider = {

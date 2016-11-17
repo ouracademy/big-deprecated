@@ -10,7 +10,7 @@ import { Location } from '../shared/location';
     moduleId: module.id,
     selector: 'event-detail',
     templateUrl: 'event-detail.component.html?tmplv=v0.0.1',
-    styleUrls: ['event-detail.component.css']
+    styleUrls: ['event-detail.component.css?v=v0.0.1']
 })
 export class EventDetailComponent implements OnInit {
     slider: Slider = {

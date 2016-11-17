@@ -82,7 +82,7 @@ var EventDetailComponent = (function () {
             moduleId: module.id,
             selector: 'event-detail',
             templateUrl: 'event-detail.component.html?tmplv=v0.0.1',
-            styleUrls: ['event-detail.component.css']
+            styleUrls: ['event-detail.component.css?v=v0.0.1']
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, event_service_1.EventService])
     ], EventDetailComponent);
