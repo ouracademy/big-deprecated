@@ -8,21 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var AboutComponent = (function () {
     function AboutComponent() {
         this.slider = {
-            title: "Nosotros",
-            imageURL: "img/about/team.jpg",
-            message: "Un equipo dedicado a formar grandes personas"
+            title: 'Nosotros',
+            imageURL: 'img/about/team.jpg',
+            message: 'Un equipo dedicado a formar grandes personas'
         };
     }
     AboutComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: "about",
-            templateUrl: "about.component.html",
-            styleUrls: ["about.component.css"]
+            selector: 'about',
+            templateUrl: 'about.component.html',
+            styleUrls: ['about.component.css?v0.0.1']
         }), 
         __metadata('design:paramtypes', [])
     ], AboutComponent);
