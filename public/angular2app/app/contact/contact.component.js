@@ -8,25 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var contact_service_1 = require('./contact.service');
 var forms_1 = require('@angular/forms');
 var ContactComponent = (function () {
     function ContactComponent(contactService, builder) {
         this.contactService = contactService;
         this.slider = {
-            title: "Contáctenos",
-            imageURL: "img/contact/business-world.jpg",
-            message: "Conéctate con nosotros"
+            title: 'Contáctenos',
+            imageURL: 'img/contact/business-world.jpg',
+            message: 'Conéctate con nosotros'
         };
         this.BIG = {
-            email: "info@businessideasgroup.com.pe",
-            location: "Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)"
+            email: 'hola@businessideasgroup.com.pe',
+            location: 'Calle Ramón Cerdeira #175, dep. 301, San Borja(Perú, Lima 36)'
         };
         this.submitAttemp = false;
-        this.message = new forms_1.FormControl("", forms_1.Validators.required);
-        this.name = new forms_1.FormControl("", forms_1.Validators.required);
-        this.email = new forms_1.FormControl("", forms_1.Validators.required);
+        this.message = new forms_1.FormControl('', forms_1.Validators.required);
+        this.name = new forms_1.FormControl('', forms_1.Validators.required);
+        this.email = new forms_1.FormControl('', forms_1.Validators.required);
         this.contactForm = builder.group({
             message: this.message,
             from: builder.group({
@@ -45,9 +45,9 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: "contact",
-            templateUrl: "contact.component.html",
-            styleUrls: ["contact.component.css"]
+            selector: 'contact',
+            templateUrl: 'contact.component.html',
+            styleUrls: ['contact.component.css']
         }), 
         __metadata('design:paramtypes', [contact_service_1.ContactService, forms_1.FormBuilder])
     ], ContactComponent);
