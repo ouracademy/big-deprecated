@@ -38,6 +38,11 @@
   </head>
   <!-- 3. Display the application -->
   <body>
-    <app>Loading...</app>
+    <app>
+      <div id="app-loading">
+        <div class="loader running">
+        </div>
+      </div>
+    </app>
   </body>
 </html>

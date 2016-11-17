@@ -1,3 +1,4 @@
+@import url('partials/loading.css');
 @import url('partials/header.css');
 @import url('partials/footer.css');
 @import url('absolute-background.css');
@@ -107,3 +108,4 @@ section .glyphicon {
 .blue {
     color: #2b74b7;
 }
+
