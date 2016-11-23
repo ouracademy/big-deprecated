@@ -15,6 +15,7 @@ var EventService = (function () {
     function EventService(http) {
         this.http = http;
         this.apiURL = '/event'; // URL to web apiURL
+        this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
     EventService.prototype.getEvents = function () {
         return this.http.get(this.apiURL)
@@ -33,6 +34,14 @@ var EventService = (function () {
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);
     };
+    EventService.prototype.registerParticipant = function (eventId, input) {
+        var url = this.apiURL + "/" + eventId + "/participant";
+        return this.http
+            .post(url, JSON.stringify(input), { headers: this.headers })
+            .toPromise()
+            .then(function (res) { return res.json().data; })
+            .catch(this.handleError);
+    };
     EventService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
@@ -40,4 +49,9 @@ var EventService = (function () {
     return EventService;
 }());
 exports.EventService = EventService;
+var RegisterParticipantInput = (function () {
+    function RegisterParticipantInput() {
+    }
+    return RegisterParticipantInput;
+}());
 //# sourceMappingURL=event.service.js.map

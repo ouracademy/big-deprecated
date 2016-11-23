@@ -7,6 +7,8 @@ import { Event } from './event';
 export class EventService {
 
     private apiURL = '/event';  // URL to web apiURL
+    private headers = new Headers({ 'Content-Type': 'application/json' });
+
 
     constructor(private http: Http) {
     }
@@ -23,11 +25,28 @@ export class EventService {
         return Promise.reject(error.message || error);
     }
 
-    getEvent(slug: string): Promise<Event>{
+    getEvent(slug: string): Promise<Event> {
         let url = `${this.apiURL}/${slug}`;
         return this.http.get(url)
             .toPromise()
             .then(res => res.json().data as Event)
             .catch(this.handleError);
     }
+
+    registerParticipant(eventId: string, input: RegisterParticipantInput) {
+        let url = `${this.apiURL}/${eventId}/participant`;
+        return this.http
+            .post(url, JSON.stringify(input), { headers: this.headers })
+            .toPromise()
+            .then(res => res.json().data)
+            .catch(this.handleError);
+    }
+}
+
+class RegisterParticipantInput {
+    firstname: string;
+    lastname: string;
+    email: string;
+    cellphone: string;
+    message?: string;
 }

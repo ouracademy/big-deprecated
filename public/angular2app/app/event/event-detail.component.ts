@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventService } from './event.service';
 import { Event, Ticket } from './event';
@@ -10,13 +11,14 @@ import { Location } from '../shared/location';
     moduleId: module.id,
     selector: 'event-detail',
     templateUrl: 'event-detail.component.html?tmplv=v0.0.1',
-    styleUrls: ['event-detail.component.css?v=v0.0.1']
+    styleUrls: ['event-detail.component.css?tmplv=v0.1.0']
 })
 export class EventDetailComponent implements OnInit {
     slider: Slider = {
         title: '',
         imageURL: ''
     };
+    private registerForm: FormGroup;
     private sub: Subscription;
     private event: Event;
     private maxTicketsPerPerson: number = 4;
@@ -29,7 +31,8 @@ export class EventDetailComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private service: EventService) { }
+        private service: EventService,
+        private formBuilder: FormBuilder) { }
 
 
     ngOnInit() {
@@ -42,11 +45,19 @@ export class EventDetailComponent implements OnInit {
                     imageURL: event.imageURL,
                     message: event.description,
                     button: {
-                        text: 'Registrate',
+                        text: 'Más información',
                         URL: 'https://businessideasgroup.typeform.com/to/Hq9Gq5'
                     }
-                }
+                };
             });
+        });
+
+        this.registerForm = this.formBuilder.group({
+            firstname: ['', Validators.required],
+            lastname: ['', Validators.required],
+            email: ['', Validators.required],
+            cellphone: ['', Validators.required],
+            message: ['']
         });
     }
 
@@ -74,5 +85,10 @@ export class EventDetailComponent implements OnInit {
     get longitude(): number {
         let result = this.map.location.longitude;
         return result;
+    }
+
+    onRegister(): void {
+        this.service.registerParticipant(this.event.id, this.registerForm.value)
+            .then((res) => alert('Enviado!'));
     }
 }

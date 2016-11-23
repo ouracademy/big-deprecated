@@ -109,3 +109,6 @@ section .glyphicon {
     color: #2b74b7;
 }
 
+textarea {
+    resize: none;
+}

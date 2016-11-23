@@ -1,5 +1,6 @@
 export interface Event {
-    name: string;    
+    id: string;
+    name: string;
     description?: string;
     location?: string;
     timePeriod: TimePeriod;
@@ -9,12 +10,12 @@ export interface Event {
     imageURL: string;
 }
 
-interface TimePeriod{
+interface TimePeriod {
     start: Date;
     end: Date;
 }
 
-export interface Ticket{
+export interface Ticket {
     name: string;
     quantityAvailable: number;
     price: Money;

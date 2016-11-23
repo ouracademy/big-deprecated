@@ -1,4 +1,15 @@
-<slider [slider]="slider"></slider>
+<div class="jumbotron absolute-background image-background" [ngStyle]="{'background-image': 'url(' + slider.imageURL + ')'}">
+    <div class="background black-background"></div>
+    <div class="content text-center">
+        <div class="container">
+            <h1>{{slider.title}}</h1>
+            <p>{{slider.message}}</p>
+            <div *ngIf="slider.button">
+                <a (click)="register.show()" class="btn">{{slider.button.text}}</a>
+            </div>
+        </div>
+    </div>
+</div>
 <!--<section>
 	<div *ngIf="!emptyEvent" class="container">
 		<hr>
@@ -188,6 +199,64 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div bsModal #register="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" (click)="register.hide()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Llena tus datos</h4>
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="form-horizontal">
+                <div class="modal-body">
+                    <div class="col-md-10 center-block">
+                        <!--<div class="row page-header text-center ">
+                            <h2><strong>Más información</strong></h2>
+                        </div>-->
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-2">Nombres</label>
+                                <div class="col-sm-10">
+                                    <input formControlName="firstname" type="text" class="form-control" id="firstname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="col-sm-2">Apellidos</label>
+                                <div class="col-sm-10">
+                                    <input formControlName="lastname" type="text" class="form-control" id="lastname">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-2">Email</label>
+                                <div class="col-sm-10">
+                                    <input formControlName="email" type="email" class="form-control" id="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="cellphone" class="col-sm-2">Celular</label>
+                                <div class="col-sm-10">
+                                    <input formControlName="cellphone" type="text" class="form-control" id="cellphone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="col-sm-2">Consultas</label>
+                                <div class="col-sm-10">
+                                    <textarea formControlName="message" class="form-control" id="message" cols="30" rows="5">
+                                        </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button [disabled]="!registerForm.valid" type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

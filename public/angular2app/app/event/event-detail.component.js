@@ -9,14 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
 var router_1 = require('@angular/router');
 var event_service_1 = require('./event.service');
 var location_1 = require('../shared/location');
 var EventDetailComponent = (function () {
-    function EventDetailComponent(route, router, service) {
+    function EventDetailComponent(route, router, service, formBuilder) {
         this.route = route;
         this.router = router;
         this.service = service;
+        this.formBuilder = formBuilder;
         this.slider = {
             title: '',
             imageURL: ''
@@ -38,11 +40,18 @@ var EventDetailComponent = (function () {
                     imageURL: event.imageURL,
                     message: event.description,
                     button: {
-                        text: 'Registrate',
+                        text: 'Más información',
                         URL: 'https://businessideasgroup.typeform.com/to/Hq9Gq5'
                     }
                 };
             });
+        });
+        this.registerForm = this.formBuilder.group({
+            firstname: ['', forms_1.Validators.required],
+            lastname: ['', forms_1.Validators.required],
+            email: ['', forms_1.Validators.required],
+            cellphone: ['', forms_1.Validators.required],
+            message: ['']
         });
     };
     EventDetailComponent.prototype.ngOnDestroy = function () {
@@ -77,14 +86,18 @@ var EventDetailComponent = (function () {
         enumerable: true,
         configurable: true
     });
+    EventDetailComponent.prototype.onRegister = function () {
+        this.service.registerParticipant(this.event.id, this.registerForm.value)
+            .then(function (res) { return alert('Enviado!'); });
+    };
     EventDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'event-detail',
             templateUrl: 'event-detail.component.html?tmplv=v0.0.1',
-            styleUrls: ['event-detail.component.css?v=v0.0.1']
+            styleUrls: ['event-detail.component.css?tmplv=v0.1.0']
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, event_service_1.EventService])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, event_service_1.EventService, forms_1.FormBuilder])
     ], EventDetailComponent);
     return EventDetailComponent;
 }());
