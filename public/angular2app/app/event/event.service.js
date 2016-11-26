@@ -25,7 +25,8 @@ var EventService = (function () {
     };
     EventService.prototype.handleError = function (error) {
         console.error('An error occurred', error);
-        return Promise.reject(error.message || error);
+        //return Promise.reject(error.message || error);
+        return Promise.reject(error.json());
     };
     EventService.prototype.getEvent = function (slug) {
         var url = this.apiURL + "/" + slug;
@@ -34,8 +35,8 @@ var EventService = (function () {
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);
     };
-    EventService.prototype.registerParticipant = function (eventId, input) {
-        var url = this.apiURL + "/" + eventId + "/participant";
+    EventService.prototype.registerInformationRequest = function (eventId, input) {
+        var url = this.apiURL + "/" + eventId + "/information-request";
         return this.http
             .post(url, JSON.stringify(input), { headers: this.headers })
             .toPromise()
@@ -49,9 +50,9 @@ var EventService = (function () {
     return EventService;
 }());
 exports.EventService = EventService;
-var RegisterParticipantInput = (function () {
-    function RegisterParticipantInput() {
+var RegisterInformationRequestInput = (function () {
+    function RegisterInformationRequestInput() {
     }
-    return RegisterParticipantInput;
+    return RegisterInformationRequestInput;
 }());
 //# sourceMappingURL=event.service.js.map

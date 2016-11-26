@@ -124,3 +124,10 @@
     font-weight: 500; 
     font-size: 5em; 
 }
+
+a.btn {
+    font-size: 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid white;
+}

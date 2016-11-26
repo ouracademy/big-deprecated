@@ -24,6 +24,7 @@ var EventDetailComponent = (function () {
             imageURL: ''
         };
         this.maxTicketsPerPerson = 4;
+        this.alerts = [];
         this.map = {
             location: new location_1.Location('Lima', { latitude: -12.0943939, longitude: -77.0370744 }),
             zoom: 17
@@ -87,8 +88,31 @@ var EventDetailComponent = (function () {
         configurable: true
     });
     EventDetailComponent.prototype.onRegister = function () {
-        this.service.registerParticipant(this.event.id, this.registerForm.value)
-            .then(function (res) { return alert('Enviado!'); });
+        var _this = this;
+        this.service.registerInformationRequest(this.event.id, this.registerForm.value)
+            .then(function (res) { return _this.showSuccess(); })
+            .catch(function (e) { return _this.showError(e.error); });
+    };
+    EventDetailComponent.prototype.showSuccess = function () {
+        this.alerts = [
+            {
+                type: 'success',
+                msg: 'Enviado correctamente :)',
+                closable: true
+            }
+        ];
+    };
+    EventDetailComponent.prototype.showError = function (errors) {
+        var errorMessages = Object.keys(errors).map(function (field) { return errors[field][0]; });
+        this.alerts = errorMessages.map(function (errorMessage) {
+            return {
+                type: 'danger',
+                msg: errorMessage
+            };
+        });
+    };
+    EventDetailComponent.prototype.closeAlert = function (i) {
+        this.alerts.splice(i, 1);
     };
     EventDetailComponent = __decorate([
         core_1.Component({

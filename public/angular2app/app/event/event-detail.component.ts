@@ -22,6 +22,8 @@ export class EventDetailComponent implements OnInit {
     private sub: Subscription;
     private event: Event;
     private maxTicketsPerPerson: number = 4;
+    private alerts: any[] = [];
+
     map = {
         location: new Location('Lima', { latitude: -12.0943939, longitude: -77.0370744 }),
         zoom: 17
@@ -88,7 +90,32 @@ export class EventDetailComponent implements OnInit {
     }
 
     onRegister(): void {
-        this.service.registerParticipant(this.event.id, this.registerForm.value)
-            .then((res) => alert('Enviado!'));
+        this.service.registerInformationRequest(this.event.id, this.registerForm.value)
+            .then((res) => this.showSuccess())
+            .catch((e) => this.showError(e.error));
+    }
+
+    private showSuccess() {
+        this.alerts = [
+            {
+                type: 'success',
+                msg: 'Enviado correctamente :)',
+                closable: true
+            }
+        ];
+    }
+
+    private showError(errors) {
+        let errorMessages = Object.keys(errors).map(field => errors[field][0]);
+        this.alerts = errorMessages.map(errorMessage => {
+            return {
+                type: 'danger',
+                msg: errorMessage
+            };
+        });
+    }
+
+    public closeAlert(i: number): void {
+        this.alerts.splice(i, 1);
     }
 }

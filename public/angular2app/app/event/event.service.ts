@@ -22,7 +22,8 @@ export class EventService {
 
     private handleError(error: any) {
         console.error('An error occurred', error);
-        return Promise.reject(error.message || error);
+        //return Promise.reject(error.message || error);
+        return Promise.reject(error.json());
     }
 
     getEvent(slug: string): Promise<Event> {
@@ -33,8 +34,8 @@ export class EventService {
             .catch(this.handleError);
     }
 
-    registerParticipant(eventId: string, input: RegisterParticipantInput) {
-        let url = `${this.apiURL}/${eventId}/participant`;
+    registerInformationRequest(eventId: string, input: RegisterInformationRequestInput) {
+        let url = `${this.apiURL}/${eventId}/information-request`;
         return this.http
             .post(url, JSON.stringify(input), { headers: this.headers })
             .toPromise()
@@ -43,7 +44,7 @@ export class EventService {
     }
 }
 
-class RegisterParticipantInput {
+class RegisterInformationRequestInput {
     firstname: string;
     lastname: string;
     email: string;

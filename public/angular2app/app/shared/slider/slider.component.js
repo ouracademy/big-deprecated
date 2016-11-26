@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var SliderComponent = (function () {
     function SliderComponent() {
     }
@@ -19,9 +19,8 @@ var SliderComponent = (function () {
     SliderComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: "slider",
-            templateUrl: "slider.component.html",
-            styles: ["\n    .btn {\n        font-size: 20px;\n        color: white;\n        background-color: rgba(255, 255, 255, 0);\n        border: 2px solid white;\n    }\n  "]
+            selector: 'slider',
+            templateUrl: 'slider.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], SliderComponent);

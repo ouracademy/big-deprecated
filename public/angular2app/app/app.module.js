@@ -43,6 +43,7 @@ var AppModule = (function () {
                 ng2_bootstrap_1.CarouselModule,
                 ng2_bootstrap_1.ModalModule,
                 ng2_bootstrap_1.CollapseModule,
+                ng2_bootstrap_1.AlertModule,
                 core_2.AgmCoreModule.forRoot({
                     apiKey: config_1.config.googleMapAPIKey
                 }),

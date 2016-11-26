@@ -215,6 +215,11 @@
             <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="form-horizontal">
                 <div class="modal-body">
                     <div class="col-md-10 center-block">
+                        <div class="row">
+                            <alert *ngFor="let alert of alerts;let i = index" [type]="alert.type" dismissible="true" (close)="closeAlert(i)">
+                                {{ alert.msg }}
+                            </alert>
+                        </div>
                         <!--<div class="row page-header text-center ">
                             <h2><strong>Más información</strong></h2>
                         </div>-->
