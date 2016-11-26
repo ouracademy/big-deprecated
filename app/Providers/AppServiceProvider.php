@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
 use App\Infraestructure\Data\Repositories\EventRepository;
+use App\Infraestructure\Data\Repositories\InformationRequestRepository;
 use App\Infraestructure\Data\Repositories\UserRepository;
 use App\Domain\Event\Event;
 use App\Domain\Time\TimePeriod;
@@ -30,6 +31,10 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind('App\Domain\Event\EventRepository', function($app){
             return new EventRepository($app['em']);
+        });
+
+        $this->app->bind('App\Domain\Event\InformationRequestRepository', function($app){
+            return new InformationRequestRepository($app['em']);
         });
         
         $this->app->bind('App\Domain\User\UserRepository', function($app){

@@ -23,4 +23,8 @@ class EventRepository implements EventRepositoryContract
         $this->entityManager->persist($event);
         $this->entityManager->flush();
     }
+
+    public function findById($id){
+        return $this->objectRepository->find($id);
+    }
 }

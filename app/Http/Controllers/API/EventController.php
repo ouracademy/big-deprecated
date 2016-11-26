@@ -35,7 +35,7 @@ class EventController extends Controller
             'data' => $eventsInJSON
         ]);
     }
-    
+
     public function showBySlug($slug){
         //TODO test with no slug
         foreach($this->eventRepository->all() as $event){
@@ -60,6 +60,7 @@ class EventController extends Controller
 
         return response()->json([
             'data' => [
+                'id' => $fetchedEvent->getId(),
                 'name' => $fetchedEvent->getName(),
                 'description' => $fetchedEvent->getDescription(),
                 'tickets' => $ticketsInJSON,
