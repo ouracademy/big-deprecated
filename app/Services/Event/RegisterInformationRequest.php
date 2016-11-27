@@ -3,18 +3,13 @@
 use App\Domain\Event\Event;
 use App\Domain\Event\InformationRequest;
 use App\Domain\Event\EventRepository;
-use App\Domain\Event\InformationRequestRepository;
 
 class RegisterInformationRequest
 {
     private $eventRepository;
-    private $informationRequestRepository;
     
-    public function __construct(
-        EventRepository $eventRepository,
-        InformationRequestRepository $informationRequestRepository){
+    public function __construct(EventRepository $eventRepository){
         $this->eventRepository = $eventRepository;
-        $this->informationRequestRepository = $informationRequestRepository;
     }
     
     // private function validate($data)
@@ -32,10 +27,11 @@ class RegisterInformationRequest
                 $data['firstname'],
                 $data['lastname'],
                 $data['email'],
-                $data['cellphone'],
-                $event
+                $data['cellphone']
             );
-        $informationRequest->setMessage($data['message']); 
-        $this->informationRequestRepository->add($informationRequest);
+
+        $informationRequest->setMessage($data['message']);
+        $event->addInformationRequest($informationRequest);
+        $this->eventRepository->add($event);
     }
 }

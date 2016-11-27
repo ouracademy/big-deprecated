@@ -3,6 +3,7 @@ namespace App\Infraestructure\Data\Mappings;
 
 use App\Domain\Event\Event;
 use App\Domain\Event\Ticket;
+use App\Domain\Event\InformationRequest;
 use LaravelDoctrine\Fluent\EntityMapping;
 use LaravelDoctrine\Fluent\Fluent;
 use App\Domain\Time\TimePeriod;
@@ -33,6 +34,9 @@ class EventMapping extends EntityMapping
         $builder->text('description');
         $builder->embed(TimePeriod::class);
         $builder->hasMany(Ticket::class)
+                ->mappedBy('event')
+                ->cascadePersist();
+        $builder->hasMany(InformationRequest::class)
                 ->mappedBy('event')
                 ->cascadePersist();
         $builder->string('eventType')->columnName('type');

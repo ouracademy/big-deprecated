@@ -32,10 +32,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('App\Domain\Event\EventRepository', function($app){
             return new EventRepository($app['em']);
         });
-
-        $this->app->bind('App\Domain\Event\InformationRequestRepository', function($app){
-            return new InformationRequestRepository($app['em']);
-        });
         
         $this->app->bind('App\Domain\User\UserRepository', function($app){
             return new UserRepository($app['em']);

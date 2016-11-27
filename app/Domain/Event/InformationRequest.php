@@ -12,15 +12,18 @@ class InformationRequest implements JsonSerializable
     private $cellphone;
     private $message;
     private $event;
-
-    public function __construct($firstname,$lastname,$email,$cellphone,Event $event){
+    
+    public function __construct($firstname,$lastname,$email,$cellphone){
         $this->firstname = $firstname;
         $this->lastname = $lastname;
         $this->email= $email;
         $this->cellphone = $cellphone;
-        $this->event = $event;
     }
     
+    function friendAddEvent(Event $event){
+        $this->event = $event;
+    }
+
     public function getFirstname() {
         return $this->firstname;
     }
@@ -43,10 +46,6 @@ class InformationRequest implements JsonSerializable
 
     public function setMessage($message) {
         $this->message = $message;
-    }
-    
-    public function getEvent($event) {
-        return $this->event;
     }
 
     public function jsonSerialize() {

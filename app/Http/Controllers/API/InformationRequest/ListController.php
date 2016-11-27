@@ -6,32 +6,21 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Domain\Event\InformationRequestRepository;
 use App\Domain\Event\EventRepository;
 
 class ListController extends Controller
 {
-    private $service;
+    private $eventRepository;
     
-    public function __construct(
-        
-        EventRepository $eventRepository,
-        InformationRequestRepository $service){
-        $this->service = $service;
+    public function __construct(EventRepository $eventRepository){
         $this->eventRepository = $eventRepository;
     }
     
     public function index($eventId, Request $request){
-
-        foreach($this->eventRepository->all() as $event){
-            if($event->getId() == $eventId){
-                $fetchedEvent = $event;
-                break;
-            }
-        }
+        $fetchedEvent = $this->eventRepository->findById($eventId);
 
         return response()->json([
-            'data' => $this->service->findBy($fetchedEvent->getId())
+            'data' => $fetchedEvent->getInformationRequests()->toArray()
         ]);
     }
 }

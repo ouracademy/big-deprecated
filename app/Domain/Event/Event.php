@@ -25,6 +25,7 @@ class Event
     private $eventType;
     private $slug;
     private $eventRoles;//use SplObjectStorage for performance concerns
+    private $informationRequests;
     private $tickets;
     public $imageURL;
     
@@ -38,9 +39,9 @@ class Event
         $this->addEventType($eventType);
         $this->eventRoles = new SplObjectStorage();
         $this->tickets = new ArrayCollection();
+        $this->informationRequests = new ArrayCollection();
         $this->slug = str_slug($name);
     }
-    
     
     private function addEventType($eventType){
         if(in_array($eventType,self::$types)){
@@ -118,5 +119,14 @@ class Event
     
     public function getTickets() {
         return $this->tickets;
+    }
+
+    public function addInformationRequest(InformationRequest $informationRequest){
+        $this->informationRequests->add($informationRequest);
+        $informationRequest->friendAddEvent($this);
+    }
+
+    public function getInformationRequests() {
+        return $this->informationRequests;
     }
 }
