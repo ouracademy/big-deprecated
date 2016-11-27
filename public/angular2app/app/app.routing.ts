@@ -9,6 +9,7 @@ import { AuthGuard } from './auth/auth-guard.service';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AboutComponent } from './about/about.component';
 import { EventListComponent } from './event/event-list.component';
+import { InformationRequestListComponent } from './event/information-request-list.component';
 import { EventDetailComponent } from './event/event-detail.component';
 import { ContactComponent } from './contact/contact.component';
 
@@ -31,9 +32,14 @@ const appRoutes: Routes = [
         path: 'eventos/:name',
         component: EventDetailComponent
     },
+    // {
+    //     path: 'registrarme/al/evento/:name',
+    //     component: ParticipantRegisterComponent,
+    //     canActivate: [AuthGuard]
+    // },
     {
-        path: 'registrarme/al/evento/:name',
-        component: ParticipantRegisterComponent,
+        path: 'pedidos-informacion/evento/:name',
+        component: InformationRequestListComponent,
         canActivate: [AuthGuard]
     },
     {

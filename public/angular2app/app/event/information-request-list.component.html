@@ -1,0 +1,36 @@
+<!--<section>
+	<div *ngIf="!emptyEvent" class="container">
+		<hr>
+		<p>
+			<i class="fa fa-clock-o"></i> Fecha inicio: {{event.timePeriod.start | date: 'd MMMM y'}} / Fecha fin: {{event.timePeriod.end
+			| date: 'd MMMM y'}}</p>
+		<hr>
+	</div>
+</section>-->
+<section>
+    <div class="container">
+        <div class="col-md-8 center-block">
+            <div class="row text-center">
+                <h2 class="page-header"><strong>Pedidos de más información</strong></h2>
+            </div>
+            <table class="table">
+                <thead>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>email</th>
+                    <th>cellphone</th>
+                    <th>message</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let informationRequest of informationRequests">
+                        <td>{{informationRequest.firstname}}</td>
+                        <td>{{informationRequest.lastname}}</td>
+                        <td>{{informationRequest.email}}</td>
+                        <td>{{informationRequest.cellphone}}</td>
+                        <td>{{informationRequest.message}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

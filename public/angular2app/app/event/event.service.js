@@ -43,6 +43,14 @@ var EventService = (function () {
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);
     };
+    EventService.prototype.getInformationRequests = function (eventId) {
+        var url = this.apiURL + "/" + eventId + "/information-request";
+        return this.http
+            .get(url)
+            .toPromise()
+            .then(function (res) { return res.json().data; })
+            .catch(this.handleError);
+    };
     EventService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
@@ -50,9 +58,4 @@ var EventService = (function () {
     return EventService;
 }());
 exports.EventService = EventService;
-var RegisterInformationRequestInput = (function () {
-    function RegisterInformationRequestInput() {
-    }
-    return RegisterInformationRequestInput;
-}());
 //# sourceMappingURL=event.service.js.map

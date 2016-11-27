@@ -5,9 +5,9 @@ var auth_guard_service_1 = require('./auth/auth-guard.service');
 var welcome_component_1 = require('./welcome/welcome.component');
 var about_component_1 = require('./about/about.component');
 var event_list_component_1 = require('./event/event-list.component');
+var information_request_list_component_1 = require('./event/information-request-list.component');
 var event_detail_component_1 = require('./event/event-detail.component');
 var contact_component_1 = require('./contact/contact.component');
-var participant_register_component_1 = require('./participant/participant-register.component');
 var appRoutes = [
     {
         path: '',
@@ -25,9 +25,14 @@ var appRoutes = [
         path: 'eventos/:name',
         component: event_detail_component_1.EventDetailComponent
     },
+    // {
+    //     path: 'registrarme/al/evento/:name',
+    //     component: ParticipantRegisterComponent,
+    //     canActivate: [AuthGuard]
+    // },
     {
-        path: 'registrarme/al/evento/:name',
-        component: participant_register_component_1.ParticipantRegisterComponent,
+        path: 'pedidos-informacion/evento/:name',
+        component: information_request_list_component_1.InformationRequestListComponent,
         canActivate: [auth_guard_service_1.AuthGuard]
     },
     {

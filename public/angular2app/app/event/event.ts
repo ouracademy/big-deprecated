@@ -25,3 +25,11 @@ interface Money {
     amount: number;
     currency: string;
 }
+
+export class InformationRequest {
+    firstname: string;
+    lastname: string;
+    email: string;
+    cellphone: string;
+    message?: string;
+}

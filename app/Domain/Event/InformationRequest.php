@@ -1,8 +1,9 @@
 <?php namespace App\Domain\Event;
 
 use App\Domain\Support\DomainObject;
+use \JsonSerializable;
 
-class InformationRequest
+class InformationRequest implements JsonSerializable
 {
     use DomainObject;
     private $firstname;
@@ -24,8 +25,8 @@ class InformationRequest
         return $this->firstname;
     }
 
-    public function getLastName() {
-        return $this->lastName;
+    public function getLastname() {
+        return $this->lastname;
     }
     
     public function getEmail() {
@@ -46,5 +47,15 @@ class InformationRequest
     
     public function getEvent($event) {
         return $this->event;
+    }
+
+    public function jsonSerialize() {
+        return [
+                'firstname' => $this->getFirstname(),
+                'lastname' => $this->getLastname(),
+                'email' => $this->getEmail(),
+                'cellphone'=> $this->getCellphone(),
+                'message' => $this->getMessage()
+            ];
     }
 }

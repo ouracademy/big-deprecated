@@ -19,4 +19,8 @@ class InformationRequestRepository implements InformationRequestRepositoryContra
         $this->entityManager->persist($informationRequest);
         $this->entityManager->flush();
     }
+
+    public function findBy($eventId){
+        return $this->objectRepository->findBy(['event' => $eventId]);
+    }
 }

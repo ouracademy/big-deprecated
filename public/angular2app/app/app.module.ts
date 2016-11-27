@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ContactService } from './contact/contact.service';
 import { EventListComponent } from './event/event-list.component';
 import { EventDetailComponent } from './event/event-detail.component';
+import { InformationRequestListComponent } from './event/information-request-list.component';
 import { EventService } from './event/event.service';
 import { ParticipantRegisterComponent } from './participant/participant-register.component';
 
@@ -48,6 +49,7 @@ import { CarouselModule, ModalModule, CollapseModule, AlertModule  } from 'ng2-b
     AboutComponent,
     EventListComponent,
     EventDetailComponent,
+    InformationRequestListComponent,
     ParticipantRegisterComponent,
     ContactComponent,
     SponsorsComponent,

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-import { Event } from './event';
+import { Event, InformationRequest } from './event';
 
 @Injectable()
 export class EventService {
@@ -34,7 +34,7 @@ export class EventService {
             .catch(this.handleError);
     }
 
-    registerInformationRequest(eventId: string, input: RegisterInformationRequestInput) {
+    registerInformationRequest(eventId: string, input: InformationRequest) {
         let url = `${this.apiURL}/${eventId}/information-request`;
         return this.http
             .post(url, JSON.stringify(input), { headers: this.headers })
@@ -42,12 +42,13 @@ export class EventService {
             .then(res => res.json().data)
             .catch(this.handleError);
     }
-}
 
-class RegisterInformationRequestInput {
-    firstname: string;
-    lastname: string;
-    email: string;
-    cellphone: string;
-    message?: string;
+    getInformationRequests(eventId: number): Promise<InformationRequest[]> {
+        let url = `${this.apiURL}/${eventId}/information-request`;
+        return this.http
+            .get(url)
+            .toPromise()
+            .then(res => res.json().data)
+            .catch(this.handleError);
+    }
 }

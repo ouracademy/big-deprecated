@@ -32,9 +32,9 @@ class RegisterInformationRequestController extends Controller
                     'error' =>  $validator->errors()
                 ], 422);
         }
-
+        
         $this->service->execute([
-            'eventId' => intval($eventId),
+            'eventId' => (int)$eventId,
             'firstname'=>$request->firstname,
             'lastname'=>$request->lastname,
             'email'=>$request->email,

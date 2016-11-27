@@ -20,6 +20,7 @@ var contact_component_1 = require('./contact/contact.component');
 var contact_service_1 = require('./contact/contact.service');
 var event_list_component_1 = require('./event/event-list.component');
 var event_detail_component_1 = require('./event/event-detail.component');
+var information_request_list_component_1 = require('./event/information-request-list.component');
 var event_service_1 = require('./event/event.service');
 var participant_register_component_1 = require('./participant/participant-register.component');
 var sponsors_component_1 = require('./shared/sponsors.component');
@@ -54,6 +55,7 @@ var AppModule = (function () {
                 about_component_1.AboutComponent,
                 event_list_component_1.EventListComponent,
                 event_detail_component_1.EventDetailComponent,
+                information_request_list_component_1.InformationRequestListComponent,
                 participant_register_component_1.ParticipantRegisterComponent,
                 contact_component_1.ContactComponent,
                 sponsors_component_1.SponsorsComponent,
